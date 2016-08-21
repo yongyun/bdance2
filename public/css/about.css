@@ -1,0 +1,276 @@
+body {
+	background-image: url('../img/9.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+section {
+	height: auto;
+}
+
+p {
+	width: 100%;
+    line-height: 25px;
+    font-size: 14px;
+}
+
+h2 {
+	font-size: 20px;
+	margin: 10px 0;
+	letter-spacing: 2px;
+    font-style: italic;
+}
+
+h4 {
+	font-style: italic;
+	text-align: right;
+	font-size: 12px;
+	line-height: 35px;
+}
+
+h5 {
+	width: 100%;
+    line-height: 25px;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+h6 {
+	width: 100%;
+    line-height: 25px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-style: italic;
+}
+
+.sec-white {
+	background: #fff;
+}
+
+.sec-dark {
+	background-image: url('../img/1.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+
+}
+
+.sec-pic {
+	background-image: url('../img/rhombus.svg');
+	background-repeat: no-repeat;
+	background-size: 1500px;
+	background-position: center;
+	background-position-y : 0px;
+	padding-bottom: 88px;
+}
+
+.sec-slide {
+	background-image: url('../img/smo.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+.sec-dark  .sec-white {
+	opacity: .6;
+}
+
+.about-top {
+	width: 100%;
+	height: 800px;
+  	text-align: center;
+}
+
+.atop-text {
+	bottom: 0;
+    position: absolute;
+    margin: auto;
+    right: 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    color: white;
+}
+
+.atop-text p {
+	line-height: 35px;
+    color: #fff;
+    letter-spacing: 1px;
+    font-style: italic;
+    width: 100%;
+}
+
+.atop-photo img{
+	width: 100%;
+}
+
+.atop-logo {
+	width: 128px;
+	margin: auto;
+	top: 250px;
+    position: absolute;
+    right: 0;
+    left: 0;
+    opacity: .6;
+}
+
+.atop-down {
+	position: absolute;
+	bottom: 20px;
+    position: absolute;
+    right: 0;
+    left: 0;
+}
+
+.quotation {
+	font-size: 30px;
+    font-family: -webkit-pictograph;
+}
+
+.atop-down img {
+	width: 20px;
+}
+
+/*atop end*/
+
+.atext {
+	width: 70%;
+    margin: 70px auto;
+}
+
+.con1 {
+	overflow: hidden;
+    width: 100%;
+}
+
+.con2 {
+	width: 50%;
+	height: auto;
+	float: left;
+	display: inline-block;
+}
+
+.con2 img{
+	width: 150px;
+	margin: 70px auto;
+}
+
+.con2wid {
+	width: 80%;
+	margin: auto;
+}
+
+.con2 p {
+	width: 100%;
+	text-align: left;
+}
+
+.con3 {
+	height: 300px;
+}
+
+.conwhite {
+	background: #fff;
+}
+
+.clear {
+	clear: both;
+}
+
+.t-con {
+	line-height: 350px;
+}
+
+.t-box {
+	border: 1px solid;
+    padding: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    width: 200px; 
+    margin: auto;
+}
+
+.underline {
+	border-bottom: 1px solid #f0f0f0;
+}
+
+.tsai img {
+	width: 250px;
+}
+
+.at-left p {
+	text-align: left;
+}
+
+.pwht p , .pwht h2 , .pwht h5, .pwht h6 {
+	color: #fff;
+}
+
+.con3 ul {
+	bottom: 0;
+    position: absolute;
+    margin: auto;
+    right: 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    line-height: 20px;
+}
+
+.itemwrap p {
+	line-height: 50px;
+}
+
+.acopyright {
+	color: #999;
+    font-size: 12px;
+    bottom: 20px;
+    text-align: center;
+    width: 100%;
+    z-index: 9999;
+    position: fixed;
+}
+
+.onepage-foot {
+	position: relative;
+	background-color: #999;
+}
+
+.onepage-foot p {
+	color: #fff;
+    font-size: 12px;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    z-index: 9999;
+    background-color: #000;
+    line-height: 50px;
+}
+
+.sec-media .component-fullwidth { 
+	background: #fff;
+}
+
+.media-title {
+	margin-bottom: 0;
+}
+
+.sec-media .component-fullwidth nav a {
+	color: #000;
+}
+
+@media screen and (max-width: 740px) {
+	.con2{
+		width: 100%;
+	}
+	.t-con {
+    	line-height: 250px;
+	}
+}

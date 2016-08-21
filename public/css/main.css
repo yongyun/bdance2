@@ -1,0 +1,188 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*---Reset css---*/
+body {
+	    margin: 0;
+	    padding: 0;	
+	    font-family: 'Raleway', sans-serif;
+}
+ul,li {
+	list-style: none;
+}
+img {
+    -moz-background-size: cover;
+    background-size: cover;
+}
+header {
+	position: fixed;
+    margin: 0 auto;
+    width: 100%;
+    height: 125px;
+   	background: rgba(0,0,0,0.5.component-fullwidth li); 
+   	top:0;
+   	z-index: 9999;
+}
+header ul {
+	margin: 0;
+}
+header ul li {
+　  display: inline-block;
+	color: #fff;
+	float: left;
+	text-align: center;
+	line-height: 125px;
+    position: relative;
+    letter-spacing: 2px;
+    font-size: 13px;
+}
+header ul li a {
+	color: #fff;
+}
+
+.film {
+	width: 100%;
+	position: absolute;
+    top: 0;
+    left: 0;
+    max-width: none;
+    will-change: transform;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 1380px) {
+	.film {
+	    height: 100vh;
+	}
+}
+
+.nav-collapse {
+	position: relative;
+}
+.logo {
+    float: left;
+    width: 40px;
+    margin: 25px;
+    z-index: 9999;
+    position: fixed;
+}
+#slider {
+	width: 100%;
+	height: 100%;
+}
+.itemwrap {
+	margin: 0;
+	padding: 0;
+}
+.current {
+	opacity: 1;
+    pointer-events: auto;
+    z-index: 1000;
+}
+.language {
+	padding: 0;
+}
+.fa-angle-right, .fa-angle-left {
+	font-size: 25px;
+}
+
+.social-item {
+	margin-left: 20px;
+}
+
+.social-item a {
+	padding: 0;
+}
+.social-item-main {
+	width: 50px;
+}
+
+.copyright {
+	color: #fff;
+	font-size: 12px;
+	position: absolute;
+	bottom: 20px;
+	text-align: center;
+	width: 100%;
+	z-index: 9999;
+}
+
+.prevIcn , .nextIcn {
+	width: 13px;
+}
+
+.imgfit {
+	margin:0;
+    height:100%;
+    overflow:hidden;
+}
+
+.imgfit img {
+	min-height:100%;
+    min-width:100%;
+    height:auto;
+    width: 100%;
+    position:absolute;
+    top:-100%; bottom:-100%;
+    left:-100%; right:-100%;
+    margin:auto;
+}
+
+@media screen and (max-width: 1100px) {
+	.imgfit img {
+	    display: block;
+	    height: 100vh;
+	    width: auto;
+	}
+@media screen and (max-height: 700px) {
+    .imgfit img {
+	    display: block;
+	    height: auto;
+	    width: auto;
+	}
+}

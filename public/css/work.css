@@ -1,0 +1,12 @@
+body {
+	background-color: #f0f0f0;
+}
+
+.sec-works {
+	width: 100%;
+}
+
+.workbox img {
+	width: 33%;
+	margin: 125px auto;
+}

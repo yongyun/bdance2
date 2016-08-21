@@ -1,0 +1,141 @@
+@extends('layout')
+
+@section('custom_css')
+<link rel="stylesheet" type="text/css" href="{{ asset('css/about.css')}}" />
+@endsection
+
+@section('content')
+<section>
+			<div class="container">
+				<div class="about-top">
+					<div class="atop-text">
+						<h2>
+							<span class="quotation">&#8223; </span>
+							We believe focus and sincerity define beauty
+							<span class="quotation">&#8221;</span>
+						</h2>
+						<p>while stunning beauty is bigoted focus with a human touch,
+						coupled with the test of time, to create the value of &#34;creation&#34;. </p>
+					</div>
+					<div class="atop-down"><img src="img/down.svg"></div>
+				</div>
+			</div>
+		</section>
+		<section class="sec-white">
+			<div class="con1">
+				<div class="atext">
+					<h2><span class="quotation">&#8223; </span>  Dance is the source of his passion for life. <span class="quotation">&#8221;</span></h2>
+					<p>Taiwanese choreographer Tsai Po-Cheng endeavors to interpret Taiwanese native works in foreign countries through body aesthetics taken to extremes and a blend of oriental fantasy. </p>
+					<p>Dance is the source of Po-Cheng&#39;s passion for life. He believes that dance is a taste worth savoring, </p>
+					<p>every moment in life is a moving experience, through which multi-directional insights can be gained, </p>
+					<p>leading to the delicate mood flow experience and brewed extraordinary works.</p>
+				</div>
+			</div>	
+		</section>
+		<section class="sec-dark">
+			<section class="sec-white">
+				<div class="con2wid">
+					<div class="con2">
+						<div class="t-con">
+							<span class="t-box">About B.DANCE</span>
+						</div>
+					</div>
+					<div class="con2">
+						<div class="atext">
+							<p>&#34;B.Dance&#34; adheres to the core value of &#34;persistence for beautiful art conservation&#34;. Featuring a composite team with cross-industry links, B.Dance hopes to become an art platform that inspires creation. Through frequent international exchanges, every member on the team is brought closer to the pulse of the world, acknowledging self-worth and Taiwan&#39;s values. In the future, B.Dance will not only be just a modern dance troupe, but it will also be a synonym for talents from all sides.</p>
+						</div>
+					</div>
+				</div>
+				<div class="conwhite"></div>
+				<div class="clear"></div>
+			</section>
+		</section>
+		<section class="sec-white underline">
+			<div class="con2wid">
+				<div class="con2">
+					<div class="atext">
+						<p>B.Dance has since its founding performed in Germany, Czech Republic, Spain, Israel, Denmark, China, Hong Kong, France, and Italy, winning numerous international competitions and the recognition of renowned dance troupes.</p>
+					</div>
+				</div>
+				<div class="con2">
+					<img src="img/logo.svg">
+				</div>
+			</div>
+			<div class="conwhite"></div>
+			<div class="clear"></div>
+		</section>
+		<section class="sec-white">
+			<section class="sec-pic">
+				<div class="con1">
+					<div class="atext">
+						<h2>PO-CHENG TSAI</h2>
+						<p>Artistic Director of B.DANCE / Choreographer</p>
+					</div>
+					<div class="tsai"><img src="img/Tsai.jpg"></div>
+				</div>
+			</section>
+		</section>
+		<section class="sec-white">
+			<div class="con1">
+				<div class="atext at-left">
+					<p>Po-Cheng Tsai&#39;s international breakthrough came with Floating Flowers. In 2013, the production won the National Creative Dance Competition in Taiwan. In 2014, Floating Flowerswon both Audience Award and the First Production Prize at the International Competition for Choreographers in Hannover ,giving Po-Cheng Tsai the opportunity to tour Floating Flowers with dancers from Gauthier Dance. This piece was invited to perform at 2014 China Dance Forward in Hong Kong and Guangdong, and later to LUCKY TRIMMER in Berlin in 2015.</p>
+					<p>This year, Po-Cheng&#39;s new work, Hugin/Munin came in first and won Tanz Luzerner Theater Production Award at Copenhagen International Choreography Competition in Denmark; also ranked No.1 and won Italy Balletto Di Siena Production Award at International Contest of Choreography Burgos in Spain. Po-Cheng Tsai founded his own company B.DANCE in Taiwan. He also worked as guest choreographer with different professional companies, including Cloud Gate 2 and Kaohsiung City Ballet. Tsai dedicated himself to dance education and choreographed at Tsoying Senior High School and the Taipei Physical Education College.</p></p>
+				</div>
+			</div>
+		</section>
+		<section id="slider" class="sec-slide">
+			<div id="component" class="component component-fullwidth con1 con3 pwht">
+				<div class="atext"><h2>&#8212; Awards &#8212;</h2></div>
+					<ul class="itemwrap atext pwht">
+						<li class="current">
+							<p>Hugin/Munin</p>
+							<h5>Copenhagen International Choreography Competition</h5>
+							<h6>First prize &#38; Tanz Luzerner Theater Production Award</h6>
+						</li>
+						<li>
+							<p>Hugin/Munin</p>
+							<h5>International Contest of Choreography Burgos and New York</h5>
+							<h6>First prize &#38; Italy Balletto Di Siena production award</h6>
+						</li>
+					</ul>
+					<nav>
+						<a class="prev" href="#"><img class="prevIcn" src="img/prevIcn.svg"></a>
+						<a class="next" href="#"><img class="nextIcn" src="img/nextIcn.svg"></a>
+					</nav>
+			</div>
+		</section>
+		<section id="slider" class="sec-white sec-media">
+			<div id="component" class="component component-fullwidth con1">
+					<div class="atext media-title"><h2>&#8212; Media &#8212;</h2></div>
+					<ul class="itemwrap atext">
+						<li class="current">
+							<div class="atext at-left">
+								<p>Featuring unpredictability, Tsai Po-Cheng puts everyday objects to good uses and creates new ideas out of them.</p>
+								<p>In a nut shell, he is a magician that unveils the mystery of the gift cordially presented to the audience.</p>
+								<h4>&#8212; October 2015  Issue, La vie</h4>
+							</div>
+							<div class="atext at-left">
+								<p>Artistic director Kathleen McNurney&#58; &#34;Hugin/Munin&#34; is full of suprises. The choreographer&#39;s talents are undeniable. Dancers Change Shen-Ho and Change Chien-Chih&#39;s unique body performance is displayed. It is undoubtedly the best heartwarming work among this year&#39;works. </p>
+								<h4>&#8212; Taipei Representative Office in Denmark (Resident News)</h4>
+							</div>
+							<div class="atext at-left">
+								<p>&#34;Floating Flower&#34; comes from a 27-year-old choreographer. A heavy pull on life and death transcends to a new realm for  affectionate farewell.</p>
+								<h4>&#8212; PAR Performance Arts Reviews &#47; No. 274 &#47; 2015. July &#47; page15</h4>
+							</div>
+						</li>
+						<li>123</li>
+					</ul>
+					<nav>
+						<a class="prev" href="#">Prev</a>
+						<a class="next" href="#">Next</a>
+					</nav>
+			</div>
+		</section>
+		<section class="onepage-foot">
+			<div class="con1">
+				<footer>
+					<p class="copyright">Copyright &copy; 2016 B.DANCE . All rights reserved.</p>
+				</footer>
+			</div>
+		</section>
+@endsection
