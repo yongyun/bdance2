@@ -131,3 +131,12 @@ footer {
   -o-filter: grayscale(0%);
   -o-transition: .5s ease-in-out;
 }
+
+.feature {
+	width: 350px;
+	display: inline-block;
+}
+
+.feature img {
+	width: 350px;
+}

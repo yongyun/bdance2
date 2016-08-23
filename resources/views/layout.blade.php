@@ -17,7 +17,7 @@
 		<script src="{{ asset('js/responsive-nav.js')}}"></script>
 	</head>
 	<body>
-		<a  href="/"><img class="logo" src="{{ asset('img/logow.png')}}" alt="#"></a>
+		<a href="/"><img class="logo" src="{{ asset('img/logow.png')}}" alt="#"></a>
 		<header id="header" class="fxFade">
 			<a href="/"><img class="logo" src="{{ asset('img/logow.png')}}" alt="#"></a>
 			<nav class="nav-collapse">
