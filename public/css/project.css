@@ -1,0 +1,115 @@
+section {
+    height: auto;
+}
+
+p {
+	width: 100%;
+	line-height: 25px;
+	font-size: 14px;
+}
+
+h1, h2 {
+	font-size: 20px;
+	margin: 10px 0;
+	letter-spacing: 2px;
+    font-style: italic;
+}
+
+h3 {
+	font-size: 16px;
+    font-weight: lighter;
+    margin: 20px 0 10px 0;
+    letter-spacing: 2px;
+}
+
+h4 {
+	font-style: italic;
+	text-align: right;
+	font-size: 12px;
+	line-height: 35px;
+	margin-top: 20px; 
+}
+
+.sec-img {
+	height: 500px;
+}
+
+.sec-img img {
+	width: 33%;
+    display: inline-block;
+    float: left;
+    margin: 0;
+    height: 500px;
+}
+
+.sec-norm {
+	margin: 70px 0;
+}
+
+.conwidth {
+	width: 70%;
+    margin: auto;
+}
+
+.sec-norm h2 {
+    margin-bottom: 50px;
+}
+
+.text-lft {
+	text-align: left;
+}
+
+.underline {
+	border-bottom: 1px solid #f0f0f0;
+}
+
+.staffoto img {
+	width: 180px;
+}
+
+
+.con1 {
+	overflow: hidden;
+    width: 100%;
+}
+
+.onepage-foot {
+	position: relative;
+	background-color: #999;
+}
+
+.onepage-foot p {
+	color: #fff;
+    font-size: 12px;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    z-index: 9999;
+    background-color: #000;
+    line-height: 50px;
+}
+
+.proj-btm {
+    width: 200px;
+    display: inline-block;
+    background-image: url('../img/rhombus2.svg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+}
+
+.proj-btm a p {
+	line-height: 40px;
+}
+
+footer {
+	margin-top: 50px;
+}
+
+@media screen and (max-width: 400px) {
+	.proj-btm {
+    	width: 100%;
+    	margin: 20px 0;
+    }
+}
