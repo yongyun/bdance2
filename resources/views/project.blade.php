@@ -1,9 +1,14 @@
+<?php
+	$reviewLimit = 3;
+	$date=date_create($project->perform_date);
+	$date_year = date_format($date,"Y");
+?>
+
 @extends('layout')
 
 @section('custom_css')
-
 <link rel="stylesheet" type="text/css" href="{{asset('css/project.css')}}">
-
+<link rel="stylesheet" type="text/css" href="{{asset('plugins/jquery.bxslider/jquery.bxslider.css')}}">
 @endsection
 
 @section('content')
@@ -13,16 +18,18 @@
 		<div class="conwidth">
 			<h1>{{ $project->name}}</h1>
 			<p>{{ $project->intro}}</p>
-			<p>&#8212; 2014 &#8212;</p>
+			<p>&#8212; {{ $date_year }} &#8212;</p>
 		</div>
 	</section>
 
-	<section class="sec-img">
-		<div>
+	<section class="sec-img" >
+		<div id="film_roll">
 			@foreach ($images as $image)
-				<img src="{{ asset($image->url)}}" alt="">
+			  <div>
+			    <img src="{{ asset($image->url)}}" />
+			  </div>
 			@endforeach
-		</div>	
+		</div>
 	</section>
 
 	<section class="sec-norm">
@@ -40,12 +47,41 @@
 
 	<section class="sec-norm underline">
 			<h2>&#8212; Reviews &#8212;</h2>
-			@foreach ($reviews as $review)
-				<div class="conwidth" style="margin-bottom: 70px;">
-					<p class="text-lft">{{ $review->content}}</p>
-					<h4>&#8212; {{ $project->perform_date}} {{ $review->reviewer}}</h4>
-				</div>
-			@endforeach
+			<ul class="bxslider">
+
+			<?php
+				$c_reviews = count($reviews);
+				foreach ($reviews as $key => $value) {
+					if ($key % $reviewLimit == 0) {
+			?>
+				<li class="{{ $c_reviews}}">
+			<?php
+					} ?>
+					<div class="conwidth {{ $key == count($reviews) -1 }}" style="margin-bottom: 70px;">
+						<p class="text-lft">{{ $value->content}}</p>
+						<h4>&#8212; {{ $project->perform_date}} {{ $value->reviewer}}</h4>
+					</div>
+			<?php
+					if ($key % $reviewLimit == $reviewLimit -1 || $key == $c_reviews - 1 ) {
+			?>
+				</li>
+			<?php
+					}
+				}
+			?>
+			</ul>
+			<div id="bx-pager">
+			    <ul>
+			    	<?php 
+			    		$pages = ceil( count($reviews) / $reviewLimit); 
+			    		for ($i = 1; $i <= $pages; $i ++) { 
+	    			?>
+	    				<li> <a data-slide-index="{{ $i - 1 }}" href="">{{ $i}}</a></li>
+	    			<?php
+	    				}
+		    		?>
+			    </ul>
+			</div>
 	</section>
 
 	<section class="sec-norm">
@@ -60,7 +96,7 @@
 					<p>{{$stuff->role}}</p>
 				</div>
 			@endforeach
-		</div>	
+		</div>
 	</section>
 
 	<section class="sec-norm">
@@ -70,12 +106,12 @@
 				<p>{{ $stuff->name}} - {{$stuff->role}}</p>
 			@endforeach
 			<p>Tommy Lin - Assistant / Tommy Lin - Assistant / Tommy Lin - Assistant</p>
-		</div>	
+		</div>
 	</section>
 
 	<section class="sec-norm">
 		<div class="proj-btm"><a href="/works"><p>&#8212; All Works &#8212;</p></a></div>
-		<div class="proj-btm"><a href=""><p>&#8212; Back to Top &#8212;</p></a></div>
+		<div class="proj-btm"><a href="#" class="backToTop"><p>&#8212; Back to Top &#8212;</p></a></div>
 	</section>
 
 	<section class="onepage-foot">
@@ -86,6 +122,32 @@
 			</div>
 	</section>
 @endsection
-@section('footer')
 
+@section('custom_js')
+<script src="{{ asset('plugins/film_roll/js/jquery.film_roll.min.js')}}"></script>
+<script src="{{ asset('plugins/jquery.bxslider/jquery.bxslider.min.js')}}"></script>
+<script>
+	$(function() {
+		var fr = new FilmRoll({
+		    container: '#film_roll',
+		    height: 500
+		  });
+		var reviewSlider = $('.bxslider').bxSlider({
+			pagerCustom: '#bx-pager'
+		});
+		$('.backToTop').click(function(e){
+			e.preventDefault();
+			$('html, body').animate({scrollTop : 0}, 1000);
+			return false;
+		});
+		$('a.pager-prev').click(function () {
+	    var current = reviewSlider.getCurrentSlide();
+			    reviewSlider.goToPrevSlide(current) - 1;
+			});
+		$('a.pager-next').click(function () {
+		    var current = reviewSlider.getCurrentSlide();
+		    reviewSlider.goToNextSlide(current) + 1;
+		});
+	});
+</script>
 @endsection

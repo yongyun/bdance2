@@ -35,11 +35,8 @@ h4 {
 }
 
 .sec-img img {
-	width: 33%;
-    display: inline-block;
-    float: left;
-    margin: 0;
     height: 500px;
+    margin-left: 10px;
 }
 
 .sec-norm {

@@ -1,5 +1,8 @@
 @extends('layout')
 
+@section('custom_css')
+@endsection
+
 @section('content')
 <section id="slider"><!--slider-->
 	<div id="component" class="component component-fullwidth " >
@@ -26,3 +29,6 @@
 </footer>
 @endsection
 
+@section('custom_js')
+<script src="{{ asset('js/main.js')}}"></script>
+@endsection

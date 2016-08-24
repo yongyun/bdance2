@@ -12,7 +12,7 @@
 		<link rel="stylesheet" type="text/css" href="{{ asset('css/common.css')}}" />
 		@yield('custom_css')
 		<link href='https://fonts.googleapis.com/css?family=Raleway:100' rel='stylesheet' type='text/css'>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+		<script   src="https://code.jquery.com/jquery-1.12.4.min.js"   integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="   crossorigin="anonymous"></script>
 		<script src="{{ asset('js/modernizr.custom.js')}}"></script>
 		<script src="{{ asset('js/responsive-nav.js')}}"></script>
 	</head>
@@ -60,7 +60,6 @@
 			@yield('content')
 			@yield('footer')
 		<script src="{{ asset('js/classie.js')}}"></script>
-		<script src="{{ asset('js/main.js')}}"></script>
 		<script src="{{ asset('js/fastclick.js')}}"></script>
    	 	<script src="{{ asset('js/scroll.js')}}"></script>
     	<script src="{{ asset('js/fixed-responsive-nav.js')}}"></script>
