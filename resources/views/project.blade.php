@@ -7,8 +7,8 @@
 @extends('layout')
 
 @section('custom_css')
-<link rel="stylesheet" type="text/css" href="{{asset('css/project.css')}}">
 <link rel="stylesheet" type="text/css" href="{{asset('plugins/jquery.bxslider/jquery.bxslider.css')}}">
+<link rel="stylesheet" type="text/css" href="{{asset('css/project.css')}}">
 @endsection
 
 @section('content')

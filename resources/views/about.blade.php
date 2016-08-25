@@ -1,8 +1,8 @@
 @extends('layout')
 
 @section('custom_css')
-<link rel="stylesheet" type="text/css" href="{{ asset('css/about.css')}}" />
 <link rel="stylesheet" type="text/css" href="{{asset('plugins/jquery.bxslider/jquery.bxslider.css')}}">
+<link rel="stylesheet" type="text/css" href="{{ asset('css/about.css')}}" />
 @endsection
 
 @section('content')
@@ -84,28 +84,40 @@
 				</div>
 			</div>
 		</section>
-		<section id="slider" class="sec-slide">
-			<ul class="bxslider" id="awardSlider">
-				<li class="current">
-					<p>Hugin/Munin</p>
-					<h5>Copenhagen International Choreography Competition</h5>
-					<h6>First prize &#38; Tanz Luzerner Theater Production Award</h6>
-				</li>
-				<li>
-					<p>Hugin/Munin</p>
-					<h5>International Contest of Choreography Burgos and New York</h5>
-					<h6>First prize &#38; Italy Balletto Di Siena production award</h6>
-				</li>
-			</ul>
-			<div id="bx-pager">
-			    <ul>
-			        <li> <a data-slide-index="0" href="">1</a>
-			        </li>
-			        <li> <a data-slide-index="1" href="">2</a>
-			        </li>
-			    </ul>
+
+		<section id="a-slider" class="sec-slide">
+			<h2 class="textwhite">&#8212; Awards &#8212;</h2></div>
+			<div class="awards">
+				<ul class="bxslider textwhite" id="awardSlider">
+					<li class="current">
+						<p>Hugin/Munin</p>
+						<h5>Copenhagen International Choreography Competition</h5>
+						<h6>First prize &#38; Tanz Luzerner Theater Production Award</h6>
+					</li>
+					<li>
+						<p>Hugin/Munin</p>
+						<h5>International Contest of Choreography Burgos and New York</h5>
+						<h6>First prize &#38; Italy Balletto Di Siena production award</h6>
+					</li>
+					<li>
+						<p>Hugin/Munin</p>
+						<h5>International Choreography Competition in Jerusalem</h5>
+						<h6>Sliver prize</h6>
+					</li>
+					<li>
+						<p>Floating Flowers</p>
+						<h5>20th MASDANZA International choreography competition</h5>
+						<h6>Best choreography of Audience</h6>
+					</li>
+					<li>
+						<p>Floating Flowers</p>
+						<h5>29th International Choreography Competition Hanover in 2014</h5>
+						<h6>Gauthier Dance//Dance company Theaterhaus Stuttgart Production Award. &#38; Audience award</h6>
+					</li>
+				</ul>
 			</div>
 		</section>
+
 		<section id="slider" class="sec-white sec-media">
 			<div id="component" class="component component-fullwidth con1">
 					<div class="atext media-title"><h2>&#8212; Media &#8212;</h2></div>
@@ -127,13 +139,21 @@
 						</li>
 						<li>123</li>
 					</ul>
+					<div id="bx-pager">
+					    <ul>
+					        <li> <a data-slide-index="0" href="">1</a>
+							</li>
+					        <li> <a data-slide-index="1" href="">2</a>
+					        </li>
+					    </ul>
+					</div>
 			</div>
 		</section>
 		<section class="onepage-foot">
 			<div class="con1">
-				<footer>
+				<div style="margin-top: 150px;">
 					<p class="copyright">Copyright &copy; 2016 B.DANCE . All rights reserved.</p>
-				</footer>
+				</div>
 			</div>
 		</section>
 @endsection
@@ -143,17 +163,19 @@
 <script>
 	$(function() {
 		var awardSlider = $('#awardSlider').bxSlider({
+			
+		});
+		var mediaSlider = $('#MediaSlider').bxSlider({
 			pagerCustom: '#bx-pager'
 		});
-		var mediaSlider = $('#MediaSlider').bxSlider({});
 
 		$('a.pager-prev').click(function () {
-	    var current = awardSlider.getCurrentSlide();
-			    awardSlider.goToPrevSlide(current) - 1;
+	    var current = mediaSlider.getCurrentSlide();
+			    mediaSlider.goToPrevSlide(current) - 1;
 			});
 		$('a.pager-next').click(function () {
-		    var current = awardSlider.getCurrentSlide();
-		    slider.goToNextSlide(current) + 1;
+		    var current = mediaSlider.getCurrentSlide();
+		    mediaSlider.goToNextSlide(current) + 1;
 		});
 	});
 </script>

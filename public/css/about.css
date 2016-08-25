@@ -239,7 +239,7 @@ h6 {
 
 .onepage-foot {
 	position: relative;
-	background-color: #999;
+	background-color: #fff;
 }
 
 .onepage-foot p {
@@ -273,4 +273,71 @@ h6 {
 	.t-con {
     	line-height: 250px;
 	}
+}
+
+#awardSlider p h5 h6 {
+	color: #fff;
+}
+
+.textwhite {
+	color: #fff;
+}
+
+#a-slider {
+	width: 100%;
+	height: 250px;
+	padding: 45px 0;
+}
+
+
+.awards {
+	margin-top: 25px;
+}
+
+#a-slider .bx-wrapper .bx-pager.bx-default-pager a {
+    background: #fff; 
+    opacity: 0.5;
+    width: 5px;
+    height: 5px;
+}
+
+#a-slider .bx-wrapper .bx-pager.bx-default-pager a:hover,
+#a-slider .bx-wrapper .bx-pager.bx-default-pager a.active {
+	background: #fff;
+	opacity: 1;
+}
+
+
+#a-slider .bx-wrapper .bx-controls-direction a {
+	text-indent: -9999px;
+	width: 13px;
+	height: 25px;
+}
+
+#a-slider .bx-wrapper .bx-prev {
+	background-image: url(/img/PrevIcn.svg); 
+	background-size: 13px;
+}
+
+#a-slider .bx-wrapper .bx-next {
+	background-image: url(/img/NextIcn.svg); 
+    background-size: 13px;
+}
+
+#a-slider .bx-wrapper .bx-prev {
+    left: 20px;
+    top: 20px;
+}
+
+#a-slider .bx-wrapper .bx-next {
+    right: 20px;
+    top: 20px;
+}
+
+#a-slider .bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto {
+	bottom: -40px;
+} 
+
+#slider .itemwrap {
+	margin-top: 0;
 }
