@@ -130,7 +130,8 @@
 	$(function() {
 		var fr = new FilmRoll({
 		    container: '#film_roll',
-		    height: 500
+		    height: 500,
+		    no_css: true
 		  });
 		var reviewSlider = $('.bxslider').bxSlider({
 			pagerCustom: '#bx-pager'
