@@ -12,10 +12,10 @@
 @endsection
 
 @section('content')
-	<section style="height: 125px; background-color:#dcdcdc;"></section>
+	<section style="height: 125px; background-color:#000;"></section>
 
-	<section class="sec-norm">
-		<div class="conwidth">
+	<section class="sec-dark">
+		<div class="conwidth text-white">
 			<h1>{{ $project->name}}</h1>
 			<p>{{ $project->intro}}</p>
 			<p>&#8212; {{ $date_year }} &#8212;</p>
@@ -32,9 +32,12 @@
 		</div>
 	</section>
 
+
+
 	<section class="sec-norm">
 		<div class="conwidth">
 			<h2>&#8212; Information &#8212;</h2>
+			<p style="margin-bottom: 20px;">Date: {{ $project->perform_date }}</p>
 			<p class="text-lft">{{ $project->description}}</p>
 		</div>
 	</section>
