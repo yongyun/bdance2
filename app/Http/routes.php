@@ -10,6 +10,7 @@
 | and give it the controller to call when that URI is requested.
 |
 */
+use Illuminate\Support\Facades\Input;
 
 
 Route::get('/', function () {
@@ -22,6 +23,25 @@ Route::get('/about', function () {
 
 Route::get('/contact', function () {
     return view('contact');
+});
+
+Route::post('/sendMail', function() {
+
+	$name = Input::get('name');
+
+	$email = Input::get('email');
+	$messages = Input::get('message');
+	$mess = $name + " say: " + $messages;
+	$subject = "[BDance] " + $name+ " send you a message";
+	$data = array('name'=> $name, 'email'=> $email, 
+		'subject'=> $subject, 'message'=> $mess);
+
+	Mail::raw($messages, function($message) use ($data)
+		{
+
+		    $message->to($data['email'])->subject('You got a Message!');
+		});
+	return redirect('/');
 });
 
 

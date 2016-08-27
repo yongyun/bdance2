@@ -25,20 +25,20 @@
 					<div class="panel-heading">
 					</div>
 					<div class="panel-body">
-						<form name="contactform" method="post" action="http://wedding-space.net/01_admin_resources/blog/contact_form/mailer.php" class="form-horizontal" role="form">
+						<form name="contactform" method="post" action="/sendMail" class="form-horizontal" role="form">
 							<div class="form-group">
 								<div class="col-lg-10">
-									<input type="text" class="form-control" id="inputName" name="inputName" placeholder="Your Name">
+									<input type="text" class="form-control" id="inputName" name="name" placeholder="Your Name">
 								</div>
 							</div>
 							<div class="form-group">
 								<div class="col-lg-10">
-									<input type="text" class="form-control" id="inputEmail" name="inputEmail" placeholder="Your Email">
+									<input type="text" class="form-control" id="inputEmail" name="email" placeholder="Your Email">
 								</div>
 							</div>
 							<div class="form-group">
 								<div class="col-lg-10">
-									<textarea class="form-control" rows="4" id="inputMessage" name="inputMessage" placeholder="Your message..."></textarea>
+									<textarea class="form-control" rows="4" id="inputMessage" name="message" placeholder="Your message..."></textarea>
 								</div>
 							</div>
 							<div class="form-group">
@@ -48,6 +48,7 @@
 									</button>
 								</div>
 							</div>
+							<input type="hidden" name="_token" value="{{{ csrf_token() }}}" />
 						</form>
 						<div class="or"><p>or</p></div>
 						<div class="admin-info">

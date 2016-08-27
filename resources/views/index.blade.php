@@ -1,6 +1,7 @@
 @extends('layout')
 
 @section('custom_css')
+<link rel="stylesheet" type="text/css" href="{{ asset('css/component.css')}}" />
 @endsection
 
 @section('content')

@@ -98,14 +98,6 @@
 
 /* DIRECTION CONTROLS (NEXT / PREV) */
 
-#bx-pager {
-	position: absolute;
-    display: inline-block;
-    left: 0;
-    right: 0;
-    bottom: -1494px;
-}
-
 #bx-pager ul li {
 	display: inline-block;
 	margin: 0 10px;

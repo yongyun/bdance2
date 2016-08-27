@@ -3,7 +3,6 @@
 	<head>
 		<meta charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="{{ asset('css/normalize.css')}}" />
-		<link rel="stylesheet" type="text/css" href="{{ asset('css/component.css')}}" />
 		<link rel="stylesheet" type="text/css" href="{{ asset('css/demo.css')}}" />
 		<link rel="stylesheet" type="text/css" href="{{ asset('css/fxfullwidth.css')}}" />
 		<link rel="stylesheet" type="text/css" href="{{ asset('css/head.css')}}" />

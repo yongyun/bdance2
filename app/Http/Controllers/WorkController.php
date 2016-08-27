@@ -29,7 +29,7 @@ class WorkController extends Controller {
 		$other_stuff = Stuff::where([
 				['work_id', '=' , $id],
 				['type', '=' , 'secondary']
-			])->get();
+			])->first();
 
 		return view('project', 
 			['project' => $work, 'images' => $images, 'reviews' => $reviews,

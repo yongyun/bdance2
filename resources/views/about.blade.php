@@ -122,7 +122,7 @@
 			<div id="component" class="component component-fullwidth con1">
 					<div class="atext media-title"><h2>&#8212; Media &#8212;</h2></div>
 					<ul class="itemwrap atext bxslider" id="MediaSlider">
-						<li class="current">
+						<li >
 							<div class="atext at-left">
 								<p>Featuring unpredictability, Tsai Po-Cheng puts everyday objects to good uses and creates new ideas out of them.</p>
 								<p>In a nut shell, he is a magician that unveils the mystery of the gift cordially presented to the audience.</p>
@@ -137,7 +137,16 @@
 								<h4>&#8212; PAR Performance Arts Reviews &#47; No. 274 &#47; 2015. July &#47; page15</h4>
 							</div>
 						</li>
-						<li>123</li>
+						<li>
+							<div class="atext at-left">
+								<p>Artistic director Kathleen McNurney&#58; &#34;Hugin/Munin&#34; is full of suprises. The choreographer&#39;s talents are undeniable. Dancers Change Shen-Ho and Change Chien-Chih&#39;s unique body performance is displayed. It is undoubtedly the best heartwarming work among this year&#39;works. </p>
+								<h4>&#8212; Taipei Representative Office in Denmark (Resident News)</h4>
+							</div>
+							<div class="atext at-left">
+								<p>&#34;Floating Flower&#34; comes from a 27-year-old choreographer. A heavy pull on life and death transcends to a new realm for  affectionate farewell.</p>
+								<h4>&#8212; PAR Performance Arts Reviews &#47; No. 274 &#47; 2015. July &#47; page15</h4>
+							</div>
+						</li>
 					</ul>
 					<div id="bx-pager">
 					    <ul>
@@ -166,7 +175,10 @@
 			
 		});
 		var mediaSlider = $('#MediaSlider').bxSlider({
-			pagerCustom: '#bx-pager'
+			pagerCustom: '#bx-pager',
+			onSliderLoad: function () {
+				$('#bx-pager').appendTo('.bx-controls-direction');
+			}
 		});
 
 		$('a.pager-prev').click(function () {

@@ -105,10 +105,8 @@
 	<section class="sec-norm">
 		<div class="conwidth">
 			<h2>&#8212; Staff &#8212;</h2>
-			@foreach ($other_stuff as $stuff)
-				<p>{{ $stuff->name}} - {{$stuff->role}}</p>
-			@endforeach
-			<p>Tommy Lin - Assistant / Tommy Lin - Assistant / Tommy Lin - Assistant</p>
+			{!! $other_stuff->rest_stuffs !!}
+			
 		</div>
 	</section>
 
@@ -137,7 +135,10 @@
 		    no_css: true
 		  });
 		var reviewSlider = $('.bxslider').bxSlider({
-			pagerCustom: '#bx-pager'
+			pagerCustom: '#bx-pager',
+			onSliderLoad: function () {
+				$('#bx-pager').appendTo('.bx-controls-direction');
+			}
 		});
 		$('.backToTop').click(function(e){
 			e.preventDefault();
