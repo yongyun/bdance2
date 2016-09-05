@@ -5,7 +5,7 @@
 <link rel="stylesheet" type="text/css" href="{{asset('css/project.css')}}">
 <style type="text/css">
 	body {
-		background-color: #000;
+		background-color: #111;
 	}
 </style>
 
@@ -16,14 +16,25 @@
 
 	<div class="grid">
 		@foreach ($works as $work)
-			<div class="grid-item">
-				<div class="feature"><img src="{{ asset($work->feature_img) }}"></div>
-				<p class="text-white"><a href="/works/{{$work->id}}" title="">{{ $work->name}}</a></p>
-				<p class="text-white">{{ $work->perform_date}}</p>
+			<div class="grid-item staffoto">
+				<a href="/works/{{$work->id}}" title="">
+					<div class="feature box-line"><img src="{{ asset($work->feature_img) }}"></div>
+					<br>
+					<p class="text-white" style="letter-spacing: 1px;">{{ $work->name}}</p>
+				</a>
+				<p class="text-white" style="font-size: 12px;">{{ $work->perform_date}}</p>
+				<br>
 			</div>	
 		@endforeach
 	</div>
 	
+	<section class="onepage-foot">
+			<div class="con1">
+				<footer>
+					<p class="copyright">Copyright &copy; 2016 B.DANCE . All rights reserved.</p>
+				</footer>
+			</div>
+	</section>
 
 @endsection
 

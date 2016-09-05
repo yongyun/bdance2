@@ -335,9 +335,29 @@ h6 {
 }
 
 #a-slider .bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto {
-	bottom: -40px;
+	
 } 
 
 #slider .itemwrap {
 	margin-top: 0;
+}
+
+.proj-btm {
+    width: 200px;
+    display: inline-block;
+    background-image: url('../img/rhombus2.svg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+}
+
+.proj-btm a p {
+	line-height: 40px;
+}
+
+
+@media screen and (max-width: 450px) {
+	#a-slider .bx-wrapper .bx-controls-direction a {
+		display: none;
+	}
 }

@@ -21,7 +21,7 @@
 			<a href="/"><img class="logo" src="{{ asset('img/logow.png')}}" alt="#"></a>
 			<nav class="nav-collapse">
 				<ul>
-					<li class="menu-item active"><a href="/about">About us</a></li>
+					<!-- <li class="menu-item active"><a href="/about">About us</a></li>
 					<li class="menu-item"><a href="/works">Works</a></li>
 					<!-- <li class="menu-item"><a href="#">News</a></li> -->
 					<li class="menu-item"><a href="/contact">Contact us</a></li>

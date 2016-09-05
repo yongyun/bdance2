@@ -3301,3 +3301,15 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   -webkit-animation-name: zoomOutUp;
   animation-name: zoomOutUp;
 }
+
+.delay-05s {
+    animation-delay: 0.5s;
+    -webkit-animation-delay: 0.5s;
+}
+
+.scroll-down img {
+  -webkit-animation: scroll-down-anim 1s infinite;
+    -moz-animation: scroll-down-anim 1s infinite;
+    -o-animation: scroll-down-anim 1s infinite;
+    animation: scroll-down-anim 1s infinite;
+}

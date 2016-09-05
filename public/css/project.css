@@ -139,6 +139,22 @@ footer {
   -o-transition: .5s ease-in-out;
 }
 
+.box-line img {
+  border: none;
+  transition: border .5s;
+  -webkit-transition: .5s ease-in-out;
+  -moz-filter: grayscale(100%); 
+  -moz-transition: .5s ease-in-out;
+  -o-filter: grayscale(100%); 
+  -o-transition: .5s ease-in-out;
+ 
+}
+
+.box-line img:hover {
+  border: 0.5px solid;
+  padding: 5px;
+}
+
 .feature {
 	width: 350px;
 	display: inline-block;
@@ -251,6 +267,6 @@ footer {
  }
 
 .grid-sizer,
-.grid-item { width: 20%; }
+.grid-item { width: 25%; }
 /* 2 columns */
 .grid-item--width2 { width: 40%; }

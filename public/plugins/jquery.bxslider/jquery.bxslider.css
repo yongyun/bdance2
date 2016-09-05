@@ -100,7 +100,7 @@
 
 #bx-pager ul li {
 	display: inline-block;
-	margin: 0 10px;
+	margin-right: 30px;
 }
 
 .bx-wrapper .bx-prev {

@@ -3,6 +3,7 @@
 @section('custom_css')
 <link rel="stylesheet" type="text/css" href="{{asset('plugins/jquery.bxslider/jquery.bxslider.css')}}">
 <link rel="stylesheet" type="text/css" href="{{ asset('css/about.css')}}" />
+<link rel="stylesheet" type="text/css" href="{{asset('css/animate.css')}}">
 @endsection
 
 @section('content')
@@ -10,22 +11,22 @@
 			<div class="container">
 				<div class="about-top">
 					<div class="atop-text">
-						<h2>
+						<h2 class="animated fadeInDown">
 							<span class="quotation">&#8223; </span>
 							We believe focus and sincerity define beauty
 							<span class="quotation">&#8221;</span>
 						</h2>
-						<p>while stunning beauty is bigoted focus with a human touch,
+						<p class="animated fadeInUp delay-05s">while stunning beauty is bigoted focus with a human touch,
 						coupled with the test of time, to create the value of &#34;creation&#34;. </p>
 					</div>
-					<div class="atop-down"><img src="img/down.svg"></div>
+					<div class="atop-down scroll-down"><img src="img/down.svg"></div>
 				</div>
 			</div>
 		</section>
 		<section class="sec-white">
 			<div class="con1">
 				<div class="atext">
-					<h2><span class="quotation">&#8223; </span>  Dance is the source of his passion for life. <span class="quotation">&#8221;</span></h2>
+					<h2 class="animated fadeInDown delay-05s"><span class="quotation">&#8223; </span>  Dance is the source of his passion for life. <span class="quotation">&#8221;</span></h2>
 					<p>Taiwanese choreographer Tsai Po-Cheng endeavors to interpret Taiwanese native works in foreign countries through body aesthetics taken to extremes and a blend of oriental fantasy. </p>
 					<p>Dance is the source of Po-Cheng&#39;s passion for life. He believes that dance is a taste worth savoring, </p>
 					<p>every moment in life is a moving experience, through which multi-directional insights can be gained, </p>
@@ -158,6 +159,12 @@
 					</div>
 			</div>
 		</section>
+
+
+		<section class="sec-white">
+			<div class="proj-btm"><a href="#" class="backToTop"><p>&#8212; Back to Top &#8212;</p></a></div>
+		</section>
+
 		<section class="onepage-foot">
 			<div class="con1">
 				<div style="margin-top: 150px;">

@@ -9,6 +9,7 @@
 @section('custom_css')
 <link rel="stylesheet" type="text/css" href="{{asset('plugins/jquery.bxslider/jquery.bxslider.css')}}">
 <link rel="stylesheet" type="text/css" href="{{asset('css/project.css')}}">
+<link rel="stylesheet" type="text/css" href="{{asset('css/animate.css')}}">
 @endsection
 
 @section('content')
@@ -16,9 +17,9 @@
 
 	<section class="sec-dark">
 		<div class="conwidth text-white">
-			<h1>{{ $project->name}}</h1>
-			<p>{{ $project->intro}}</p>
-			<p>&#8212; {{ $date_year }} &#8212;</p>
+			<h1 class="animated fadeInDown">{{ $project->name}}</h1>
+			<p class="animated fadeInUp delay-05s">{{ $project->intro}}</p>
+			<p class="animated fadeInUp delay-05s">&#8212; {{ $date_year }} &#8212;</p>
 		</div>
 	</section>
 
@@ -105,7 +106,7 @@
 	<section class="sec-norm">
 		<div class="conwidth">
 			<h2>&#8212; Staff &#8212;</h2>
-			{!! $other_stuff->rest_stuffs !!}
+			<p>{!! $other_stuff->rest_stuffs !!}</p>
 			
 		</div>
 	</section>
