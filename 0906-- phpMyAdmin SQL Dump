@@ -1,0 +1,304 @@
+-- phpMyAdmin SQL Dump
+-- version 4.4.10
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost:3306
+-- Generation Time: Sep 06, 2016 at 12:10 AM
+-- Server version: 5.5.42
+-- PHP Version: 7.0.8
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+--
+-- Database: `bdance`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `migrations`
+--
+
+CREATE TABLE `migrations` (
+  `migration` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `batch` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `migrations`
+--
+
+INSERT INTO `migrations` (`migration`, `batch`) VALUES
+('2014_10_12_000000_create_users_table', 1),
+('2014_10_12_100000_create_password_resets_table', 1),
+('2016_08_20_143507_create_projects_table', 2),
+('2016_08_21_131105_create_reviews_table', 3),
+('2016_08_21_133146_create_photos_table', 4),
+('2016_08_21_133346_update_works_table', 5),
+('2016_08_21_140644_create_stuffs_table', 6),
+('2016_08_21_140931_update_stuff_table', 7),
+('2016_08_21_141213_update_stuff2_table', 8),
+('2016_08_27_060931_update_stuff_table2', 9);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `password_resets`
+--
+
+CREATE TABLE `password_resets` (
+  `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `token` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `photos`
+--
+
+CREATE TABLE `photos` (
+  `id` int(10) unsigned NOT NULL,
+  `work_id` int(10) unsigned NOT NULL,
+  `url` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `description` text COLLATE utf8_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `photos`
+--
+
+INSERT INTO `photos` (`id`, `work_id`, `url`, `description`, `created_at`, `updated_at`) VALUES
+(1, 1, 'photos/1/1012599_267587193426062_5952564303732391958_n.jpg', '', NULL, NULL),
+(2, 1, 'photos/1/10245351_267587246759390_8125284288458844857_n.jpg', '', NULL, NULL),
+(3, 1, 'photos/1/10363399_267587230092725_5567577841873392480_n.jpg', '', NULL, NULL),
+(4, 2, '/photos/1/10411321_267587366759378_1891259313551974666_n.jpg', '', NULL, NULL),
+(5, 1, 'photos/1/10407590_267587326759382_1418415725848702690_n.jpg', '', NULL, NULL),
+(6, 1, 'photos/1/10418882_267587206759394_2568009610047073637_n.jpg', '', NULL, NULL),
+(7, 1, 'photos/1/10419485_267587016759413_8642646302064880105_n.jpg', '', NULL, NULL),
+(8, 1, 'photos/1/10421606_267587270092721_5652519243009504974_n.jpg', '', NULL, NULL),
+(9, 1, 'photos/1/10422065_267587173426064_6976001359985955390_n.jpg', '', NULL, NULL),
+(10, 1, 'photos/1/10426859_267587300092718_6616744354673023547_n.jpg', '', NULL, NULL),
+(11, 1, 'photos/1/10441241_267587203426061_4715780302270083984_n.jpg', '', NULL, NULL),
+(12, 1, 'photos/1/10446489_267587063426075_8603217588924477514_n.jpg', '', NULL, NULL),
+(13, 1, 'photos/1/10446506_267587306759384_7687217478304442073_n.jpg', '', NULL, NULL),
+(14, 1, 'photos/1/10449958_267587120092736_6963407913182886427_n.jpg', '', NULL, NULL),
+(15, 1, 'photos/1/10457560_267587136759401_7370131639112250422_n.jpg', '', NULL, NULL),
+(16, 1, 'photos/1/10489814_267587066759408_7296135101600695231_n.jpg', '', NULL, NULL),
+(17, 1, 'photos/1/10501658_267587050092743_7866702015243482094_n.jpg', '', NULL, NULL),
+(18, 1, 'photos/1/10501705_267587146759400_6280891474092193152_n.jpg', '', NULL, NULL),
+(19, 1, 'photos/1/10502223_267587100092738_9028579877209809858_n.jpg', '', NULL, NULL),
+(20, 1, 'photos/1/10511237_267587026759412_5478829893266195246_n.jpg', '', NULL, NULL),
+(21, 1, 'photos/1/10513494_267587023426079_2984160086215787980_n.jpg', '', NULL, NULL),
+(22, 1, 'photos/1/浮花劇照3.jpg', '', NULL, NULL),
+(23, 1, 'photos/1/浮花劇照4.jpg', '', NULL, NULL),
+(24, 1, 'photos/1/浮花劇照5.jpg', '', NULL, NULL),
+(25, 1, 'photos/1/浮花劇照6.jpg', '', NULL, NULL),
+(26, 1, 'photos/1/浮花Floating Flowers©B.DANCE.2.jpg', '', NULL, NULL),
+(27, 1, 'photos/1/浮花Floating Flowers©B.DANCE.3.jpg', '', NULL, NULL),
+(28, 1, 'photos/1/浮花Floating Flowers©B.DANCE.jpg', '', NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `projects`
+--
+
+CREATE TABLE `projects` (
+  `id` int(10) unsigned NOT NULL,
+  `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `intro` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `description` text COLLATE utf8_unicode_ci NOT NULL,
+  `video_url` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `video_chanel` enum('youtube','vimeo') COLLATE utf8_unicode_ci NOT NULL,
+  `perform_date` date NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `feature_img` varchar(255) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `projects`
+--
+
+INSERT INTO `projects` (`id`, `name`, `intro`, `description`, `video_url`, `video_chanel`, `perform_date`, `created_at`, `updated_at`, `feature_img`) VALUES
+(1, 'Floating Flowers', 'We believe focus and sincerity define beauty ', 'Po-Cheng Tsai''s international breakthrough came with Floating Flowers. In 2013, the production won the National Creative Dance Competition in Taiwan. In 2014, Floating Flowerswon both Audience Award and the First Production Prize at the International Competition for Choreographers in Hannover ,giving Po-Cheng Tsai the opportunity to tour Floating Flowers with dancers from Gauthier Dance. This piece was invited to perform at 2014 China Dance Forward in Hong Kong and Guangdong, and later to LUCKY TRIMMER in Berlin in 2015.\r\nThis year, Po-Cheng''s new work, Hugin/Munin came in first and won Tanz Luzerner Theater Production Award at Copenhagen International Choreography Competition in Denmark; also ranked No.1 and won Italy Balletto Di Siena Production Award at International Contest of Choreography Burgos in Spain. Po-Cheng Tsai founded his own company B.DANCE in Taiwan. He also worked as guest choreographer with different professional companies, including Cloud Gate 2 and Kaohsiung City Ballet. Tsai dedicated himself to dance education and choreographed at Tsoying Senior High School and the Taipei Physical Education College.', 'www.youtube.com/embed/tqdt0fceBNo', 'youtube', '2014-12-01', NULL, NULL, 'photos/1/p1.jpg'),
+(2, 'Project Name', 'Intro', 'Desc', 'http://www.google.com', 'youtube', '2016-08-03', NULL, NULL, 'photos/2/p2.jpg'),
+(3, 'Floating Flowers', 'We believe focus and sincerity define beauty ', 'Po-Cheng Tsai''s international breakthrough came with Floating Flowers. In 2013, the production won the National Creative Dance Competition in Taiwan. In 2014, Floating Flowerswon both Audience Award and the First Production Prize at the International Competition for Choreographers in Hannover ,giving Po-Cheng Tsai the opportunity to tour Floating Flowers with dancers from Gauthier Dance. This piece was invited to perform at 2014 China Dance Forward in Hong Kong and Guangdong, and later to LUCKY TRIMMER in Berlin in 2015.\r\nThis year, Po-Cheng''s new work, Hugin/Munin came in first and won Tanz Luzerner Theater Production Award at Copenhagen International Choreography Competition in Denmark; also ranked No.1 and won Italy Balletto Di Siena Production Award at International Contest of Choreography Burgos in Spain. Po-Cheng Tsai founded his own company B.DANCE in Taiwan. He also worked as guest choreographer with different professional companies, including Cloud Gate 2 and Kaohsiung City Ballet. Tsai dedicated himself to dance education and choreographed at Tsoying Senior High School and the Taipei Physical Education College.', 'www.youtube.com/embed/tqdt0fceBNo', 'youtube', '2014-12-01', NULL, NULL, 'photos/3/p3.jpg'),
+(4, 'Floating Flowers', 'We believe focus and sincerity define beauty ', 'Po-Cheng Tsai''s international breakthrough came with Floating Flowers. In 2013, the production won the National Creative Dance Competition in Taiwan. In 2014, Floating Flowerswon both Audience Award and the First Production Prize at the International Competition for Choreographers in Hannover ,giving Po-Cheng Tsai the opportunity to tour Floating Flowers with dancers from Gauthier Dance. This piece was invited to perform at 2014 China Dance Forward in Hong Kong and Guangdong, and later to LUCKY TRIMMER in Berlin in 2015.\r\nThis year, Po-Cheng''s new work, Hugin/Munin came in first and won Tanz Luzerner Theater Production Award at Copenhagen International Choreography Competition in Denmark; also ranked No.1 and won Italy Balletto Di Siena Production Award at International Contest of Choreography Burgos in Spain. Po-Cheng Tsai founded his own company B.DANCE in Taiwan. He also worked as guest choreographer with different professional companies, including Cloud Gate 2 and Kaohsiung City Ballet. Tsai dedicated himself to dance education and choreographed at Tsoying Senior High School and the Taipei Physical Education College.', 'www.youtube.com/embed/tqdt0fceBNo', 'youtube', '2014-12-01', NULL, NULL, 'photos/4/p4.jpg'),
+(5, 'Project Name', 'Intro', 'Desc', 'http://www.google.com', 'youtube', '2016-08-03', NULL, NULL, 'photos/1/p1.jpg'),
+(6, 'Floating Flowers', 'We believe focus and sincerity define beauty ', 'Po-Cheng Tsai''s international breakthrough came with Floating Flowers. In 2013, the production won the National Creative Dance Competition in Taiwan. In 2014, Floating Flowerswon both Audience Award and the First Production Prize at the International Competition for Choreographers in Hannover ,giving Po-Cheng Tsai the opportunity to tour Floating Flowers with dancers from Gauthier Dance. This piece was invited to perform at 2014 China Dance Forward in Hong Kong and Guangdong, and later to LUCKY TRIMMER in Berlin in 2015.\r\nThis year, Po-Cheng''s new work, Hugin/Munin came in first and won Tanz Luzerner Theater Production Award at Copenhagen International Choreography Competition in Denmark; also ranked No.1 and won Italy Balletto Di Siena Production Award at International Contest of Choreography Burgos in Spain. Po-Cheng Tsai founded his own company B.DANCE in Taiwan. He also worked as guest choreographer with different professional companies, including Cloud Gate 2 and Kaohsiung City Ballet. Tsai dedicated himself to dance education and choreographed at Tsoying Senior High School and the Taipei Physical Education College.', 'www.youtube.com/embed/tqdt0fceBNo', 'youtube', '2014-12-01', NULL, NULL, 'photos/1/p1.jpg'),
+(7, 'Project Name', 'Intro', 'Desc', 'http://www.google.com', 'youtube', '2016-08-03', NULL, NULL, 'photos/1/p1.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `reviews`
+--
+
+CREATE TABLE `reviews` (
+  `id` int(10) unsigned NOT NULL,
+  `work_id` int(10) unsigned NOT NULL,
+  `reviewer` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `content` text COLLATE utf8_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `reviews`
+--
+
+INSERT INTO `reviews` (`id`, `work_id`, `reviewer`, `content`, `created_at`, `updated_at`) VALUES
+(1, 1, 'October 2015 Issue, La vie', 'In a nut shell, he is a magician that unveils the mystery of the gift cordially presented to the audience.', NULL, NULL),
+(2, 1, 'Taipei Representative Office in Denmark (Resident News)', 'Artistic director Kathleen McNurney: "Hugin/Munin" is full of suprises. The choreographer''s talents are undeniable. Dancers Change Shen-Ho and Change Chien-Chih''s unique body performance is displayed. It is undoubtedly the best heartwarming work among this year''works.', NULL, NULL),
+(3, 2, 'sdddddd', 'ddddddd', NULL, NULL),
+(4, 2, 'dfgdh', 'fjhgk', NULL, NULL),
+(5, 1, 'October 2015 Issue, La vie TEST', 'TEST In a nut shell, he is a magician that unveils the mystery of the gift cordially presented to the audience.', NULL, NULL),
+(6, 1, '111October 2015 Issue, La vie', '111In a nut shell, he is a magician that unveils the mystery of the gift cordially presented to the audience.', NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `stuffs`
+--
+
+CREATE TABLE `stuffs` (
+  `id` int(10) unsigned NOT NULL,
+  `work_id` int(10) unsigned NOT NULL,
+  `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `type` enum('primary','secondary') COLLATE utf8_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `photo` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `role` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `rest_stuffs` text COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `stuffs`
+--
+
+INSERT INTO `stuffs` (`id`, `work_id`, `name`, `type`, `created_at`, `updated_at`, `photo`, `role`, `rest_stuffs`) VALUES
+(1, 1, 'Tsai Po Cheng', 'primary', NULL, NULL, 'photos/1/Tsai.jpg', 'Director', ''),
+(2, 1, 'Jimmy Lin', 'primary', NULL, NULL, 'photos/1/Tsai.jpg', 'Actor', ''),
+(3, 1, 'John Chen', 'primary', NULL, NULL, 'photos/1/Tsai.jpg', 'Actor', ''),
+(4, 1, 'Jerry Wang', 'primary', NULL, NULL, 'photos/1/Tsai.jpg', 'Actor', ''),
+(5, 1, '', 'secondary', NULL, NULL, '', '', 'Deng Yong Yun / Media Designer, Deng Yong Yun / Media Designer, Deng Yong Yun / Media Designer<br>'),
+(11, 2, 'name', 'primary', NULL, NULL, '/photos/2/tsai.jpg', 'actor', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(10) unsigned NOT NULL,
+  `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `password` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `remember_token` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `password_resets`
+--
+ALTER TABLE `password_resets`
+  ADD KEY `password_resets_email_index` (`email`),
+  ADD KEY `password_resets_token_index` (`token`);
+
+--
+-- Indexes for table `photos`
+--
+ALTER TABLE `photos`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `photos_work_id_foreign` (`work_id`);
+
+--
+-- Indexes for table `projects`
+--
+ALTER TABLE `projects`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `reviews`
+--
+ALTER TABLE `reviews`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `reviews_work_id_foreign` (`work_id`);
+
+--
+-- Indexes for table `stuffs`
+--
+ALTER TABLE `stuffs`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `stuffs_work_id_foreign` (`work_id`);
+
+--
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `users_email_unique` (`email`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `photos`
+--
+ALTER TABLE `photos`
+  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=29;
+--
+-- AUTO_INCREMENT for table `projects`
+--
+ALTER TABLE `projects`
+  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
+--
+-- AUTO_INCREMENT for table `reviews`
+--
+ALTER TABLE `reviews`
+  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
+--
+-- AUTO_INCREMENT for table `stuffs`
+--
+ALTER TABLE `stuffs`
+  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=13;
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `photos`
+--
+ALTER TABLE `photos`
+  ADD CONSTRAINT `photos_work_id_foreign` FOREIGN KEY (`work_id`) REFERENCES `projects` (`id`);
+
+--
+-- Constraints for table `reviews`
+--
+ALTER TABLE `reviews`
+  ADD CONSTRAINT `reviews_work_id_foreign` FOREIGN KEY (`work_id`) REFERENCES `projects` (`id`);
+
+--
+-- Constraints for table `stuffs`
+--
+ALTER TABLE `stuffs`
+  ADD CONSTRAINT `stuffs_work_id_foreign` FOREIGN KEY (`work_id`) REFERENCES `projects` (`id`);
