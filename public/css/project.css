@@ -269,6 +269,10 @@ footer {
    box-sizing: content-box;
  }
 
+.grid{
+  margin-top: 125px;
+}
+
 .grid-sizer,
 .grid-item { width: 25%; padding-bottom: 30px;}
 /* 2 columns */

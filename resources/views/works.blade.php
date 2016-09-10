@@ -14,7 +14,6 @@
 @endsection
 
 @section('content')
-	<section style="height: 125px;"></section>
 
 	<div class="grid">
 		@foreach ($works as $work)
@@ -51,6 +50,7 @@
 	});
 	$grid.imagesLoaded().progress( function() {
 	  $grid.masonry('layout');
+	  $('#loading-mask').fadeOut();
 	});
 </script>
 @endsection

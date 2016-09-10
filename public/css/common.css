@@ -10,3 +10,64 @@
 .fxFade:hover {
   background: rgba(0, 0, 0, .5);
 }
+
+#loading-mask{
+	position: fixed;
+	left: 0;
+	top: 0;
+	background-color: rgba(0,0,0, 1);
+	width: 100%;
+	height: 100%;
+	z-index: 10000;
+	color: #000;
+}
+
+.icon_logo{
+	width: 30px;
+}
+
+.box{
+	position: relative;
+	height: 100%;
+}
+
+.loader1{
+ position: relative;
+ height: 30px;
+ width: 30px;
+ border-radius: 30px;
+ border: 1px solid  rgba(255,255,255, .7);
+
+ top: 28%;
+ top: -webkit-calc(50% - 43px);
+ top: calc(50% - 43px);
+ left: 35%;
+ left: -webkit-calc(50% - 43px);
+ left: calc(50% - 43px);
+
+ -webkit-transform-origin: 50% 50%;
+   transform-origin: 50% 50%;
+ -webkit-animation: loader1 3s linear infinite;
+   animation: loader1 3s linear infinite;
+}
+
+.loader1:after{
+ content: "";
+ position: absolute;
+ top: 0px;
+ left: 20px;
+ width: 5px;
+ height: 5px;
+ border-radius: 10px;
+ background-color: #fff;
+}
+
+@-webkit-keyframes loader1{
+    0%{-webkit-transform:rotate(0deg);}
+    100%{-webkit-transform:rotate(360deg);}
+}
+
+@keyframes loader1{
+    0%{transform:rotate(0deg);}
+    100%{transform:rotate(360deg);}
+}

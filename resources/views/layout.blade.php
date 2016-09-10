@@ -16,9 +16,13 @@
 		<script src="{{ asset('js/responsive-nav.js')}}"></script>
 	</head>
 	<body>
-		<a href="/"><img class="logo" src="{{ asset('img/logow.png')}}" alt="#"></a>
+		<div id="loading-mask">	
+			<div class="box">
+			   <div class="loader1"></div>
+  			</div>
+		</div>
 		<header id="header" class="fxFade">
-			<a href="/"><img class="logo" src="{{ asset('img/logow.png')}}" alt="#"></a>
+			<a href="/"><img class="logo" id="main-logo" src="{{ asset('img/logow.png')}}" alt="#"></a>
 			<nav class="nav-collapse">
 				<ul>
 					<!-- <li class="menu-item active"><a href="/about">About us</a></li>
@@ -28,13 +32,13 @@
 					<li class="menu-item social">
 							<span class="social-item-main"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></span>
 							<span class="social-item-main"><a href="#"><i class="fa fa-vimeo" aria-hidden="true"></i></a></span>
-							<span class="social-item-main" aria-hidden="true"><a href="#">AxE</a></span>
+							<span class="social-item-main" aria-hidden="true"><a href="#"><img class="icon_logo" src="{{ asset('img/axe.svg')}}" alt=""></a></span>
 					</li>
-					<!-- <li class="menu-item social">
+					<li class="menu-item social">
 						<a class= "language" aria-hidden="true" href="#">En</a>
 						<Span>/</Span>
 						<a class= "language" aria-hidden="true" href="#">Fr</a>
-					</li> -->
+					</li>
 				</ul>
 				<!-- full screen -->
 				<ul id="fv">
@@ -42,7 +46,7 @@
 					 	<ul>
 					 		<li class="social-item"><a href="https://www.facebook.com/tsaipocheng/?fref=ts"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
 					     	<li class="social-item"><a href="https://vimeo.com/bdancetw"><i class="fa fa-vimeo" aria-hidden="true"></i></a></li>
-					     	<li class="social-item"><a href="http://www.axearts.org" aria-hidden="true">AxE</a></li>
+					     	<li class="social-item"><a href="http://www.axearts.org" aria-hidden="true"><img src="{{ asset('img/axe.svg')}}" class="icon_logo" alt=""></a></li>
 					    </ul>
 					</li>
 					<!-- <li class="menu-item">
@@ -62,6 +66,11 @@
 		<script src="{{ asset('js/fastclick.js')}}"></script>
    	 	<script src="{{ asset('js/scroll.js')}}"></script>
     	<script src="{{ asset('js/fixed-responsive-nav.js')}}"></script>
+    	<script>
+    		$('#main-logo').on('click', function(){
+    			window.location= '/';
+    		});
+    	</script>
     		@yield('custom_js')
 	</body>
 </html>
