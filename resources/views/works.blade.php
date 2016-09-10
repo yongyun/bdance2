@@ -44,9 +44,13 @@
 
 @section('custom_js')
 <script src="{{ asset('plugins/masonry/masonry.pkgd.min.js')}}"></script>
+<script src="https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
 <script>
-	$('.grid').masonry({
+	var $grid = $('.grid').masonry({
       itemSelector: '.grid-item',
-});
+	});
+	$grid.imagesLoaded().progress( function() {
+	  $grid.masonry('layout');
+	});
 </script>
 @endsection
