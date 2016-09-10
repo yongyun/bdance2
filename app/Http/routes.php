@@ -11,10 +11,13 @@
 |
 */
 use Illuminate\Support\Facades\Input;
+use Jenssegers\Agent\Agent;
 
 
 Route::get('/', function () {
-    return view('index');
+	$agent = new Agent();
+
+    return view('index', ['isMobile' => $agent->isMobile()]);
 });
 
 Route::get('/about', function () {

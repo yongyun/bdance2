@@ -1,3 +1,5 @@
+
+
 @extends('layout')
 
 @section('custom_css')
@@ -16,14 +18,16 @@
 
 	<div class="grid">
 		@foreach ($works as $work)
+		<?php
+			$date=date_create($work->perform_date);
+			$date_year = date_format($date,"Y");
+		?>
 			<div class="grid-item staffoto">
 				<a href="/works/{{$work->id}}" title="">
 					<div class="feature box-line"><img src="{{ asset($work->feature_img) }}"></div>
-					<br>
-					<p class="text-white" style="letter-spacing: 1px;">{{ $work->name}}</p>
+					<p class="text-white work_name" style="letter-spacing: 1px;">{{ $work->name}}</p>
 				</a>
-				<p class="text-white" style="font-size: 12px;">{{ $work->perform_date}}</p>
-				<br>
+				<p class="text-white" style="font-size: 12px;">{{ $date_year}}</p>
 			</div>	
 		@endforeach
 	</div>
@@ -43,8 +47,6 @@
 <script>
 	$('.grid').masonry({
       itemSelector: '.grid-item',
-      columnWidth: 350,
-      gutter: 10
 });
 </script>
 @endsection
