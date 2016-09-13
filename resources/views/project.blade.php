@@ -27,7 +27,7 @@
 		<div id="film_roll">
 			@foreach ($images as $image)
 			  <div>
-			    <img src="{{ asset($image->url)}}" />
+			    <img src="{{ asset($image->url)}}" height: 500px; />
 			  </div>
 			@endforeach
 		</div>
@@ -133,7 +133,8 @@
 		var fr = new FilmRoll({
 		    container: '#film_roll',
 		    height: 500,
-		    no_css: true
+		    no_css: true,
+		    configure_load: true,
 		  });
 		var reviewSlider = $('.bxslider').bxSlider({
 			pagerCustom: '#bx-pager',
@@ -155,5 +156,6 @@
 		    reviewSlider.goToNextSlide(current) + 1;
 		});
 	});
+	$('#loading-mask').delay(0).fadeOut();
 </script>
 @endsection

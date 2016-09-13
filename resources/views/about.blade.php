@@ -27,10 +27,10 @@
 			<div class="con1">
 				<div class="atext">
 					<h2 class="animated fadeInDown delay-05s"><span class="quotation">&#8223; </span>  Dance is the source of his passion for life. <span class="quotation">&#8221;</span></h2>
-					<p>Taiwanese choreographer Tsai Po-Cheng endeavors to interpret Taiwanese native works in foreign countries through body aesthetics taken to extremes and a blend of oriental fantasy. </p>
+					<!-- <p>Taiwanese choreographer Tsai Po-Cheng endeavors to interpret Taiwanese native works in foreign countries through body aesthetics taken to extremes and a blend of oriental fantasy. </p>
 					<p>Dance is the source of Po-Cheng&#39;s passion for life. He believes that dance is a taste worth savoring, </p>
 					<p>every moment in life is a moving experience, through which multi-directional insights can be gained, </p>
-					<p>leading to the delicate mood flow experience and brewed extraordinary works.</p>
+					<p>leading to the delicate mood flow experience and brewed extraordinary works.</p> -->
 				</div>
 			</div>	
 		</section>
@@ -197,5 +197,6 @@
 		    mediaSlider.goToNextSlide(current) + 1;
 		});
 	});
+	$('#loading-mask').delay(0).fadeOut();
 </script>
 @endsection
