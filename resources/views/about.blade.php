@@ -27,6 +27,7 @@
 			<div class="con1">
 				<div class="atext">
 					<h2 class="animated fadeInDown delay-05s"><span class="quotation">&#8223; </span>  Dance is the source of his passion for life. <span class="quotation">&#8221;</span></h2>
+					<p>&#34;B.Dance&#34; adheres to the core value of &#34;persistence for beautiful art conservation&#34;. Featuring a composite team with cross-industry links, B.Dance hopes to become an art platform that inspires creation.</p>
 					<!-- <p>Taiwanese choreographer Tsai Po-Cheng endeavors to interpret Taiwanese native works in foreign countries through body aesthetics taken to extremes and a blend of oriental fantasy. </p>
 					<p>Dance is the source of Po-Cheng&#39;s passion for life. He believes that dance is a taste worth savoring, </p>
 					<p>every moment in life is a moving experience, through which multi-directional insights can be gained, </p>
@@ -44,7 +45,7 @@
 					</div>
 					<div class="con2">
 						<div class="atext">
-							<p>&#34;B.Dance&#34; adheres to the core value of &#34;persistence for beautiful art conservation&#34;. Featuring a composite team with cross-industry links, B.Dance hopes to become an art platform that inspires creation. Through frequent international exchanges, every member on the team is brought closer to the pulse of the world, acknowledging self-worth and Taiwan&#39;s values. In the future, B.Dance will not only be just a modern dance troupe, but it will also be a synonym for talents from all sides.</p>
+							<p>Through frequent international exchanges, every member on the team is brought closer to the pulse of the world, acknowledging self-worth and Taiwan&#39;s values. In the future, B.Dance will not only be just a modern dance troupe, but it will also be a synonym for talents from all sides.</p>
 						</div>
 					</div>
 				</div>
@@ -54,9 +55,9 @@
 		</section>
 		<section class="sec-white underline">
 			<div class="con2wid">
-				<div class="con2">
+				<div class="con2" style="margin: 40px 0;">
 					<div class="atext">
-						<p>B.Dance has since its founding performed in Germany, Czech Republic, Spain, Israel, Denmark, China, Hong Kong, France, and Italy, winning numerous international competitions and the recognition of renowned dance troupes.</p>
+						<p>B.Dance has since its founding performed in Germany, Czech Republic, Spain, Israel, Denmark, China, Hong Kong, France, and Italy.</p>
 					</div>
 				</div>
 				<div class="con2">
@@ -88,6 +89,18 @@
 
 		<section id="a-slider" class="sec-slide">
 			<h2 class="textwhite">&#8212; Awards &#8212;</h2></div>
+			    <div class="grid-item" style="display: block; width: 70px; margin: auto;">
+		            <div id="loading19">
+				        <div class="cube">
+						    <div class="squre squre_front"></div>
+						    <div class="squre squre_back"></div>
+						    <div class="squre squre_left"></div>
+						    <div class="squre squre_right"></div>
+						    <div class="squre squre_top"></div>
+						    <div class="squre squre_bottom"></div>
+	   		  			</div>
+	   				</div>
+      			</div>
 			<div class="awards">
 				<ul class="bxslider textwhite" id="awardSlider">
 					<li class="current">
@@ -140,12 +153,30 @@
 						</li>
 						<li>
 							<div class="atext at-left">
-								<p>Artistic director Kathleen McNurney&#58; &#34;Hugin/Munin&#34; is full of suprises. The choreographer&#39;s talents are undeniable. Dancers Change Shen-Ho and Change Chien-Chih&#39;s unique body performance is displayed. It is undoubtedly the best heartwarming work among this year&#39;works. </p>
-								<h4>&#8212; Taipei Representative Office in Denmark (Resident News)</h4>
+								<p>Germany&#39;s Stuttgart dance troupe founder and artistic director Dric Gauthier: “Floatign flower” is an eye-catching materpiece.  </p>
+								<h4>&#8212; Report of the Central News Agency</h4>
 							</div>
 							<div class="atext at-left">
-								<p>&#34;Floating Flower&#34; comes from a 27-year-old choreographer. A heavy pull on life and death transcends to a new realm for  affectionate farewell.</p>
-								<h4>&#8212; PAR Performance Arts Reviews &#47; No. 274 &#47; 2015. July &#47; page15</h4>
+								<p>Tsao Cheng-Yuan: “Tsai Po-Cheng’s “Floating Flower” emphasizes interpersonal relationships. From this work you will discover that instead of performing in a certain mood, they use stage language devices to perform through clothing and action”. </p>
+								<h4>—nddaily</h4>
+							</div>
+							<div class="atext at-left">
+								<p>The audience’s favorite piece “Floating Flower” is a pas de deux filled with surprises created by Tsai Po-Cheng from Taiwan.  As the dance starts, the male partner readily hiding under the puffy skirt lets the female dancer sit on his shoulder. Suddenly the peitite female dancer grows like a tree, briing the first surprise to the audicence, folllowed by an interesting mix of rhthymic and lively dance.  </p>
+								<h4>&#8212; HAZ Anmeldung  newspaper’</h4>
+							</div>
+						</li>
+						<li>
+							<div class="atext at-left">
+								<p>It is precise to say the work is a clever balance of body and poetry. The choreographer’s arrangement of two dancers sitting on each other’s shoulders makes them appear like a giant dancer’s perfect skirt. Floating Flower is indeed a clever masterpiece.  </p>
+								<h4>&#8212; Germany kreiszeitung newspaper </h4>
+							</div>
+							<div class="atext at-left">
+								<p>Tsai Po-Cheng is young and gifted. He defines complexity through the simple concept of  “less is more”.  </p>
+								<h4>&#8212; critical dance commentary</h4>
+							</div>
+							<div class="atext at-left">
+								<p>Floating Fower created by young Taiwanese choreographer Tsai Po-Cheng is definitely the most popular program for the night.</p>
+								<h4>&#8212; tanznetz.de</h4>
 							</div>
 						</li>
 					</ul>
@@ -154,6 +185,8 @@
 					        <li> <a data-slide-index="0" href="">1</a>
 							</li>
 					        <li> <a data-slide-index="1" href="">2</a>
+					        </li>
+					        <li> <a data-slide-index="2" href="">3</a>
 					        </li>
 					    </ul>
 					</div>
