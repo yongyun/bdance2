@@ -311,7 +311,7 @@ h6 {
 #a-slider .bx-wrapper .bx-controls-direction a {
 	text-indent: -9999px;
 	width: 40px;
-	height: 56px;
+	height: 58px;
 	opacity: 0.7;
 	transition: opacity .5s;
 }
@@ -321,12 +321,12 @@ h6 {
 }
 
 #a-slider .bx-wrapper .bx-prev {
-	background-image: url(/img/PrevTryngo.svg); 
+	background-image: url(/img/pret.png); 
 	background-size: 40px;
 }
 
 #a-slider .bx-wrapper .bx-next {
-	background-image: url(/img/NextTryngo.svg); 
+	background-image: url(/img/nt.png); 
     background-size: 40px;
 }
 
