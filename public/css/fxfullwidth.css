@@ -1533,14 +1533,14 @@
 
 .fxFade .navOutPrev,
 .fxFade .navOutNext {
-	-webkit-animation: FadeOut 0.8s forwards ease-in;
-	animation: FadeOut 0.8s forwards ease-in;
+	-webkit-animation: FadeOut 2s forwards ease-in;
+	animation: FadeOut 2s forwards ease-in;
 }
 
 .fxFade .navInPrev,
 .fxFade .navInNext {
-	-webkit-animation: FadeIn 0.8s forwards ease-out;
-	animation: FadeIn 0.8s forwards ease-out;
+	-webkit-animation: FadeIn 1.5s forwards ease-out;
+	animation: FadeIn 1.5s forwards ease-out;
 }
 
 @-webkit-keyframes FadeOut {

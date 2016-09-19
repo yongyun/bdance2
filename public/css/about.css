@@ -183,7 +183,7 @@ h6 {
 }
 
 .t-con {
-	line-height: 265px;
+	line-height: 290px;
 }
 
 .t-box {
@@ -336,7 +336,7 @@ h6 {
 }
 
 #a-slider .bx-wrapper .bx-next {
-    right: -1px;
+    right: 0px;
     top: -20px;
 }
 
