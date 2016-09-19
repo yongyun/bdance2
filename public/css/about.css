@@ -255,7 +255,10 @@ h6 {
 }
 
 .sec-media .component-fullwidth { 
-	background: #fff;
+	background-image: url('../img/rhombus1.svg');
+	background-repeat: no-repeat;
+	background-size: 3000px;
+	background-position: center;
 }
 
 .media-title {
