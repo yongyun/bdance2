@@ -85,6 +85,20 @@ header ul li a {
 	color: #fff;
 }
 
+h5 {
+	width: 100%;
+    line-height: 25px;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+h6 {
+	width: 100%;
+    line-height: 25px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-style: italic;
+}
 .film {
 	width: 100%;
 	position: absolute;

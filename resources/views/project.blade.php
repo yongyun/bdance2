@@ -43,6 +43,38 @@
 		</div>
 	</section>
 
+	<section id="a-slider" class="sec-slide">
+			<h2 class="textwhite">&#8212; Awards &#8212;</h2></div>
+			<div class="awards">
+				<ul class="bxslider textwhite" id="awardSlider">
+					<li class="current">
+						<p>Floating Flowers</p>
+						<h5>20th MASDANZA International choreography competition</h5>
+						<h6>Best choreography of Audience</h6>
+					</li>
+					<li>
+						<p>Floating Flowers</p>
+						<h5>29th International Choreography Competition Hanover in 2014</h5>
+						<h6>Gauthier Dance//Dance company Theaterhaus Stuttgart Production Award. &#38; Audience award</h6>
+					</li>
+				</ul>
+			</div>
+		</section>
+
+	<section class="sec-norm">
+		<div class="conwidth">
+			<h2>&#8212; Details &#8212;</h2>
+				<p class="text-lft"><span>DURATION&#58; </span> 10 minutes without intermission &#124; <span>PREMIERE&#58; </span> June 28th, 2014 at Theater am Aegi, Hannover, Germany</p>
+				<p class="text-lft">TOUR DATE&#58;</p>
+				<p class="text-lft">2016 June 10-11 FLOATING FLOWERS & HUGIN/MUNIN, CÁDIZ EN DANZA (ES)</p>
+				<p class="text-lft">June 26 FLOATING FLOWERS & HUGIN/MUNIN, Zaragoza Trayecto (ES)</p>
+				<p class="text-lft">July 16 FLOATING FLOWERS, LUCKY TRIMMER DOES WALES (UK)</p>
+				<p class="text-lft">Oct 19-23 FLOATING FLOWERS & INNERMOST & ALMOST HUMAN(world premiere) - Festival Danse Péi, La Réunion (FR)</p>
+				<p class="text-lft">Nov 26B.DANCE GALA - Bilbao Dance Festival, Fundición Bilbao (ES)</p>
+				<p class="text-lft">Dec 2-3 Jerusalem International Choreography Competition (IL)</p>
+			</div>
+	</section>
+
 	<section>
 		<div>
 			<iframe width="70%" height="450px" src="//{{ $project->video_url}}?rel=0&modestbranding=1&autohide=1&showinfo=0&controls=0" frameborder="0" allowfullscreen></iframe>
@@ -146,6 +178,15 @@
 			e.preventDefault();
 			$('html, body').animate({scrollTop : 0}, 1000);
 			return false;
+		});
+		var awardSlider = $('#awardSlider').bxSlider({
+			
+		});
+		var mediaSlider = $('#MediaSlider').bxSlider({
+			pagerCustom: '#bx-pager',
+			onSliderLoad: function () {
+				$('#bx-pager').appendTo('.bx-controls-direction');
+			}
 		});
 		$('a.pager-prev').click(function () {
 	    var current = reviewSlider.getCurrentSlide();
