@@ -197,15 +197,16 @@
 		    no_css: true,
 		    configure_load: true,
 		  });
+		var awardSlider = $('#awardSlider').bxSlider({
+			
+		});
 		var reviewSlider = $('.bxslider').bxSlider({
 			pagerCustom: '#bx-pager',
 			onSliderLoad: function () {
 				$('#bx-pager').appendTo('.bx-controls-direction');
 			}
 		});
-		var awardSlider = $('#awardSlider').bxSlider({
-			
-		});
+		
 		$('.backToTop').click(function(e){
 			e.preventDefault();
 			$('html, body').animate({scrollTop : 0}, 1000);
