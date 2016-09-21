@@ -65,10 +65,10 @@
 		<div class="conwidth">
 			<h2>&#8212; Details &#8212;</h2>
 			<div class="text-lft">
-				<p>DURATION&#58;10 minutes without intermission </p>
-				<p>PREMIERE&#58; June 28th, 2014 at Theater am Aegi, Hannover, Germany</p>
+				<p>DURATION &#58; 10 minutes without intermission </p>
+				<p>PREMIERE &#58; June 28th, 2014 at Theater am Aegi, Hannover, Germany</p>
 				<div class="tour">
-					<p>TOUR DATE&#58;</p>
+					<p>TOUR DATE &#58; </p>
 					<ul>
 						<li><p>2016 June 10-11</p></li>
 						<li><h1>FLOATING FLOWERS & HUGIN/MUNIN</h1></li>
