@@ -16,6 +16,8 @@
 	    .end()
 	    .appendTo('#conslide');
 	},  6000);
+
+	$('#loading-mask').delay(0).fadeOut();
 </script>
 @endsection
 

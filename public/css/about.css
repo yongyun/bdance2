@@ -10,41 +10,6 @@ section {
 	height: auto;
 }
 
-p {
-	width: 100%;
-    line-height: 25px;
-    font-size: 14px;
-}
-
-h2 {
-	font-size: 20px;
-	margin: 10px 0;
-	letter-spacing: 2px;
-    font-style: italic;
-}
-
-h4 {
-	font-style: italic;
-	text-align: right;
-	font-size: 12px;
-	line-height: 35px;
-}
-
-h5 {
-	width: 100%;
-    line-height: 25px;
-    font-size: 12px;
-    letter-spacing: 1px;
-}
-
-h6 {
-	width: 100%;
-    line-height: 25px;
-    font-size: 14px;
-    letter-spacing: 1px;
-    font-style: italic;
-}
-
 .sec-white {
 	background: #fff;
 }
