@@ -233,7 +233,7 @@
 		});
 		var mediaSlider = $('#MediaSlider').bxSlider({
 			pagerCustom: '#bx-pager',
-			onSliderLoad: function () {
+			onSliderLoad: function ()
 				$('#bx-pager').appendTo('.bx-controls-direction');
 			}
 		});
