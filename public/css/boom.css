@@ -25,6 +25,10 @@ svg {
 	stroke-width:1;
 }
 
+.atop-text {
+	top: -230px;
+}
+
 .sec-pic {
     background-image: url(../img/rhombus3.svg);
     background-repeat: no-repeat;
@@ -32,6 +36,10 @@ svg {
     background-position: center;
     background-position-y: 10px;
     padding-bottom: 10px;
+}
+
+.t-con {
+    line-height: 150px;
 }
 
 .b-box {
@@ -43,11 +51,11 @@ svg {
     font-size: 13px;
     color: #E59F65;
     background-color: #000;
-    opacity: 0.7;
+    opacity: 0.6;
 }
 
 .boomlink {
-    width: 25%;
+    width: 20%;
     height: auto;
     display: inline-block;
 }
@@ -107,4 +115,8 @@ svg {
 	display: inline-block;
 	width: 250px;
 	margin: 20px 30px;
+}
+
+.goldline {
+	border-bottom: 1px solid #E59F65;
 }

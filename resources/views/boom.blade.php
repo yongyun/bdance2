@@ -19,13 +19,9 @@
 				<div class="about-top">
 					<div class="atop-text">
 						<h2 class="animated fadeInDown">
-							<span class="quotation">&#8223; </span>
-							We believe focus and sincerity define beauty
-							<span class="quotation">&#8221;</span>
+							<div><img src="img/boomlogo.png" width="300px"></div>
 						</h2>
-						<p class="animated fadeInUp delay-05s">while stunning beauty is bigoted focus with a human touch,
-						coupled with the test of time, to create the value of &#34;creation&#34;. 
-						</p>
+						<p class="animated fadeInUp delay-05s">B.OOM by B.DANCE - a pioneer dance project transcends borders</p>
 						<div class="con2wid">
 							<div class="boomlink">
 								<div class="t-con" >
@@ -51,7 +47,7 @@
 		<section class="sec-pic">
 			<div class="con1">
 				<div class="atext">
-						<h2>&#8212; Concept of BOOM &#8212;</h2>
+						<h2>&#8212; Concept of B.OOM &#8212;</h2>
 				</div>
 				<div class="atext at-left">
 					<p>B.OOM by B.DANCE - a pioneer dance project transcends borders

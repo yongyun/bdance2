@@ -17,7 +17,7 @@
 
 	<section class="sec-dark">
 		<div class="conwidth text-white">
-			<h1 class="animated fadeInDown">{{ $project->name}}</h1>
+			<h2 class="animated fadeInDown">{{ $project->name}}</h2>
 			<p class="animated fadeInUp delay-05s">{{ $project->intro}}</p>
 			<p class="animated fadeInUp delay-05s">&#8212; {{ $date_year }} &#8212;</p>
 		</div>
