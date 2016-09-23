@@ -1,0 +1,110 @@
+body {
+	background-image: url('../img/smo2.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+h2 {
+	color: #E59F65;
+}
+
+a {
+	transition: opacity .5s;
+}
+
+a:hover {
+	opacity: 1;
+	color: #E59F65;
+}
+
+svg {
+	position: absolute;
+	stroke:#E59F65; 
+	stroke-width:1;
+}
+
+.sec-pic {
+    background-image: url(../img/rhombus3.svg);
+    background-repeat: no-repeat;
+    background-size: 800px;
+    background-position: center;
+    background-position-y: 10px;
+    padding-bottom: 10px;
+}
+
+.b-box {
+	border: 1px solid #E59F65;
+    padding: 15px 50px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    width: 200px;
+    font-size: 13px;
+    color: #E59F65;
+    background-color: #000;
+    opacity: 0.7;
+}
+
+.boomlink {
+    width: 25%;
+    height: auto;
+    display: inline-block;
+}
+
+@media screen and (max-width: 889px) {
+	.boomlink{
+		width: 100%;
+	}
+	.t-con {
+    	line-height: 60px;
+
+	}
+}
+
+.box {
+    background: white;
+    width: 100%;
+    height: 30px;
+    position: relative;
+}
+
+.line {
+    height: 39px;
+    border-bottom: 1px solid #E59F65;
+    opacity: 0.7;
+}
+
+.triangle {
+    background: white;
+    border: 1px solid #E59F65;
+    border-width: 1px 1px 0 0;
+    transform: rotate(-45deg);
+    position: relative;
+    top: 28px;
+    width: 20px;
+    height: 20px;
+    margin: 0 auto;
+}
+
+.boomhistory img {
+	width: 250px;
+	border: none;
+  transition: border .5s;
+  -webkit-transition: .5s ease-in-out;
+  -moz-filter: grayscale(100%); 
+  -moz-transition: .5s ease-in-out;
+  -o-filter: grayscale(100%); 
+  -o-transition: .5s ease-in-out;
+}
+
+.boomhistory img:hover {
+	border: 0.5px solid;
+  	padding: 5px;
+}
+
+.boomhistory ul li {
+	display: inline-block;
+	width: 250px;
+	margin: 20px 30px;
+}

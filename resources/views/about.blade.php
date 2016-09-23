@@ -7,7 +7,7 @@
 @endsection
 
 @section('content')
-<section>
+		<section>
 			<div class="container">
 				<div class="about-top">
 					<div class="atop-text">
@@ -233,7 +233,7 @@
 		});
 		var mediaSlider = $('#MediaSlider').bxSlider({
 			pagerCustom: '#bx-pager',
-			onSliderLoad: function ()
+			onSliderLoad: function () {
 				$('#bx-pager').appendTo('.bx-controls-direction');
 			}
 		});
