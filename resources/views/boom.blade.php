@@ -74,9 +74,41 @@
 					<ul>
 						<li>
 							<a href="">
-								<img src="img/kv1.jpg"><p>2016 BOOM</p>
+								<img src="/img/kv1.jpg"><p>2016 BOOM</p>
 							</a>
 						</li>
+						<li>
+							<a href="">
+								<img src="/img/kv1.jpg"><p>2016 BOOM</p>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<img src="/img/kv1.jpg"><p>2016 BOOM</p>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<img src="/img/kv1.jpg"><p>2016 BOOM</p>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<img src="/img/kv1.jpg"><p>2016 BOOM</p>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<img src="/img/kv1.jpg"><p>2016 BOOM</p>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<img src="/img/kv1.jpg"><p>2016 BOOM</p>
+							</a>
+						</li>
+						
+						
 					</ul>
 				</div>
 			</div>

@@ -248,5 +248,11 @@
 		});
 	});
 	$('#loading-mask').delay(0).fadeOut();
+
+	$('.backToTop').click(function(e){
+			e.preventDefault();
+			$('html, body').animate({scrollTop : 0}, 1000);
+			return false;
+		});
 </script>
 @endsection

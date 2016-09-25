@@ -95,10 +95,15 @@ svg {
     margin: 0 auto;
 }
 
+.boomhistory {
+	width: 80%;
+    margin: 0 auto;
+}
+
 .boomhistory img {
 	width: 250px;
 	border: none;
-  transition: border .5s;
+  -webkit-filter: grayscale(100%);
   -webkit-transition: .5s ease-in-out;
   -moz-filter: grayscale(100%); 
   -moz-transition: .5s ease-in-out;
@@ -106,17 +111,34 @@ svg {
   -o-transition: .5s ease-in-out;
 }
 
-.boomhistory img:hover {
+
+.boomhistory ul li a img:hover {
 	border: 0.5px solid;
   	padding: 5px;
+  	-webkit-filter: grayscale(0%);
+  -webkit-transition: .5s ease-in-out;
+  -moz-filter: grayscale(0%);
+  -moz-transition: .5s ease-in-out;
+  -o-filter: grayscale(0%);
+  -o-transition: .5s ease-in-out;
 }
 
 .boomhistory ul li {
 	display: inline-block;
 	width: 250px;
-	margin: 20px 30px;
+    margin: 20px 30px 85px 30px;
+	height: 250px;
 }
 
-.goldline {
-	border-bottom: 1px solid #E59F65;
+.btext {
+	width: 100%;
+    margin: 30px auto;
+    padding-top: 30px;
+    text-align: left;
+    border-top: 1px solid #E59F65;
+}
+
+.artist {
+	width: 80%;
+    margin: 0 auto 70px auto;
 }
