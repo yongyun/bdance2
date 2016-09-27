@@ -7,7 +7,9 @@ use App\Http\Controllers\Controller;
 use App\Work;
 use App\Review;
 use App\Photo;
+use App\Award;
 use App\Stuff;
+use App\Tour;
 
 class WorkController extends Controller {
 
@@ -30,10 +32,13 @@ class WorkController extends Controller {
 				['work_id', '=' , $id],
 				['type', '=' , 'secondary']
 			])->first();
+		$awards = Award::where('work_id', $id)->get();
+		$tours = Tour::where('work_id', $id)->orderBy('order', 'asc')->get();
 
 		return view('project', 
 			['project' => $work, 'images' => $images, 'reviews' => $reviews,
-			 'main_stuff' => $main_stuff, 'other_stuff' => $other_stuff]);
+			 'main_stuff' => $main_stuff, 'other_stuff' => $other_stuff,
+			 'tours' => $tours, 'awards' => $awards]);
 	}
 }
 

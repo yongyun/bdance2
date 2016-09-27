@@ -47,16 +47,13 @@
 			<h2 class="textwhite">&#8212; Awards &#8212;</h2></div>
 			<div class="awards">
 				<ul class="bxslider textwhite" id="awardSlider">
-					<li class="current">
-						<p>Floating Flowers</p>
-						<h5>20th MASDANZA International choreography competition</h5>
-						<h6>Best choreography of Audience</h6>
-					</li>
-					<li>
-						<p>Floating Flowers</p>
-						<h5>29th International Choreography Competition Hanover in 2014</h5>
-						<h6>Gauthier Dance//Dance company Theaterhaus Stuttgart Production Award. &#38; Audience award</h6>
-					</li>
+					@foreach ($awards as $key => $value)
+						<li class="@if ($key === 0) active @endif">
+							<p>{{$value->title}}</p>
+							<h5>{{$value->awardName}}</h5>
+							<h6>{{$value->description}}</h6>
+						</li>
+					@endforeach
 				</ul>
 			</div>
 	</section>
@@ -65,40 +62,17 @@
 		<div class="conwidth">
 			<h2>&#8212; Details &#8212;</h2>
 			<div class="text-lft">
-				<p>DURATION &#58; 10 minutes without intermission </p>
-				<p>PREMIERE &#58; June 28th, 2014 at Theater am Aegi, Hannover, Germany</p>
+				<p>DURATION &#58; {{ $project->duration}} </p>
+				<p>PREMIERE &#58; {{ $project->premiere}}</p>
 				<div class="tour">
 					<p>TOUR DATE &#58; </p>
-					<ul>
-						<li><p>2016 June 10-11</p></li>
-						<li><h1>FLOATING FLOWERS & HUGIN/MUNIN</h1></li>
-						<li><p>CÁDIZ EN DANZA (ES)</p></li>
-					</ul>
-					<ul>
-						<li><p>2016 June 26</p></li>
-						<li><h1>FLOATING FLOWERS & HUGIN/MUNIN</h1></li>
-						<li><p> Zaragoza Trayecto (ES)</p></li>
-					</ul>
-					<ul>
-						<li><p>2016 July 16</p></li>
-						<li><h1>FLOATING FLOWERS</h1></li>
-						<li><p>LUCKY TRIMMER DOES WALES (UK)</p></li>
-					</ul>
-					<ul>
-						<li><p>2016 Oct 19-23</p></li>
-						<li><h1>FLOATING FLOWERS & INNERMOST & ALMOST HUMAN(world premiere) - Festival Danse Péi</h1></li>
-						<li><p>La Réunion (FR)</p></li>
-					</ul>
-					<ul>
-						<li><p>2016 Nov 26</p></li>
-						<li><h1>B.DANCE GALA - Bilbao Dance Festival</h1></li>
-						<li><p>Fundición Bilbao (ES)</p></li>
-					</ul>
-					<ul>
-						<li><p>2016 Dec 2-3</p></li>
-						<li><h1>Jerusalem International Choreography</h1></li>
-						<li><p>Competition (IL)</p></li>
-					</ul>
+					@foreach ($tours as $tour)
+						<ul>
+							<li><p>{{ $tour->tour_date}}</p></li>
+							<li><h1>{{ $tour->name}}</h1></li>
+							<li><p>{{ $tour->performed}}</p></li>
+						</ul>
+					@endforeach
 				</div>
 			</div>
 		</div>

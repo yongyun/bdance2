@@ -52,3 +52,5 @@ Route::get('/works', 'WorkController@allWorks');
 Route::get('/works/{id}', 'WorkController@showWork');
 Route::get('/boom', 'BoomController@allBooms');
 Route::get('/boom/{id}', 'BoomController@showBoom');
+Route::get('/news', 'NewsController@allNews');
+Route::get('/news/{id}', 'NewsController@showNews');
