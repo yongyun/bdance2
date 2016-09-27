@@ -36,9 +36,10 @@
 					</p>
 					<div  class="btext">
 						<div class="bcon2">
-							<p>LOCATION &#58; (Concert Hall of Taipei National University of the Arts) 1 Hsueh-Yuan Rd., Peitou District, Taipei 11201, Taiwan, R.O.C</p>
-							<p>DATE &#58; 27th-28th Sep 2016 PM730</p>
-							<p>DURATION &#58; 60mins without intermission </p>
+							<p><i class="fa fa-map" aria-hidden="true"></i>LOCATION &#58; (Concert Hall of Taipei National University of the Arts) 1 Hsueh-Yuan Rd., Peitou District, Taipei 11201, Taiwan, R.O.C</p>
+							<p><i class="fa fa-clock-o" aria-hidden="true"></i>DURATION &#58; 60mins without intermission </p>
+							<p><i class="fa fa-th-large" aria-hidden="true"></i>DATE &#58;</p>
+							<p>27th-28th Sep 2016 PM730</p>
 						</div>
 					</div>
 				</div>
@@ -48,6 +49,12 @@
 	<section class="sec-white" >
 		<div class="con1">
 			<iframe width="70%" height="450px" src="https://www.youtube.com/embed/tqdt0fceBNo?rel=0&modestbranding=1&autohide=1&showinfo=0&controls=0" frameborder="0" allowfullscreen></iframe>
+		</div>
+	</section>
+
+	<section class="sec-white" >
+		<div class="con1">
+			<div class="goldline"></div>
 		</div>
 	</section>
 
@@ -107,6 +114,7 @@
 					</p>
 					<div  class="btext">
 						<div class="bcon2">
+							<p>Duration &#58; 10mins</p>
 							<p>Choreography & Performance &#58; Francesca Foscarini</p>
 							<p>Technician &#58; Luca Serafini</p>
 							<p>Photographer &#58; Luca Serafini</p>

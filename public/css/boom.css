@@ -130,7 +130,7 @@ svg {
 .boomhistory ul li {
 	display: inline-block;
 	width: 200px;
-    margin: 20px 30px 45px 30px;
+    margin: 20px 10px 45px 10px;
 	height: 250px;
 }
 
@@ -170,4 +170,14 @@ svg {
 
 .bpost-box:hover {
 	background: #f0f0f0;
+}
+
+.goldline {
+	border-top: 1px solid #E59F65;
+	margin-top: 70px; 
+}
+
+.fa {
+	width: 20px;
+	color: #E59F65;
 }
