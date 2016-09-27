@@ -6,8 +6,12 @@ body {
 	background-attachment: fixed;
 }
 
-h2 {
+h2, h3, h6 {
 	color: #E59F65;
+}
+
+h3 {
+	text-align: left;
 }
 
 a {
@@ -101,7 +105,7 @@ svg {
 }
 
 .boomhistory img {
-	width: 250px;
+	width: 200px;
 	border: none;
   -webkit-filter: grayscale(100%);
   -webkit-transition: .5s ease-in-out;
@@ -125,9 +129,13 @@ svg {
 
 .boomhistory ul li {
 	display: inline-block;
-	width: 250px;
-    margin: 20px 30px 85px 30px;
+	width: 200px;
+    margin: 20px 30px 45px 30px;
 	height: 250px;
+}
+
+.boomhistory ul li a p {
+	margin: 10px 0 5px 0;
 }
 
 .btext {
@@ -139,6 +147,27 @@ svg {
 }
 
 .artist {
-	width: 80%;
-    margin: 0 auto 70px auto;
+	width: 100%;
+    margin: 0 auto;
+}
+
+.bpostlink {
+	height: auto;
+    display: inline-block;
+}
+
+.b-con {
+	line-height: 150px;
+	float: left;
+	margin: 0 20px;
+}
+
+.bpost-box {
+	background-color: #fff;
+	opacity: 1;
+	transition: background 0.5s;
+}
+
+.bpost-box:hover {
+	background: #f0f0f0;
 }

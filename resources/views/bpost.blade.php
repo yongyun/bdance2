@@ -36,13 +36,10 @@
 					</p>
 					<div  class="btext">
 						<div class="bcon2">
-							<p>LOCATION &#58; Birmingham Hippodrome Theatre Birmingham, GB</p>
-							<p>DATE &#58; June 28th, 2014 at Theater am Aegi, Hannover, Germany</p>
-							<p>DURATION &#58; 10 minutes without intermission </p>
+							<p>LOCATION &#58; (Concert Hall of Taipei National University of the Arts) 1 Hsueh-Yuan Rd., Peitou District, Taipei 11201, Taiwan, R.O.C</p>
+							<p>DATE &#58; 27th-28th Sep 2016 PM730</p>
+							<p>DURATION &#58; 60mins without intermission </p>
 						</div>
-					</div>
-					<div class="t-con" >
-						<a href="#" class="b-box">Buy now</a>	
 					</div>
 				</div>
 			</div>
@@ -64,46 +61,73 @@
 						<li>
 							<a href="">
 								<img src="/img/Tsai2.jpg">
-								<h3>Po-Cheng Tsai</h3>
-								<p>Taiwan</p>
+								<p>Po-Cheng Tsai</p>
+								<h1>Taiwan</h1>
 							</a>
 						</li>
 						<li>
 							<a href="">
 								<img src="/img/IdanSharab.jpg">
-								<h3>Idan Sharab</h3>
-								<p>Israel</p>
+								<p>Idan Sharab</p>
+								<h1>Israel</h1>
 							</a>
 						</li>
 						<li>
 							<a href="">
 								<img src="/img/FURIOGANZ.jpg">
-								<h3>Francesca Foscarini</h3>
-								<p>Italiy</p>
+								<p>Francesca Foscarini</p>
+								<h1>Italiy</h1>
 							</a>
 						</li>
 						<li>
 							<a href="">
 								<img src="/img/AntoninComestaz.jpg">
-								<h3>Antonin Comestaz</h3>
-								<p>France</p>
+								<p>Antonin Comestaz</p>
+								<h1>France</h1>
 							</a>
 						</li>
 						<li>
 							<a href="">
 								<img src="/img/511803.jpg">
-								<h3>JOERI ALEXANDER DUBBE</h3>
-								<p>Haarlem</p>
+								<p>JOERI ALEXANDER DUBBE</p>
+								<h1>Haarlem</h1>
 							</a>
 						</li>
 					</ul>
+				</div>
+				<div class="atext artist">
+						<h2>&#8212; Artist Info &#8212;</h2>
+				</div>
+				<div class="atext at-left" style="margin: 30px auto">
+					<p>Versatile independent choreographer and dancer. Her personal career was marked by the encounter with quite important masters of the national and international dance scene, with whom she had the opportunity to research on the languages of contemporary dance and improvisation, thus enriching and internalizing her language both in terms of expression and of performance. She started her own professional experience from 2000. Also Francesca is a winner of the Equilibrio Award for Performer in 2013. As well as she won the jury prize of the 17th edition of the MASDANZA in 2012. She has been selected as the young performer in 2012.	
+					</p>
+					<h3>Concept of work</h3>
+					<p>GRANDMOTHER</p>
+					<p>A body letting go of the past, The urgency of being present in the here and now, Never knowing what will happen next, Moving by the rhythm of breath, memories, and light conquering darkness.
+					</p>
+					<div  class="btext">
+						<div class="bcon2">
+							<p>Choreography & Performance &#58; Francesca Foscarini</p>
+							<p>Technician &#58; Luca Serafini</p>
+							<p>Photographer &#58; Luca Serafini</p>
+							<a href=""><h6>Artist Link</h6></a>
+						</div>
+					</div>
 				</div>
 			</div>
 	</section>
 
 	<section class="sec-white">
-		<div class="proj-btm"><a href="/boom"><p>&#8212; B.OOM &#8212;</p></a></div>
-		<div class="proj-btm"><a href="#" class="backToTop"><p>&#8212; Back to Top &#8212;</p></a></div>
+		<div class="con2wid">
+			<div class="bpostlink">
+				<div class="b-con" >
+					<a href="#" class="b-box bpost-box">Buy now</a>	
+				</div>
+				<div class="b-con" >
+					<a href="#" class="b-box backToTop bpost-box"> Back to Top </a>	
+				</div>
+			</div>
+		</div>
 	</section>
 
 	<section class="onepage-foot">

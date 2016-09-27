@@ -31,9 +31,9 @@
 					<li class="menu-item"><a href="#">News</a></li>
 					<li class="menu-item"><a href="/contact">Contact us</a></li>
 					<li class="menu-item social">
-							<span class="social-item-main"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></span>
-							<span class="social-item-main"><a href="#"><i class="fa fa-vimeo" aria-hidden="true"></i></a></span>
-							<span class="social-item-main" aria-hidden="true"><a href="#"><img class="icon_logo" src="{{ asset('img/axe.svg')}}" alt=""></a></span>
+							<span class="social-item-main"><a target href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></span>
+							<span class="social-item-main"><a target href="#"><i class="fa fa-vimeo" aria-hidden="true"></i></a></span>
+							<span class="social-item-main" aria-hidden="true"><a target href="#"><img class="icon_logo" src="{{ asset('img/axe.svg')}}" alt=""></a></span>
 					</li>
 					<li class="menu-item social">
 						<a class= "language" aria-hidden="true" href="#">En</a>
