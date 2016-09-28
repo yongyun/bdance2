@@ -4,6 +4,7 @@ body {
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
+  background-color: #000;
 }
 
 h2, h3, h6 {
@@ -177,7 +178,36 @@ svg {
 	margin-top: 70px; 
 }
 
-.fa {
+.bcon2 .fa {
 	width: 20px;
 	color: #E59F65;
+}
+
+.awards {
+    margin-top: -45px;
+}
+
+#a-slider {
+  height: 700px;
+}
+
+#a-slider .bx-wrapper .bx-prev {
+    left: 0px;
+    top: 320px;
+}
+
+#a-slider .bx-wrapper .bx-next {
+    right: 0px;
+    top: 320px;
+}
+
+.bx-wrapper .bx-caption span {
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 1px;
+    font-size: 12px;
+}
+
+.awards ul li {
+ height: 700px;
+ overflow: hidden;
 }

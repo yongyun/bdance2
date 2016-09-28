@@ -16,7 +16,7 @@
 				<h5>Admin | 9 December 2016</h5>
 					<p></p>
 				<p>Morbi lacus massa, euismod ut turpis molestie, tristique sodales est. Integer sit amet mi id sapien tempor molestie in nec</p>
-				<a href=""><div class="more">Read more</div></a>
+				<div class="more"><a href="">Read more</a></div>
 			</div>
 			<div class="grid-item staffoto">
 				<a href=" " title="">

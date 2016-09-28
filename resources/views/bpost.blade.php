@@ -8,22 +8,32 @@
 @endsection
 
 @section('custom_js')
-<script type="text/javascript">
+<script src="{{ asset('plugins/film_roll/js/jquery.film_roll.min.js')}}"></script>
+<script src="{{ asset('plugins/jquery.bxslider/jquery.bxslider.min.js')}}"></script>
+<script>
+	$(function() {
+		var awardSlider = $('#awardSlider').bxSlider({	
+			captions: true
+		});
+	});
+	$('#loading-mask').delay(0).fadeOut();
 	$('.backToTop').click(function(e){
 			e.preventDefault();
 			$('html, body').animate({scrollTop : 0}, 1000);
 			return false;
 		});
-
-	$('#loading-mask').delay(0).fadeOut();
 </script>
 @endsection
 
+
 @section('content')
-	<section>
-		<div style="width:100%; height:800px; background-color: #000; line-height: 800px ">
-			<h2>Gallery slideshow</h2>
-		</div>
+	<section id="a-slider" class="sec-slide sec-white">
+			<div class="awards">
+				<ul class="bxslider textwhite" id="awardSlider">
+					<li><img src="/img/9.jpg"  width="100%" title="GRANDMOTHER by Francesca Foscarini"></li>	
+					<li><img src="/img/2.jpg" width="100%" title="Project Name by Artist"></li>	
+				</ul>
+			</div>
 	</section>
 
 	<section class="sec-white" >
