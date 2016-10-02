@@ -12,6 +12,7 @@
 */
 use Illuminate\Support\Facades\Input;
 use Jenssegers\Agent\Agent;
+use App\MailMessage;
 
 
 Route::get('/', function () {
@@ -31,19 +32,25 @@ Route::get('/contact', function () {
 Route::post('/sendMail', function() {
 
 	$name = Input::get('name');
-
 	$email = Input::get('email');
 	$messages = Input::get('message');
-	$mess = $name + " say: " + $messages;
-	$subject = "[BDance] " + $name+ " send you a message";
+	$subject = "[BDance] ". $name. " send you a message";
 	$data = array('name'=> $name, 'email'=> $email, 
-		'subject'=> $subject, 'message'=> $mess);
+		'subject'=> $subject, 'messages'=> $messages);
 
-	Mail::raw($messages, function($message) use ($data)
-		{
+	Mail::send('emails.contact', ['name'=> $name, 'email'=> $email, 
+		'subject'=> $subject, 'messages'=> $messages], function($message) use ($data) {
+		$message->from($data['email'], $data['name']);
+		$message->to('bdanceweb@gmail.com')->subject($data['subject']);
+	});
 
-		    $message->to($data['email'])->subject('You got a Message!');
-		});
+	$model = new MailMessage;
+	$model->name = $name;
+	$model->email = $email;
+	$model->message = $messages;
+	$model->created_at = date("Y-m-d H:i:s");
+	$model->save();
+
 	return redirect('/');
 });
 

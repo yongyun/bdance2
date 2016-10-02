@@ -27,7 +27,7 @@
 		<div id="film_roll">
 			@foreach ($images as $image)
 			  <div>
-			    <img src="{{ asset($image->url)}}" height: 500px; />
+			    <img src="{{ asset($image->url)}}" height: 500px; class="film_image"/>
 			  </div>
 			@endforeach
 		</div>
@@ -86,7 +86,7 @@
 
 	<section class="sec-norm underline">
 			<h2>&#8212; Reviews &#8212;</h2>
-			<ul class="bxslider">
+			<ul class="bxslider" id="review_slider">
 
 			<?php
 				$c_reviews = count($reviews);
@@ -163,21 +163,27 @@
 @section('custom_js')
 <script src="{{ asset('plugins/film_roll/js/jquery.film_roll.min.js')}}"></script>
 <script src="{{ asset('plugins/jquery.bxslider/jquery.bxslider.min.js')}}"></script>
+<script src="https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
 <script>
-	$(function() {
+	var $images = $('.film_image');
+	$images.imagesLoaded().progress(function(){
 		var fr = new FilmRoll({
 		    container: '#film_roll',
 		    height: 500,
 		    no_css: true,
 		    configure_load: true,
 		  });
+		$('#loading-mask').delay(0).fadeOut();
+	});
+	$(function() {
+		
 		var awardSlider = $('#awardSlider').bxSlider({
 			
 		});
-		var reviewSlider = $('.bxslider').bxSlider({
+		var reviewSlider = $('#review_slider.bxslider').bxSlider({
 			pagerCustom: '#bx-pager',
 			onSliderLoad: function () {
-				$('#bx-pager').appendTo('.bx-controls-direction');
+				$('#review_slider #bx-pager').appendTo('.bx-controls-direction');
 			}
 		});
 		
@@ -196,6 +202,6 @@
 		    reviewSlider.goToNextSlide(current) + 1;
 		});
 	});
-	$('#loading-mask').delay(0).fadeOut();
+	
 </script>
 @endsection

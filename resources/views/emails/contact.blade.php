@@ -4,6 +4,8 @@
 	<title></title>
 </head>
 <body>
-	{{ $message }}
+	{{$name}}(email : {{$email}}) Say :<br/>
+	{{ $messages }}
+	
 </body>
 </html>
