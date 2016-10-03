@@ -183,7 +183,7 @@
 		var reviewSlider = $('#review_slider.bxslider').bxSlider({
 			pagerCustom: '#bx-pager',
 			onSliderLoad: function () {
-				$('#review_slider #bx-pager').appendTo('.bx-controls-direction');
+				$('#bx-pager').appendTo('.bx-controls-direction');
 			}
 		});
 		

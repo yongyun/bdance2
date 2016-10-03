@@ -46,7 +46,7 @@
 					<p></p>
 				</a>
 				<p>Morbi lacus massa, euismod ut turpis molestie, tristique sodales est. Integer sit amet mi id sapien tempor molestie in nec</p>
-				<a href=""><div class="more">Read more</div></a>
+				<div class="mo-box"><a href="" class="more">Read more</a></div>
 			</div>
 	</div>
 

@@ -1,11 +1,15 @@
 body {
-	background-image: url('../img/smo2.jpg');
+	background-image: none;
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
   background-color: #000;
 }
+
+.bx-wrapper .bx-viewport {
+    left: 0px !important;
+  }
 
 h2, h3, h6 {
 	color: #E59F65;
@@ -188,17 +192,17 @@ svg {
 }
 
 #a-slider {
-  height: 700px;
+  height: auto;
 }
 
 #a-slider .bx-wrapper .bx-prev {
     left: 0px;
-    top: 320px;
+    top: 45%;
 }
 
 #a-slider .bx-wrapper .bx-next {
     right: 0px;
-    top: 320px;
+    top: 45%;
 }
 
 .bx-wrapper .bx-caption span {
@@ -208,11 +212,26 @@ svg {
 }
 
 .awards ul li {
- height: 700px;
- overflow: hidden;
+   overflow: hidden;
 }
 
-@media screen and (max-width: 1240px) {
-    .bx-wrapper img {
-      height: 100vh;
+@media screen and (min-width: 1240px) {
+  .awards ul li {
+   max-height: 700px;
+   overflow: hidden;
+  }
+}
+
+.sec-slide {
+    background-image: none;
+}
+
+#a-slider .bx-wrapper .bx-pager.bx-default-pager a {
+  background: #ccc;
+  opacity: 1
+}
+
+ #a-slider .bx-wrapper .bx-pager.bx-default-pager a.active {
+    background: grey;
+    opacity: 1;
 }

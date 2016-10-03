@@ -73,42 +73,10 @@
 				<div class="boomhistory">
 					<ul>
 						<li>
-							<a href="">
+							<a href="/boom/1">
 								<img src="/img/kv1.jpg"><p>2016 BOOM</p>
 							</a>
-						</li>
-						<li>
-							<a href="">
-								<img src="/img/kv1.jpg"><p>2016 BOOM</p>
-							</a>
-						</li>
-						<li>
-							<a href="">
-								<img src="/img/kv1.jpg"><p>2016 BOOM</p>
-							</a>
-						</li>
-						<li>
-							<a href="">
-								<img src="/img/kv1.jpg"><p>2016 BOOM</p>
-							</a>
-						</li>
-						<li>
-							<a href="">
-								<img src="/img/kv1.jpg"><p>2016 BOOM</p>
-							</a>
-						</li>
-						<li>
-							<a href="">
-								<img src="/img/kv1.jpg"><p>2016 BOOM</p>
-							</a>
-						</li>
-						<li>
-							<a href="">
-								<img src="/img/kv1.jpg"><p>2016 BOOM</p>
-							</a>
-						</li>
-						
-						
+						</li>		
 					</ul>
 				</div>
 			</div>

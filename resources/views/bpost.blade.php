@@ -5,6 +5,7 @@
 <link rel="stylesheet" type="text/css" href="{{ asset('css/about.css')}}" />
 <link rel="stylesheet" type="text/css" href="{{asset('css/animate.css')}}">
 <link rel="stylesheet" type="text/css" href="{{ asset('css/boom.css')}}" />
+
 @endsection
 
 @section('custom_js')
@@ -35,7 +36,7 @@
 				</ul>
 			</div>
 	</section>
-
+	<div style="background:white;    text-align: center;"><img src="/img/golddown.svg" width="30px"></div>
 	<section class="sec-white" >
 			<div class="con1">
 				<div class="atext">
