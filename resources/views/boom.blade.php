@@ -25,13 +25,13 @@
 						<div class="con2wid">
 							<div class="boomlink">
 								<div class="t-con" >
-									<a href="#" class="b-box">Buy now</a>
+									<a href="http://www.artsticket.com.tw/CKSCC2005/cart/cart00/ShowMap.aspx?PerformanceId=8JNfZ4VZd5RtUOxQvA62L9sMP56NfMHuHdHl3VWIPt4" target="_blank" class="b-box">Buy now</a>
 								</div>
 							</div>
 
 							<div class="boomlink">
 								<div class="t-con">
-									<a href="#" class="b-box">More info</a>
+									<a href="/boom/1" class="b-box">More info</a>
 								</div>
 							</div>
 						</div>

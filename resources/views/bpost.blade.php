@@ -1,14 +1,18 @@
 @extends('layout')
 
 @section('custom_css')
+<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="{{asset('plugins/jquery.bxslider/jquery.bxslider.css')}}">
 <link rel="stylesheet" type="text/css" href="{{ asset('css/about.css')}}" />
 <link rel="stylesheet" type="text/css" href="{{asset('css/animate.css')}}">
 <link rel="stylesheet" type="text/css" href="{{ asset('css/boom.css')}}" />
+<link rel="stylesheet" type="text/css" href="{{ asset('css/main.css')}}" />
 
 @endsection
 
 @section('custom_js')
+<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="{{ asset('plugins/film_roll/js/jquery.film_roll.min.js')}}"></script>
 <script src="{{ asset('plugins/jquery.bxslider/jquery.bxslider.min.js')}}"></script>
 <script>
@@ -31,8 +35,19 @@
 	<section id="a-slider" class="sec-slide sec-white">
 			<div class="awards">
 				<ul class="bxslider textwhite" id="awardSlider">
-					<li><img src="/img/9.jpg"  width="100%" title="GRANDMOTHER by Francesca Foscarini"></li>	
-					<li><img src="/img/2.jpg" width="100%" title="Project Name by Artist"></li>	
+					<li><img src="/img/Chrono-logy_Joeri Dubbe_fotoJoris-JanBosk1052_6836.jpg"  width="100%" title="Chronology by Joeri Dubbe"></li>	
+					<li><img src="/img/Chrono-logy_Joeri Dubbe_fotoJoris-JanBosk1052_6842.jpg" width="100%" title="Chronology by Joeri Dubbe"></li>	
+					<li><img src="/img/Chrono-logy_Joeri Dubbe_fotoJoris-JanBosk1052_7198.jpg" width="100%" title="Chronology by Joeri Dubbe"></li>	
+
+					<li><img src="/img/Francesca FoscariniLena Meyer.jpg" width="100%" title="Grandmother by Francesca Foscarini"></li>	
+					<li><img src="/img/Francesca Foscarini_Sara Wiktorowicz.jpg" width="100%" title="Grandmother by Francesca Foscarini"></li>	
+					<li><img src="/img/Francesca Foscarini@ Lena Meyer.jpg" width="100%" title="Grandmother by Francesca Foscarini"></li>	
+					<li><img src="/img/Idan Sharabi _Your2Tami Weiss Photography.jpg" width="100%" title="Your Name by Idan Sharabi"></li>
+					<li><img src="/img/Idan Sharabi _Your3Tami Weiss Photography.jpg" width="100%" title="Your Name by Idan Sharabi"></li>
+					<li><img src="/img/Idan Sharabi _YourTami Weiss Photography.jpg" width="100%" title="Your Name by Idan Sharabi"></li>	
+					<li><img src="/img/Then, Before, Now, Once moreAntonin Comestaz.jpg" width="100%" title="THEN, BEFORE, NOW, ONCE MORE  by Antonin Comestaz"></li>	
+					<li><img src="/img/Then, Before, Now, Once moreAntonin Comestaz2.jpg" width="100%" title="THEN, BEFORE, NOW, ONCE MORE  by Antonin Comestaz"></li>
+					<li><img src="/img/Then, Before, Now, Once moreInbal Cohen Hamo.jpg" width="100%" title="THEN, BEFORE, NOW, ONCE MORE  by Antonin Comestaz"></li>
 				</ul>
 			</div>
 	</section>
@@ -59,7 +74,7 @@
 
 	<section class="sec-white" >
 		<div class="con1">
-			<iframe width="70%" height="450px" src="https://www.youtube.com/embed/tqdt0fceBNo?rel=0&modestbranding=1&autohide=1&showinfo=0&controls=0" frameborder="0" allowfullscreen></iframe>
+			<iframe src="https://player.vimeo.com/video/179031782?title=0&byline=0&portrait=0" width="1000" height="450" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 		</div>
 	</section>
 
@@ -107,7 +122,7 @@
 						<li>
 							<a href="">
 								<img src="/img/511803.jpg">
-								<p>JOERI ALEXANDER DUBBE</p>
+								<p>Joeri Alexander Dubbe</p>
 								<h1>Haarlem</h1>
 							</a>
 						</li>
@@ -140,7 +155,7 @@
 		<div class="con2wid">
 			<div class="bpostlink">
 				<div class="b-con" >
-					<a href="#" class="b-box bpost-box">Buy now</a>	
+					<a href="http://www.artsticket.com.tw/CKSCC2005/cart/cart00/ShowMap.aspx?PerformanceId=8JNfZ4VZd5RtUOxQvA62L9sMP56NfMHuHdHl3VWIPt4" target="_blank" class="b-box bpost-box">Buy now</a>	
 				</div>
 				<div class="b-con" >
 					<a href="#" class="b-box backToTop bpost-box"> Back to Top </a>	
@@ -157,4 +172,3 @@
 			</div>
 	</section>
 @endsection
-

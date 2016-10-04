@@ -20,12 +20,14 @@ h3 {
 }
 
 a {
+  color: #000;
 	transition: opacity .5s;
 }
 
 a:hover {
 	opacity: 1;
 	color: #E59F65;
+  text-decoration: none;
 }
 
 svg {
@@ -235,3 +237,4 @@ svg {
     background: grey;
     opacity: 1;
 }
+
