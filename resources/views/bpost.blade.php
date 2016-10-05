@@ -65,6 +65,10 @@
 					<li><img src="/img/20.jpg" width="100%" title="THEN, BEFORE, NOW, ONCE MORE  by Antonin Comestaz"></li>	
 					<li><img src="/img/21.jpg" width="100%" title="THEN, BEFORE, NOW, ONCE MORE  by Antonin Comestaz"></li>
 					<li><img src="/img/22.jpg" width="100%" title="THEN, BEFORE, NOW, ONCE MORE  by Antonin Comestaz"></li>
+					<li><img src="/img/23.jpg" width="100%" title="Hugin/ Munin by Po-Cheng Tsai"></li>
+					<li><img src="/img/24.jpg" width="100%" title="Hugin/ Munin by Po-Cheng Tsai"></li>
+					<li><img src="/img/25.jpg" width="100%" title="Hugin/ Munin by Po-Cheng Tsai"></li>
+					<li><img src="/img/26.jpg" width="100%" title="Hugin/ Munin by Po-Cheng Tsai"></li>
 				</ul>
 			</div>
 	</section>
@@ -82,7 +86,7 @@
 							<p><i class="fa fa-map" aria-hidden="true"></i>LOCATION &#58; (Concert Hall of Taipei National University of the Arts) 1 Hsueh-Yuan Rd., Peitou District, Taipei 11201, Taiwan, R.O.C</p>
 							<p><i class="fa fa-clock-o" aria-hidden="true"></i>DURATION &#58; 60mins without intermission </p>
 							<p><i class="fa fa-th-large" aria-hidden="true"></i>DATE &#58;</p>
-							<p>27th-28th December 2016 PM 7:30</p>
+							<p>27th-28th October 2016 PM 7:30</p>
 						</div>
 					</div>
 				</div>
@@ -104,7 +108,7 @@
 	<section class="sec-white" >
 			<div class="con1">
 				<div class="atext">
-						<h2>&#8212; Artist &#8212;</h2>
+						<h2>&#8212; Artists &#8212;</h2>
 				</div>
 				<div class="boomhistory artist">
 					<ul id="tabs">
@@ -118,7 +122,7 @@
 						<li>
 							<a href="#" name="tab2">
 								<img src="/img/IdanSharab.jpg">
-								<p>Idan Sharab</p>
+								<p>Idan Sharabi</p>
 								<h1>Israel</h1>
 							</a>
 						</li>
@@ -126,7 +130,7 @@
 							<a href="#" name="tab3">
 								<img src="/img/FURIOGANZ.jpg">
 								<p>Francesca Foscarini</p>
-								<h1>Italiy</h1>
+								<h1>Italy</h1>
 							</a>
 						</li>
 						<li>
@@ -140,7 +144,7 @@
 							<a href="#" name="tab5">
 								<img src="/img/511803.jpg">
 								<p>Joeri Alexander Dubbe</p>
-								<h1>Haarlem</h1>
+								<h1>Netherlands</h1>
 							</a>
 						</li>
 					</ul>
@@ -183,7 +187,7 @@ Eclipse (2010), Heart Break (2013) and Stars (2014).
 • Zhongzheng Senior High School (ZZSH): Pulse (2009) and Split (2011).
 						</p>
 						<h2>Concept of work</h2>
-						<p>Hugin/ Munin</p>
+						<p>HUGIN/MUNIN</p>
 						<p>In old Norse mythology there are two ravens sitting on either shoulder of Odin: Hugin and Munin,
 
 whose names mean "thought" and "memory", respectively. Flying out over Midgard (as their world
@@ -198,8 +202,9 @@ and how they shape our lives.
 						</p>
 						<div  class="btext">
 							<div class="bcon2">
-								<p>Duration &#58; 12mins</p>
-								<p>Choreography & Performance &#58; Po-Cheng Tsai  & Sheng-Ho Chang & Chien-Chih Chang</p>
+								<p>Duration &#58; 10mins</p>
+								<p>Choreography &#58; Po-Cheng Tsai</p>
+								<p>Performance &#58; Sheng-Ho Chang & Chien-Chih Chang</p>
 								<p>Technician &#58; lighting Designer/ Ting-Chung Chang</p>
 								<p>Photographer &#58; Chen, Yi-Shu</p>
 								<a href="http://www.bdance.com.tw/about" target="_blank"><h6>Artist Link</h6></a>
@@ -268,8 +273,9 @@ it's no longer ours, but it’s yours. Enjoy.
 						<div  class="btext">
 							<div class="bcon2">
 								<p>Duration &#58; 22mins</p>
-								<p>Choreography & Performance &#58; Idan Sharabi & Francesca Foscarini</p>
-								<p>Technician &#58; |Joni Mitchell & Recordings by I. Sharabi</p>
+								<p>Choreography &#58; Idan Sharabi</p>
+								 <p>Performance &#58; Idan Sharabi & Eyal Dadon</p>
+								<p>Technician &#58; Compose by Joni Mitchell & Recordings by I. Sharabi</p>
 								<p>Photographer &#58; Tami Weiss.</p>
 								<a href="http://www.idansharabi.com/" target="_blank"><h6>Artist Link</h6></a>
 							</div>
@@ -312,7 +318,7 @@ Aerowaves, Dance Across Europe 2012.
 							<div class="bcon2">
 								<p>Duration &#58; 12mins</p>
 								<p>Choreography & Performance &#58; Francesca Foscarini</p>
-								<p>Technician &#58; Sara Wiktorowicz (concept)  & lighting Designer Sara Wiktorowicz  & Technician Luca Serafini</p>
+								<p>Technician &#58; concept Sara Wiktorowicz & lighting Designer Sara Wiktorowicz & Technician Luca Serafini</p>
 								<p>Photographer &#58; Sara Wiktorowicz</p>
 								<a href="http://www.francescafoscarini.it/index.php" target="_blank"><h6>Artist Link</h6></a>
 							</div>
@@ -340,7 +346,7 @@ everyday life and humanity, using his playful, quirky and highly engaging choreo
 style.
 						</p>
 						<h2>Concept of work</h2>
-						<p>Then, Before, Now, Once more</p>
+						<p>THEN, BEFORE, NOW, ONCE MORE</p>
 						<p>The universe seems to play by the rule of constant change. Nothing remains. Everything transform. Life and death, day
 
 and night, seasons... What is now isn't what it was then, nor before, but may occur again. Nature lets us witness these
@@ -350,8 +356,8 @@ patterns in everything, including feelings. How do we cope with this fact when w
 						<div  class="btext">
 							<div class="bcon2">
 								<p>Duration &#58; 11mins</p>
-								<p>Choreography & Performance &#58; Antonin Comestaz & Carolina Mancuso, Miguel Oliveira</p>
-								<p>Technician &#58; Inbal Cohen Hamo</p>
+								<p>Choreography & Performance &#58; Antonin Comestaz</p>
+								<p>Performance &#58; Carolina Mancuso, Miguel Oliveira</p>
 								<p>Photographer &#58; Antonin Comestaz &
 
 Inbal Cohen Hamo</p>
@@ -379,7 +385,7 @@ concours in Hannover, Germany. Following this award Joeri is making a new piece 
 Rotterdam which will premiere during TWOOLS 17 in June 2015.
 						</p>
 						<h2>Concept of work</h2>
-						<p>Enfant_</p>
+						<p>ENFANT</p>
 						<p>One of the most prominent choreographic talents from the Netherlands is Joeri Dubbe. He won the Dutch Dance Days
 
 Prize in 2011, the prestigious BNG Bank Prize for New Theatre Makers, and the Scapino Production Prize in 2014. In
@@ -399,7 +405,8 @@ the purity of the child within us?
 						<div  class="btext">
 							<div class="bcon2">
 								<p>Duration &#58; 13mins</p>
-								<p>Choreography & Performance &#58; Joeri Alexander Dubbe & Sarah Murphy</p>
+								<p>Choreography &#58; Joeri Alexander Dubbe</p>
+								<p>Performance  &#58; Sarah Murphy</p>
 								<p>Technician &#58; Costume Carlijn Petermeijer</p>
 								<p>Photographer &#58; Joris Jan Bos</p>
 								<a href="http://www.antonincomestaz.com/" target="_blank"><h6>Artist Link</h6></a>
