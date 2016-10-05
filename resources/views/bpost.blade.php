@@ -44,6 +44,7 @@
 			return false;
 		});
 
+
 </script>
 @endsection
 
@@ -52,23 +53,23 @@
 	<section id="a-slider" class="sec-slide sec-white">
 			<div class="awards">
 				<ul class="bxslider textwhite" id="awardSlider">
-					<li><img src="/img/10.jpg"  width="100%" title="Chronology by Joeri Dubbe"></li>	
-					<li><img src="/img/11.jpg" width="100%" title="Chronology by Joeri Dubbe"></li>	
-					<li><img src="/img/12.jpg" width="100%" title="Chronology by Joeri Dubbe"></li>	
-					<li><img src="/img/131.jpg" width="100%" title="Grandmother by Francesca Foscarini"></li>	
-					<li><img src="/img/14.jpg" width="100%" title="Grandmother by Francesca Foscarini"></li>	
-					<li><img src="/img/15.jpg" width="100%" title="Grandmother by Francesca Foscarini"></li>	
-					<li><img src="/img/16.jpg" width="100%" title="Grandmother by Francesca Foscarini"></li>	
-					<li><img src="/img/171.jpg" width="100%" title="Your by Idan Sharabi"></li>
-					<li><img src="/img/181.jpg" width="100%" title="Your by Idan Sharabi"></li>
-					<li><img src="/img/191.jpg" width="100%" title="Your by Idan Sharabi"></li>	
+					<li><img src="/img/10.jpg"  width="100%" title="ENFANT by Joeri Alexander Dubbe"></li>	
+					<li><img src="/img/11.jpg" width="100%" title="ENFANT by Joeri Alexander Dubbe"></li>	
+					<li><img src="/img/12.jpg" width="100%" title="ENFANT by Joeri Alexander Dubbe"></li>	
+					<li><img src="/img/131.jpg" width="100%" title="GRANDMOTHER by Francesca Foscarini"></li>	
+					<li><img src="/img/14.jpg" width="100%" title="GRANDMOTHER by Francesca Foscarini"></li>	
+					<li><img src="/img/15.jpg" width="100%" title="GRANDMOTHER by Francesca Foscarini"></li>	
+					<li><img src="/img/16.jpg" width="100%" title="GRANDMOTHER by Francesca Foscarini"></li>	
+					<li><img src="/img/171.jpg" width="100%" title="YOURS by Idan Sharabi"></li>
+					<li><img src="/img/181.jpg" width="100%" title="YOURS by Idan Sharabi"></li>
+					<li><img src="/img/191.jpg" width="100%" title="YOURS by Idan Sharabi"></li>	
 					<li><img src="/img/20.jpg" width="100%" title="THEN, BEFORE, NOW, ONCE MORE  by Antonin Comestaz"></li>	
 					<li><img src="/img/21.jpg" width="100%" title="THEN, BEFORE, NOW, ONCE MORE  by Antonin Comestaz"></li>
 					<li><img src="/img/22.jpg" width="100%" title="THEN, BEFORE, NOW, ONCE MORE  by Antonin Comestaz"></li>
-					<li><img src="/img/23.jpg" width="100%" title="Hugin/ Munin by Po-Cheng Tsai"></li>
-					<li><img src="/img/24.jpg" width="100%" title="Hugin/ Munin by Po-Cheng Tsai"></li>
-					<li><img src="/img/25.jpg" width="100%" title="Hugin/ Munin by Po-Cheng Tsai"></li>
-					<li><img src="/img/26.jpg" width="100%" title="Hugin/ Munin by Po-Cheng Tsai"></li>
+					<li><img src="/img/23.jpg" width="100%" title="HUGIN / MUNIN by Po-Cheng Tsai"></li>
+					<li><img src="/img/24.jpg" width="100%" title="HUGIN / MUNIN by Po-Cheng Tsaii"></li>
+					<li><img src="/img/25.jpg" width="100%" title="HUGIN / MUNIN by Po-Cheng Tsai"></li>
+					<li><img src="/img/26.jpg" width="100%" title="HUGIN / MUNIN by Po-Cheng Tsai"></li>
 				</ul>
 			</div>
 	</section>

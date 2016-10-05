@@ -64,6 +64,7 @@
 							<p><i class="fa fa-user" aria-hidden="true"></i>AxE Arts Management/ Hsin-Yi Chang</p>
 							<p><i class="fa fa-phone" aria-hidden="true"></i>Tel. : +49(0)176 3921 3041</p>
 							<p><i class="fa fa-phone" aria-hidden="true"></i>Tel. : +33 6 59 95 15 40</p>
+							<p><a href="mailto:axe.artco@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i>Mail : axe.artco&#64;gmail.com</a></p>
 						</div>
 					</div>
 				</div>
