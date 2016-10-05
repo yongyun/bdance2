@@ -246,3 +246,9 @@ collapse*/
       text-align: left;
 }
 /*collapse*/
+#a-slider .bx-wrapper .bx-pager.bx-default-pager a {
+    background: #000;
+}
+#a-slider .bx-wrapper .bx-pager.bx-default-pager a:hover, #a-slider .bx-wrapper .bx-pager.bx-default-pager a.active {
+  background: #000;
+}

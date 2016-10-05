@@ -52,19 +52,19 @@
 	<section id="a-slider" class="sec-slide sec-white">
 			<div class="awards">
 				<ul class="bxslider textwhite" id="awardSlider">
-					<li><img src="/img/Chrono-logy_Joeri Dubbe_fotoJoris-JanBosk1052_6836.jpg"  width="100%" title="Chronology by Joeri Dubbe"></li>	
-					<li><img src="/img/Chrono-logy_Joeri Dubbe_fotoJoris-JanBosk1052_6842.jpg" width="100%" title="Chronology by Joeri Dubbe"></li>	
-					<li><img src="/img/Chrono-logy_Joeri Dubbe_fotoJoris-JanBosk1052_7198.jpg" width="100%" title="Chronology by Joeri Dubbe"></li>	
-
-					<li><img src="/img/Francesca FoscariniLena Meyer.jpg" width="100%" title="Grandmother by Francesca Foscarini"></li>	
-					<li><img src="/img/Francesca Foscarini_Sara Wiktorowicz.jpg" width="100%" title="Grandmother by Francesca Foscarini"></li>	
-					<li><img src="/img/Francesca Foscarini@ Lena Meyer.jpg" width="100%" title="Grandmother by Francesca Foscarini"></li>	
-					<li><img src="/img/Idan Sharabi _Your2Tami Weiss Photography.jpg" width="100%" title="Your by Idan Sharabi"></li>
-					<li><img src="/img/Idan Sharabi _Your3Tami Weiss Photography.jpg" width="100%" title="Your by Idan Sharabi"></li>
-					<li><img src="/img/Idan Sharabi _YourTami Weiss Photography.jpg" width="100%" title="Your by Idan Sharabi"></li>	
-					<li><img src="/img/Then, Before, Now, Once moreAntonin Comestaz.jpg" width="100%" title="THEN, BEFORE, NOW, ONCE MORE  by Antonin Comestaz"></li>	
-					<li><img src="/img/Then, Before, Now, Once moreAntonin Comestaz2.jpg" width="100%" title="THEN, BEFORE, NOW, ONCE MORE  by Antonin Comestaz"></li>
-					<li><img src="/img/Then, Before, Now, Once moreInbal Cohen Hamo.jpg" width="100%" title="THEN, BEFORE, NOW, ONCE MORE  by Antonin Comestaz"></li>
+					<li><img src="/img/10.jpg"  width="100%" title="Chronology by Joeri Dubbe"></li>	
+					<li><img src="/img/11.jpg" width="100%" title="Chronology by Joeri Dubbe"></li>	
+					<li><img src="/img/12.jpg" width="100%" title="Chronology by Joeri Dubbe"></li>	
+					<li><img src="/img/13.jpg" width="100%" title="Grandmother by Francesca Foscarini"></li>	
+					<li><img src="/img/14.jpg" width="100%" title="Grandmother by Francesca Foscarini"></li>	
+					<li><img src="/img/15.jpg" width="100%" title="Grandmother by Francesca Foscarini"></li>	
+					<li><img src="/img/16.jpg" width="100%" title="Grandmother by Francesca Foscarini"></li>	
+					<li><img src="/img/17.jpg" width="100%" title="Your by Idan Sharabi"></li>
+					<li><img src="/img/18.jpg" width="100%" title="Your by Idan Sharabi"></li>
+					<li><img src="/img/19.jpg" width="100%" title="Your by Idan Sharabi"></li>	
+					<li><img src="/img/20.jpg" width="100%" title="THEN, BEFORE, NOW, ONCE MORE  by Antonin Comestaz"></li>	
+					<li><img src="/img/21.jpg" width="100%" title="THEN, BEFORE, NOW, ONCE MORE  by Antonin Comestaz"></li>
+					<li><img src="/img/22.jpg" width="100%" title="THEN, BEFORE, NOW, ONCE MORE  by Antonin Comestaz"></li>
 				</ul>
 			</div>
 	</section>
