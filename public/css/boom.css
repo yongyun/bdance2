@@ -227,14 +227,7 @@ svg {
 .sec-slide {
     background-image: none;
 }
+/*
+collapse*/
 
-#a-slider .bx-wrapper .bx-pager.bx-default-pager a {
-  background: #ccc;
-  opacity: 1
-}
-
- #a-slider .bx-wrapper .bx-pager.bx-default-pager a.active {
-    background: grey;
-    opacity: 1;
-}
-
+/*collapse*/
