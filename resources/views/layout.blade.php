@@ -11,6 +11,7 @@
 		<link rel="stylesheet" type="text/css" href="{{ asset('css/common.css')}}" />
 		@yield('custom_css')
 		<link href='https://fonts.googleapis.com/css?family=Raleway:100' rel='stylesheet' type='text/css'>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 		<script   src="https://code.jquery.com/jquery-1.12.4.min.js"   integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="   crossorigin="anonymous"></script>
 		<script src="{{ asset('js/modernizr.custom.js')}}"></script>
 		<script src="{{ asset('js/responsive-nav.js')}}"></script>
@@ -26,10 +27,10 @@
 			<nav class="nav-collapse">
 				<ul>
 					<li class="menu-item active"><a href="/about">About us</a></li>
-					<!-- <li class="menu-item"><a href="/works">Works</a></li>
+					<li class="menu-item"><a href="/works">Works</a></li>
 					<li class="menu-item"><a href="/boom">boom</a></li>
 					<li class="menu-item"><a href="/news">News</a></li>
-					<li class="menu-item"><a href="/contact">Contact us</a></li> -->
+					<li class="menu-item"><a href="/contact">Contact us</a></li>
 					<li class="menu-item social">
 							<span class="social-item-main"><a target href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></span>
 							<span class="social-item-main"><a target href="#"><i class="fa fa-vimeo" aria-hidden="true"></i></a></span>
@@ -68,6 +69,11 @@
    	 	<script src="{{ asset('js/scroll.js')}}"></script>
     	<script src="{{ asset('js/fixed-responsive-nav.js')}}"></script>
     	<script>
+    		jQuery(function($){
+  $("a").focus(function(){
+    $(this).blur();
+  });
+});
     		$('#main-logo').on('click', function(){
     			window.location= '/';
     		});

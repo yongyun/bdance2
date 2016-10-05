@@ -85,6 +85,17 @@ header ul li a {
 	color: #fff;
 }
 
+a, a:active{
+		outline: medium none;
+      outline: none; /* for Firefox Google Chrome  */
+      behavior:expression(this.onFocus=this.blur()); /* for IE */
+}
+a:link {text-decoration: none}
+a::after {text-decoration: none}
+a:hover {text-decoration: none}
+a:active {text-decoration: none}
+a:visited {text-decoration: none}
+
 p {
 	width: 100%;
     line-height: 25px;

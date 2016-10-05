@@ -134,6 +134,18 @@ svg {
   -o-transition: .5s ease-in-out;
 }
 
+#current a p ,#current a h1 {
+  color: #E59F65;
+}
+
+#current img {
+  border: 0.5px solid #E59F65;
+  padding: 5px;
+  -webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
+  filter: grayscale(0%);
+  transition: grayscale .5s ease-in-out;
+}
+
 .boomhistory ul li {
 	display: inline-block;
 	width: 200px;
@@ -229,5 +241,8 @@ svg {
 }
 /*
 collapse*/
-
+#content h2 {
+      margin: 25px 0 10px 0;
+      text-align: left;
+}
 /*collapse*/
