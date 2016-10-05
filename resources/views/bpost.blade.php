@@ -409,7 +409,7 @@ the purity of the child within us?
 								<p>Performance  &#58; Sarah Murphy</p>
 								<p>Technician &#58; Costume Carlijn Petermeijer</p>
 								<p>Photographer &#58; Joris Jan Bos</p>
-								<a href="http://www.antonincomestaz.com/" target="_blank"><h6>Artist Link</h6></a>
+								<a href="http://www.joeridubbe.com" target="_blank"><h6>Artist Link</h6></a>
 							</div>
 						</div>
 				    </div>
@@ -427,7 +427,7 @@ the purity of the child within us?
 				<div class="b-con" >
 					<a href="http://www.accupass.com/event/register/1609201817241808410365#apjs-leftmenu" target="_blank" class="b-box bpost-box">Workshop</a>	
 				</div>
-				<div class="b-con" >
+				<div class="b-con">
 					<a href="#" class="b-box backToTop bpost-box"> Back to Top </a>	
 				</div>
 			</div>
