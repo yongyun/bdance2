@@ -82,7 +82,7 @@
 							<p><i class="fa fa-map" aria-hidden="true"></i>LOCATION &#58; (Concert Hall of Taipei National University of the Arts) 1 Hsueh-Yuan Rd., Peitou District, Taipei 11201, Taiwan, R.O.C</p>
 							<p><i class="fa fa-clock-o" aria-hidden="true"></i>DURATION &#58; 60mins without intermission </p>
 							<p><i class="fa fa-th-large" aria-hidden="true"></i>DATE &#58;</p>
-							<p>27th-28th Sep 2016 PM730</p>
+							<p>27th-28th December 2016 PM 7:30</p>
 						</div>
 					</div>
 				</div>
@@ -416,6 +416,9 @@ the purity of the child within us?
 			<div class="bpostlink">
 				<div class="b-con" >
 					<a href="http://www.artsticket.com.tw/CKSCC2005/cart/cart00/ShowMap.aspx?PerformanceId=8JNfZ4VZd5RtUOxQvA62L9sMP56NfMHuHdHl3VWIPt4" target="_blank" class="b-box bpost-box">Buy now</a>	
+				</div>
+				<div class="b-con" >
+					<a href="http://www.accupass.com/event/register/1609201817241808410365#apjs-leftmenu" target="_blank" class="b-box bpost-box">Workshop</a>	
 				</div>
 				<div class="b-con" >
 					<a href="#" class="b-box backToTop bpost-box"> Back to Top </a>	

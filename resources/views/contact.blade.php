@@ -53,16 +53,17 @@
 							<input type="hidden" name="_token" value="{{{ csrf_token() }}}" />
 						</form>
 						<div class="or"><p>or</p></div>
+						
+						<div class="admin-info">
+							<p><i class="fa fa-user" aria-hidden="true"></i>Production - Administration : Tzu-Yin Hsu</p>
+							<p><i class="fa fa-phone" aria-hidden="true"></i>Tel. : +886972-353-955</p>
+							<p><a href="mailto:bdance20143@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i>Mail : bdance20143&#64;gmail.com</a></p>
+						</div>
 						<div class="admin-info">
 							<p>Consultant for International Developments</p>
 							<p><i class="fa fa-user" aria-hidden="true"></i>AxE Arts Management/ Hsin-Yi Chang</p>
 							<p><i class="fa fa-phone" aria-hidden="true"></i>Tel. : +49(0)176 3921 3041</p>
 							<p><a href="mailto:axe.artco@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i>Mail : axe.artco&#64;gmail.com</a></p>
-						</div>
-						<div class="admin-info">
-							<p><i class="fa fa-user" aria-hidden="true"></i>Production - Administration : Tzu-Yin Hsu</p>
-							<p><i class="fa fa-phone" aria-hidden="true"></i>Tel. : +886972-353-955</p>
-							<p><a href="mailto:bdance20143@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i>Mail : bdance20143&#64;gmail.com</a></p>
 						</div>
 					</div>
 				</div>
