@@ -83,7 +83,8 @@
 					</p>
 					<div  class="btext">
 						<div class="bcon2">
-							<p><i class="fa fa-map" aria-hidden="true"></i>LOCATION &#58; (Concert Hall of Taipei National University of the Arts) 1 Hsueh-Yuan Rd., Peitou District, Taipei 11201, Taiwan, R.O.C</p>
+							<p><i class="fa fa-map" aria-hidden="true"></i>LOCATION &#58; Concert Hall of Taipei National University of the Arts
+（1 Hsueh-Yuan Rd., Peitou District, Taipei 11201, Taiwan, R.O.C）</p>
 							<p><i class="fa fa-clock-o" aria-hidden="true"></i>DURATION &#58; 60mins without intermission </p>
 							<p><i class="fa fa-th-large" aria-hidden="true"></i>DATE &#58;</p>
 							<p>27th-28th October 2016 PM 7:30</p>
