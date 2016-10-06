@@ -26,11 +26,11 @@
 			<a href="/"><img class="logo" id="main-logo" src="{{ asset('img/logow.png')}}" alt="#"></a>
 			<nav class="nav-collapse">
 				<ul>
-					<li class="menu-item active"><a href="/about">About us</a></li>
+					<!-- <li class="menu-item active"><a href="/about">About us</a></li> -->
 					<!-- <li class="menu-item"><a href="/works">Works</a></li> -->
 					<li class="menu-item"><a href="/boom">boom</a></li>
 					<!-- <li class="menu-item"><a href="/news">News</a></li> -->
-					<li class="menu-item"><a href="/contact">Contact us</a></li>
+					<!-- <li class="menu-item"><a href="/contact">Contact us</a></li> -->
 					<li class="menu-item social">
 							<span class="social-item-main"><a target href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></span>
 							<span class="social-item-main"><a target href="#"><i class="fa fa-vimeo" aria-hidden="true"></i></a></span>
