@@ -37,7 +37,7 @@ svg {
 }
 
 .atop-text {
-	top: -230px;
+	bottom: 50%;
 }
 
 .sec-pic {
@@ -251,4 +251,10 @@ collapse*/
 }
 #a-slider .bx-wrapper .bx-pager.bx-default-pager a:hover, #a-slider .bx-wrapper .bx-pager.bx-default-pager a.active {
   background: #000;
+}
+
+@media only screen and (min-width: 0px) and (max-width: 320px){
+  .atop-text {
+  bottom: 63%;
+}
 }
