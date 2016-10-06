@@ -36,11 +36,6 @@
 							<span class="social-item-main"><a target href="#"><i class="fa fa-vimeo" aria-hidden="true"></i></a></span>
 							<span class="social-item-main" aria-hidden="true"><a target href="#"><img class="icon_logo" src="{{ asset('img/axe.svg')}}" alt=""></a></span>
 					</li>
-					<li class="menu-item social">
-						<a class= "language" aria-hidden="true" href="#">En</a>
-						<Span>/</Span>
-						<a class= "language" aria-hidden="true" href="#">Fr</a>
-					</li>
 				</ul>
 				<!-- full screen -->
 				<ul id="fv">
