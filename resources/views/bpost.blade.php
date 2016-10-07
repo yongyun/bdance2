@@ -32,12 +32,13 @@
         }
     });
 });
+
 	$(function() {
 		var awardSlider = $('#awardSlider').bxSlider({	
 			captions: true
 		});
 	});
-	$('#loading-mask').delay(0).fadeOut();
+	$('#loading-mask').delay(1500).fadeOut();
 	$('.backToTop').click(function(e){
 			e.preventDefault();
 			$('html, body').animate({scrollTop : 0}, 1000);
@@ -48,8 +49,6 @@
 			$('html, body').animate({scrollTop : 2300}, 1000);
 			return false;
 		});
-
-
 
 </script>
 @endsection

@@ -58,7 +58,7 @@
 	</section>
 
 	<section>
-		<div class="box">
+		<div class="triangle-box">
   			<div class="line">
     			<div class="triangle"></div>
     		</div>
