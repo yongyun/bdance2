@@ -43,6 +43,12 @@
 			$('html, body').animate({scrollTop : 0}, 1000);
 			return false;
 		});
+	$('.gotoinfo').click(function(e){
+			e.preventDefault();
+			$('html, body').animate({scrollTop : 2300}, 1000);
+			return false;
+		});
+
 
 
 </script>
@@ -115,35 +121,35 @@
 				<div class="boomhistory artist">
 					<ul id="tabs">
 						<li>
-							<a href="#" name="tab1">
+							<a href="#" name="tab1" class="gotoinfo">
 								<img src="/img/Tsai2.jpg">
 								<p>Po-Cheng Tsai</p>
 								<h1>Taiwan</h1>
 							</a>
 						</li>
 						<li>
-							<a href="#" name="tab2">
+							<a href="#" name="tab2" class="gotoinfo">
 								<img src="/img/IdanSharab.jpg">
 								<p>Idan Sharabi</p>
 								<h1>Israel</h1>
 							</a>
 						</li>
 						<li>
-							<a href="#" name="tab3">
+							<a href="#" name="tab3" class="gotoinfo">
 								<img src="/img/FURIOGANZ.jpg">
 								<p>Francesca Foscarini</p>
 								<h1>Italy</h1>
 							</a>
 						</li>
 						<li>
-							<a href="#" name="tab4">
+							<a href="#" name="tab4" class="gotoinfo">
 								<img src="/img/AntoninComestaz.jpg">
 								<p>Antonin Comestaz</p>
 								<h1>France</h1>
 							</a>
 						</li>
 						<li>
-							<a href="#" name="tab5">
+							<a href="#" name="tab5" class="gotoinfo">
 								<img src="/img/511803.jpg">
 								<p>Joeri Alexander Dubbe</p>
 								<h1>Netherlands</h1>

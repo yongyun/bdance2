@@ -153,6 +153,7 @@ h6 {
     max-width: none;
     will-change: transform;
     object-fit: cover;
+    opacity: 0.4;
 }
 
 @media screen and (max-width: 1380px) {
