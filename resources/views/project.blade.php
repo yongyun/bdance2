@@ -137,7 +137,10 @@
 			@endforeach
 		</div>
 	</section>
-
+	
+	<?php 
+		if (!is_null($other_stuff)) {
+	?>
 	<section class="sec-norm">
 		<div class="conwidth">
 			<h2>&#8212; Staff &#8212;</h2>
@@ -145,6 +148,7 @@
 			
 		</div>
 	</section>
+	<?php } ?>
 
 	<section class="sec-norm">
 		<div class="proj-btm"><a href="/works"><p>&#8212; All Works &#8212;</p></a></div>
