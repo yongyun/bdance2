@@ -10,7 +10,7 @@
 			<ul class="itemwrap">
 				@if (!$isMobile) 
 				<li class="current">
-					<video  class="film" playsinline autoplay muted loop id="bgvid">
+					<video  class="film" playsinline autoplay muted id="bgvid">
 					    <source src="{{ asset('img/film.mp4')}}" type="video/mp4">
 					</video>
 				</li>
@@ -36,5 +36,9 @@
 <script src="{{ asset('js/main.js')}}"></script>
 <script>		
 	$('#loading-mask').delay(2000).fadeOut();
+	document.getElementById('bgvid').addEventListener('ended',myHandler,false);
+    function myHandler(e) {
+        $('.nextIcn').trigger('click');
+    }
 </script>
 @endsection

@@ -70,6 +70,7 @@
 			if( cntAnims === 2 ) {
 				isAnimating = false;
 			}
+
 		}
 
 		var onEndAnimationNextItem = function() {
@@ -79,6 +80,11 @@
 			++cntAnims;
 			if( cntAnims === 2 ) {
 				isAnimating = false;
+			}
+
+			if($(this).find('video')) {
+				var video = document.getElementById("bgvid");
+				video.play();
 			}
 		}
 
