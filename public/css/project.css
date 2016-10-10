@@ -1,7 +1,9 @@
 section {
     height: auto;
 }
-
+.fxFade {
+    background: rgba(0,0,0,0.5);
+}
 
 .sec-img {
 	height: 500px;
@@ -58,8 +60,8 @@ section {
 }
 
 .onepage-foot {
-	position: relative;
-	background-color: #999;
+  position: relative;
+  background-color: #111;
 }
 
 .onepage-foot p {
@@ -78,9 +80,9 @@ section {
     width: 200px;
     display: inline-block;
     background-image: url('../img/rhombus2.svg');
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: contain;
+	  background-repeat: no-repeat;
+	  background-position: center;
+	  background-size: contain;
 }
 
 .proj-btm a p {
@@ -328,5 +330,16 @@ footer {
 }
 
 .tour ul li:first-child {
-    width: 100px;
+   width: 130px;
+}
+
+.mainsection {
+    width: 100%;
+    margin: auto;
+}
+
+.mainstaff {
+  width: 250px;
+  display: inline-block;
+  margin-bottom: 40px;
 }

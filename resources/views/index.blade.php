@@ -34,7 +34,7 @@
 
 @section('custom_js')
 <script src="{{ asset('js/main.js')}}"></script>
-<script>
+<script>		
 	$('#loading-mask').delay(2000).fadeOut();
 </script>
 @endsection

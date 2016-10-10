@@ -31,13 +31,12 @@
 		@endforeach
 	</div>
 	
-	<section class="onepage-foot">
-			<div class="con1">
-				<footer>
-					<p class="copyright">Copyright &copy; 2016 B.DANCE . All rights reserved.</p>
-				</footer>
-			</div>
-	</section>
+
+@section('footer')
+<footer>
+	<p class="copyright">Copyright &copy; 2016 B.DANCE . All rights reserved.</p>
+</footer>
+@endsection
 
 @endsection
 

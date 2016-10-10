@@ -143,6 +143,7 @@ svg {
   padding: 5px;
   -webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
   filter: grayscale(0%);
+  -webkit-filter: grayscale(0%); 
   transition: grayscale .3s ease-in-out;
 }
 

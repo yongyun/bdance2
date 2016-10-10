@@ -124,10 +124,10 @@
 	</section>
 
 	<section class="sec-norm">
-		<div class="conwidth">
+		<div class="mainsection">
 			<h2>&#8212; Main Staff &#8212;</h2>
 			@foreach ($main_stuff as $stuff)
-				<div style="width: 200px; display: inline-block">
+				<div class="mainstaff">
 					<div class="staffoto">
 						<img src="{{ asset($stuff->photo)}}" alt="">
 					</div>
