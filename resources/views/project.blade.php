@@ -42,7 +42,9 @@
 			<p class="text-lft">{{ $project->description}}</p>
 		</div>
 	</section>
-
+	<?php 
+		if (count($awards) > 0) {
+	?>
 	<section id="a-slider" class="sec-slide">
 			<h2 class="textwhite">&#8212; Awards &#8212;</h2></div>
 			<div class="awards">
@@ -57,6 +59,7 @@
 				</ul>
 			</div>
 	</section>
+	<?php } ?>
 
 	<section class="sec-norm">
 		<div class="conwidth">
@@ -181,9 +184,13 @@
 	});
 	$(function() {
 		
+		<?php 
+		if (!is_null($awards)) {
+		?>
 		var awardSlider = $('#awardSlider').bxSlider({
 			
 		});
+		<?php } ?>
 		var reviewSlider = $('#review_slider.bxslider').bxSlider({
 			pagerCustom: '#bx-pager',
 			onSliderLoad: function () {
