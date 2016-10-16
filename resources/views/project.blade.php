@@ -1,5 +1,5 @@
 <?php
-	$reviewLimit = 3;
+	$reviewLimit = 2;
 	$date=date_create($project->perform_date);
 	$date_year = date_format($date,"Y");
 ?>

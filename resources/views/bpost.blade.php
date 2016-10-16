@@ -10,7 +10,6 @@
 @endsection
 
 @section('custom_js')
-<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
 <script src="{{ asset('plugins/film_roll/js/jquery.film_roll.min.js')}}"></script>
 <script src="{{ asset('plugins/jquery.bxslider/jquery.bxslider.min.js')}}"></script>
 <script>
