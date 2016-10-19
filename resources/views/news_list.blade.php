@@ -9,7 +9,7 @@
 
 	<div class="grid">
 			<div class="grid-item staffoto">
-				<a href=" " title="">
+				<a href=" /news/1" title="">
 					<div class="feature box-line"><img src="/img/1.jpg"></div>
 					<h3>News Title</h3>
 				</a>
