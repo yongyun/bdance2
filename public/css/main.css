@@ -145,6 +145,14 @@ h6 {
     font-style: italic;
 }
 
+section {
+	height: auto;
+}
+
+.sec-first {
+	background: #fff;
+}
+
 .film {
 	width: 100%;
 	position: absolute;

@@ -38,16 +38,18 @@
 								<p>Artistic director Kathleen McNurney&#58; &#34;Hugin/Munin&#34; is full of suprises. The choreographer&#39;s talents are undeniable. Dancers Change Shen-Ho and Change Chien-Chih&#39;s unique body performance is displayed. It is undoubtedly the best heartwarming work among this year&#39;works. </p>
 								<h4>&#8212; Taipei Representative Office in Denmark (Resident News)</h4>
 							</div>
+						</li>
+						<li>
 							<div class="atext at-left">
 								<p>&#34;Floating Flower&#34; comes from a 27-year-old choreographer. A heavy pull on life and death transcends to a new realm for  affectionate farewell.</p>
 								<h4>&#8212; PAR Performance Arts Reviews &#47; No. 274 &#47; 2015. July &#47; page15</h4>
 							</div>
-						</li>
-						<li>
 							<div class="atext at-left">
 								<p>Germany&#39;s Stuttgart dance troupe founder and artistic director Dric Gauthier: “Floatign flower” is an eye-catching materpiece.  </p>
 								<h4>&#8212; Report of the Central News Agency</h4>
 							</div>
+						</li>
+						<li>
 							<div class="atext at-left">
 								<p>Tsao Cheng-Yuan: “Tsai Po-Cheng’s “Floating Flower” emphasizes interpersonal relationships. From this work you will discover that instead of performing in a certain mood, they use stage language devices to perform through clothing and action”. </p>
 								<h4>—nddaily</h4>
@@ -66,6 +68,8 @@
 								<p>Tsai Po-Cheng is young and gifted. He defines complexity through the simple concept of  “less is more”.  </p>
 								<h4>&#8212; critical dance commentary</h4>
 							</div>
+						</li>
+						<li>
 							<div class="atext at-left">
 								<p>Floating Fower created by young Taiwanese choreographer Tsai Po-Cheng is definitely the most popular program for the night.</p>
 								<h4>&#8212; tanznetz.de</h4>
@@ -79,6 +83,10 @@
 					        <li> <a data-slide-index="1" href="">2</a>
 					        </li>
 					        <li> <a data-slide-index="2" href="">3</a>
+					        </li>
+					        <li> <a data-slide-index="3" href="">4</a>
+					        </li>
+					        <li> <a data-slide-index="4" href="">5</a>
 					        </li>
 					    </ul>
 					</div>
@@ -194,10 +202,10 @@
 			<div class="proj-btm" style=" margin-top: 100px;"><a href="#" class="backToTop"><p>&#8212; Back to Top &#8212;</p></a></div>
 		</section>
 
-		<section class="onepage-foot">
+		<section class="onepage-foot sec-white">
 			<div class="con1">
-				<div style="margin-top: 150px;">
-					<p class="copyright">Copyright &copy; 2016 B.DANCE . All rights reserved.</p>
+				<div style="margin-top: 100px;">
+					<p class="acopyright">Copyright &copy; 2016 B.DANCE . All rights reserved.</p>
 				</div>
 			</div>
 		</section>

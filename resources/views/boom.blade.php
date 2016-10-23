@@ -85,8 +85,8 @@
 
 	<section class="onepage-foot">
 			<div class="con1">
-				<div style="margin-top: 150px;">
-					<p class="copyright">Copyright &copy; 2016 B.DANCE . All rights reserved.</p>
+				<div>
+					<p class="acopyright">Copyright &copy; 2016 B.DANCE . All rights reserved.</p>
 				</div>
 			</div>
 	</section>

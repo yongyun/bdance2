@@ -441,9 +441,9 @@ the purity of the child within us?
 	</section>
 
 	<section class="onepage-foot">
-			<div class="con1">
-				<div style="margin-top: 150px;">
-					<p class="copyright">Copyright &copy; 2016 B.DANCE . All rights reserved.</p>
+			<div class="con1 sec-white">
+				<div style="margin-top: 100px;">
+					<p class="acopyright">Copyright &copy; 2016 B.DANCE . All rights reserved.</p>
 				</div>
 			</div>
 	</section>
