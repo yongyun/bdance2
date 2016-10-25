@@ -56,8 +56,19 @@ body {
   margin: 180px 0 -105px 0;
 }
 
+
 .new-con {
-  margin: 170px auto 0 auto;
+  margin: 0px auto;
+  width: 60%;
+  text-align: left;
+}
+
+.new-first-con {
+  margin-top: 170px;
+}
+
+.new-con2 {
+  margin: 40px auto;
   width: 60%;
   text-align: left;
 }
@@ -85,4 +96,37 @@ body {
 iframe {
   width: 100%;
   margin: 40px 0;
+}
+
+#a-slider {
+    width: 100%;
+    height: 500px;
+    padding: 0;
+}
+
+.bx-wrapper img {
+    max-width: 100%;
+    display: block;
+}
+
+.bx-wrapper .bx-viewport {
+     left: 0px; 
+}
+
+#a-slider .bx-wrapper .bx-prev {
+    left: 0px;
+    top: 45%;
+    display: block;
+}
+
+#a-slider .bx-wrapper .bx-next {
+    right: 0px;
+    top: 45%;
+    display: block;
+}
+
+@media screen and (min-width: 1240px) {
+.awards ul li {
+    max-height: 500px;
+    overflow: hidden;
 }
