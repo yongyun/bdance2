@@ -28,9 +28,9 @@ require_once('head.php');
             <h2><i class="icon-search"></i> 條件搜尋</h2>
         </div>
         <div class="box-content" style="display: block;">
-            <form class="row-fluid" method="get" action="index.php" id="search_bar" name="search_bar" style="margin-bottom:0px;">
+            <form class="row-fluid" method="get" action="news_sys.php" id="search_bar" name="search_bar" style="margin-bottom:0px;">
                 <div class="span12" style="margin-left:0px;">
-                    <label>發佈日期</label>
+                    <label>建立日期</label>
                     <input id="expect_date_op" type="text" name="expect_date_op" style="width:170px;" value="" class="hasDatepicker">&nbsp;&nbsp;~&nbsp;&nbsp;
                     <input id="expect_date_ed" type="text" name="expect_date_ed" style="width:170px;" value="" class="hasDatepicker">
                 </div>
@@ -59,7 +59,7 @@ require_once('head.php');
 
 
             <!--page info op-->
-            <?php print_simple_pager($res_member_sum[0]['cnt'],$arr_page['page_limit']);?>
+            <?php print_simple_pager($res_news_sum[0]['cnt'],$arr_page['page_limit']);?>
 			<!--page info ed-->
             <table class="table table-striped table-bordered">
                 <thead>
@@ -128,7 +128,7 @@ require_once('head.php');
 
 			<!--pager op-->
 			<?php
-			print_pager($res_member_sum[0]['cnt'],$arr_page['page_limit']);
+			print_pager($res_news_sum[0]['cnt'],$arr_page['page_limit']);
 			?>
 			<!--pager ed-->  
         </div>
