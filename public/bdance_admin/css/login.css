@@ -1,0 +1,80 @@
+body
+{
+	background:rgb(240,240,240);	
+}
+.logintableleft
+{
+background:#c0d6f7;
+-webkit-border-top-left-radius: 5px;
+-webkit-border-bottom-left-radius: 5px;
+-moz-border-radius-topleft: 5px;
+-moz-border-radius-bottomleft: 5px;
+border-top-left-radius: 5px;
+border-bottom-left-radius: 5px;
+
+}
+.logintableright
+{
+background:#c0d6f7;
+-webkit-border-top-right-radius: 5px;
+-webkit-border-bottom-right-radius: 5px;
+-moz-border-radius-topright: 5px;
+-moz-border-radius-bottomright: 5px;
+border-top-right-radius: 5px;
+border-bottom-right-radius: 5px;
+}
+.logintabletop
+{
+border-left:1px solid #8c9bb2;
+border-right:1px solid #8c9bb2;
+background:#c0d6f7;
+font-size:9pt;
+color:#1f3a64;
+}
+.logintabledown
+{
+border-left:1px solid #8c9bb2;
+border-right:1px solid #8c9bb2;
+background:#c0d6f7;
+}
+.logintablemiddle
+{
+border-left:1px solid #8c9bb2;
+border-right:1px solid #8c9bb2;
+border-top:1px solid #8c9bb2;
+border-bottom:1px solid #8c9bb2;
+background:#9dc4ff;
+}
+.logindiv
+{
+position:absolute;
+left:50%;
+top:50%;
+margin-left:-200px;
+margin-top:-100px;
+
+}
+.downimg
+{
+position:absolute;
+width:17px;
+height:17px;
+}
+
+.logo
+{
+position:absolute;
+width:380px;
+height:380px;
+//left:730px;
+//top:80px;
+background:url(../img/logo.png);
+filter:alpha(opacity=30);
+-moz-opacity:0.3;
+opacity:0.3;
+-khtml-opacity: 0.3;
+-moz-background-size:380px 380px;        /*for Firefox*/
+-webkit-background-size:380px 380px;        /*for Google Chrome¡BSafari*/
+-o-background-size:380px 380px;        /*for Opera*/
+background-size:380px 380px;    
+}
