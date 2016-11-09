@@ -31,6 +31,7 @@ CKEDITOR.editorConfig = function( config ) {
 		{ name: 'styles', items : [ 'Styles','Format','Font','FontSize' ] },
 		{ name: 'colors', items : [ 'TextColor','BGColor' ] },
 		{ name: 'insert', items : [ 'Image' ] },
+		{ name: 'links', items : [ 'Link','Unlink' ] }
 	];	
 	
 	//開啟圖片上傳功能

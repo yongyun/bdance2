@@ -148,6 +148,7 @@ switch($act)
 			
 			$arr_input['na_nwid'] = $id;
 			$arr_input['na_image'] = $pics;
+			$arr_input['na_description'] = $description;
 			db_add_news_ad($db,$arr_input);
 			unset($arr_input);
 		}

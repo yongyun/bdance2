@@ -8,46 +8,27 @@
 	<div class="news"><h2>&#8212; News &#8212;</h2></div>
 
 	<div class="grid">
+		@foreach ($news_list as $n_list)
 			<div class="grid-item staffoto">
-				<a href=" /news/1" title="">
-					<div class="feature box-line"><img src="/img/1.jpg"></div>
-					<h3>News Title</h3>
+				<a href="/news/{{ $n_list->nw_id}}" title="">
+					<div class="feature box-line">
+						<?php
+							echo $date = $n_list->nw_synopsis_image;
+						?>
+					</div>
+					<h3>{{$n_list->nw_title}}</h3>
 				</a>
-				<h5>Admin | 9 December 2016</h5>
+				<h5>
+					{{$n_list->nw_user}} | 
+					<?php
+						echo date('d M Y',strtotime($n_list->nw_date));
+					?>
+				</h5>
 					<p></p>
-				<p>Morbi lacus massa, euismod ut turpis molestie, tristique sodales est. Integer sit amet mi id sapien tempor molestie in nec</p>
-				<div class="more"><a href="">Read more</a></div>
+				<p>{{$n_list->nw_synopsis}}</p>
+				<div class="more"><a href="/news/{{ $n_list->nw_id}}">Read more</a></div>
 			</div>
-			<div class="grid-item staffoto">
-				<a href=" " title="">
-					<div class="feature box-line"><img src="/img/2.jpg"></div>
-					<h3>News Title</h3>
-					<h5>Admin | 9 December 2016</h5>
-					<p></p>
-				</a>
-				<p>Morbi lacus massa, euismod ut turpis molestie, tristique sodales est. Integer sit amet mi id sapien tempor molestie in nec</p>
-				<a href=""><div class="more">Read more</div></a>
-			</div>
-			<div class="grid-item staffoto">
-				<a href=" " title="">
-					<div class="feature box-line"><img src="/img/3.jpg"></div>
-					<h3>News Title</h3>
-					<h5>Admin | 9 December 2016</h5>
-					<p></p>
-				</a>
-				<p>Morbi lacus massa, euismod ut turpis molestie, tristique sodales est. Integer sit amet mi id sapien tempor molestie in nec</p>
-				<a href=""><div class="more">Read more</div></a>
-			</div>
-			<div class="grid-item staffoto">
-				<a href=" " title="">
-					<div class="feature box-line"><img src="/img/1.jpg"></div>
-					<h3>News Title</h3>
-					<h5>Admin | 9 December 2016</h5>
-					<p></p>
-				</a>
-				<p>Morbi lacus massa, euismod ut turpis molestie, tristique sodales est. Integer sit amet mi id sapien tempor molestie in nec</p>
-				<div class="mo-box"><a href="" class="more">Read more</a></div>
-			</div>
+		@endforeach
 	</div>
 
 @endsection
