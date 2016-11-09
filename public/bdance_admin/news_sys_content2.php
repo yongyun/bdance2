@@ -39,7 +39,7 @@ require_once('head.php');
 <div class="row-fluid sortable ui-sortable">
     <div class="box span12">
         <div class="box-header well" data-original-title="">
-            <h2> 相關連結設定</h2>
+            <h2> 內容說明</h2>
         </div>
         <div class="box-content">
 			<form id="mod_form" name="mod_form" method="post" action="news_sys_act.php" class="bs-docs-example form-horizontal" enctype='multipart/form-data'>
