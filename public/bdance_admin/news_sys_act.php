@@ -77,6 +77,7 @@ switch($act)
 	
 	case 'content_mod':
 		$id = ft($_POST['id'],0);
+		$top_content = $_POST['top_content'];
 		$content = $_POST['content'];
 	
 		if($id == '')
@@ -89,6 +90,7 @@ switch($act)
 		preg_match_all('#<img[^>]*>#i', $content, $match);
 
 		$arr_input['nw_synopsis_image'] = $match[0][0];
+		$arr_input['nw_top_content'] = $top_content;
 		$arr_input['nw_content'] = $content;
 		$arr_input['nw_update'] = date('Y-m-d H:i:s');
 

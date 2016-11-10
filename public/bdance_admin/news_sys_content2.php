@@ -39,17 +39,27 @@ require_once('head.php');
 <div class="row-fluid sortable ui-sortable">
     <div class="box span12">
         <div class="box-header well" data-original-title="">
-            <h2> 內容說明</h2>
+            <h2> 抬頭內容</h2>
         </div>
-        <div class="box-content">
-			<form id="mod_form" name="mod_form" method="post" action="news_sys_act.php" class="bs-docs-example form-horizontal" enctype='multipart/form-data'>
+		<form id="mod_form" name="mod_form" method="post" action="news_sys_act.php" class="bs-docs-example form-horizontal" enctype='multipart/form-data'>
+			<div class="box-content">
 				<input type="hidden" name="act" id="act" value="content_mod" />
 				<input type="hidden" name="id" id="id" value="<?php echo $id;?>" />
-                <div class="control-group">
-                    <div>
+				<div class="control-group">
+					<div>
+						<textarea id="top_content" name="top_content" class="ckeditor" style="width:99%; height:200px;"><?php echo $res_news[0]['nw_top_content'];?></textarea>
+				   </div>
+				</div>
+			</div>
+			<div class="box-header well" data-original-title="">
+				<h2> 中間內容</h2>
+			</div>
+			<div class="box-content">
+				<div class="control-group">
+					<div>
 						<textarea id="content" name="content" class="ckeditor" style="width:99%; height:200px;"><?php echo $res_news[0]['nw_content'];?></textarea>
-                   </div>
-                </div>
+				   </div>
+				</div>
 				
 				<div class="control-group"> 
 					<label class="control-label" for="id"></label>
@@ -57,9 +67,9 @@ require_once('head.php');
 						<input type="submit" class="btn btn-primary" value="修改" />
 					</div>
 				</div>
-				
-			</form>
-        </div>
+					
+			</div>
+		</form>
     </div>
 </div>
         <!-- content ends -->

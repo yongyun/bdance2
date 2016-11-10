@@ -37,7 +37,7 @@ function db_get_news($db,$arr_input,$arr_page = null)
 	}
 	else
 	{
-		$sql = 'SELECT nw_id,nw_user,nw_title,nw_synopsis,nw_content,nw_date,nw_update,nw_status,nw_link 
+		$sql = 'SELECT nw_id,nw_user,nw_title,nw_synopsis,nw_top_content,nw_content,nw_date,nw_update,nw_status,nw_link 
 				FROM news 
 				'.$def;
 		$sql .= get_page_limit($arr_page);		
