@@ -13,7 +13,8 @@
 				<a href="/news/{{ $n_list->nw_id}}" title="">
 					<div class="feature box-line">
 						<?php
-							echo $date = $n_list->nw_synopsis_image;
+						//600 * 600
+						echo $date = $n_list->nw_synopsis_image;
 						?>
 					</div>
 					<h3>{{$n_list->nw_title}}</h3>

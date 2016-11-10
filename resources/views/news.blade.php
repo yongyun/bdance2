@@ -11,15 +11,10 @@
 <section>
 	<div class="new-con new-first-con">
 		<div class="new-info">
-			<h2>Weiwuying Arts Festival</h2>
-			<h6>November 15, 2016</h6>
+			<h2><?php echo $news_list[0]['nw_title'];?></h2>
+			<h6><?php echo date('M d, Y',strtotime($news_list[0]['nw_date']));?></h6>
 		</div>
-	    <p>Chemistry invites award-winning choreographers around the world
-
-			come to show-off in Taiwan! Their works promise to reshape our
-
-			conceptions of contemporary dance.
-		</p>
+	    <p><?php echo $news_list[0]['nw_top_content'];?></p>
 	</div>
 </section>
 <!-- Slieshow -->
@@ -34,12 +29,31 @@
 	</div>
 </section>
 <!-- Slieshow End-->
+</br></br>
 <section>
 	<div class="new-con">
-			 <iframe src="https://player.vimeo.com/video/179031782?title=0&byline=0&portrait=0" width="1000" height="450" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-		<p> 10 月關渡藝術節 B.OOM by B.DANCE ( 票券 )<a href="http://www.artsticket.com.tw/CKSCC2005/cart/cart00/ShowMap.aspx?performanceid=8JNfZ4VZd5RtUOxQvA62L9sMP56NfMHuHdHl3VWIPt4"> 售票連結</a></p>
-		<p>11 月衛武營藝術祭台灣舞蹈平台 ( 已售罄 )</p>
-		<a href=""><h6># BOOMbyBDANCE</h6></a>
+		<div>
+	      <a class="example-image-link" href="/img/1.jpg" data-lightbox="example-1"><img class="example-image" src="/img/1.jpg" alt="image-1" /></a>
+	    </div>
+		<?php echo $news_list[0]['nw_content'];?>
+		<?php
+		foreach ($news_video as $row)
+		{
+			if($row['nv_type'] == 2)
+			{
+				$array_str = explode('/',$row['nv_link']);
+				?>
+				 <iframe src="https://player.vimeo.com/video/<?php echo $array_str[count($array_str) - 1];?>?title=0&byline=0&portrait=0" width="1000" height="450" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+				<?php
+			}
+			else
+			{
+			}
+		}
+		?>
+			 
+			 
+		<p> <?php echo $news_list[0]['nw_link'];?></p>
 	</div>
 
 </section>
@@ -47,7 +61,7 @@
 <section class="sec-white">
 	<div class="proj-btm"><a href="/news"><p>&#8212; News List &#8212;</p></a></div>
 	<div class="proj-btm" style=" margin-top: 100px;"><a href="#" class="backToTop"><p>&#8212; Back to Top &#8212;</p></a></div>
-	<div class="proj-btm"><a href="#"><p>&#8212; Next News &#8212;</p></a></div>
+	<div class="proj-btm"><a href="/news/<?php if($news_nt[0]['nw_id'] == ''){ echo $news_pr[0]['nw_id'];}else{ echo $news_nt[0]['nw_id'];}?>"><p>&#8212; Next News &#8212;</p></a></div>
 </section>
 
 <section class="onepage-foot">

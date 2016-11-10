@@ -26,11 +26,6 @@ switch($act)
 			post_back('請輸入標題');
 			exit();
 		}
-		if($synopsis == '')
-		{
-			post_back('請輸入簡述內容');
-			exit();
-		}
 
 		//新增資料
 		$arr_input['nw_user'] = $mem_info['name'];
@@ -57,11 +52,6 @@ switch($act)
 			post_back('請輸入標題');
 			exit();
 		}
-		if($synopsis == '')
-		{
-			post_back('請輸入簡述內容');
-			exit();
-		}
 
 		$arr_input['nw_title'] = $title;
 		$arr_input['nw_synopsis'] = $synopsis;
@@ -79,12 +69,6 @@ switch($act)
 		$id = ft($_POST['id'],0);
 		$top_content = $_POST['top_content'];
 		$content = $_POST['content'];
-	
-		if($id == '')
-		{
-			post_back('參數錯誤');
-			exit();
-		}
 		
 		//擷取全部圖片
 		preg_match_all('#<img[^>]*>#i', $content, $match);
@@ -126,12 +110,6 @@ switch($act)
 		$description = ft($_POST['description'],1);
 
 		if($id == '')
-		{
-			post_back('參數錯誤');
-			exit();
-		}
-
-		if($description == '')
 		{
 			post_back('參數錯誤');
 			exit();
