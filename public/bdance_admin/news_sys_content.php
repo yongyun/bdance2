@@ -14,24 +14,8 @@ $id = ft($_GET['id'],0);
 $res_images = db_get_news_ad($db,$id);
 require_once('head.php');
 ?>
-<div id="content" class="span10"><div class="row-fluid sortable ui-sortable">
-	<div class="box span12">
-      	<div class="box-header well">
-            <div class="box-icon">
-                <a class="btn btn-minimize btn-round" href="index.php"><i class="icon-chevron-up"></i></a>
-            </div>
-            <h2><i class="icon-th-list"></i> 顯示切換</h2>
-        </div>
-        <div class="box-content" style="display: block;">
-            <a class="btn btn-outline-success" href="news_sys_content1.php?id=<?php echo $id;?>">簡述內容</a>
-			<a class="btn btn-outline-success" href="news_sys_content.php?id=<?php echo $id;?>">輪播圖片</a>
-			<a class="btn btn-outline-success" href="news_sys_content2.php?id=<?php echo $id;?>">內容說明</a>
-			<a class="btn btn-outline-success" href="news_sys_content3.php?id=<?php echo $id;?>">影片設定</a>
-			<a class="btn btn-outline-success" href="news_sys_content4.php?id=<?php echo $id;?>">相關連結設定</a>
-        </div>  
-	</div>
-</div>
-
+<div id="content" class="span10">
+<?php require_once('news_sys_menu.php');?>
 
 <div class="row-fluid sortable ui-sortable">
     <div class="box span12">
@@ -74,25 +58,25 @@ require_once('head.php');
             <h2> 輪播圖片列表</h2>
         </div>
         <div class="box-content">
-    <div>
-        <?php 
-		if(isset($res_images))
-		{
-			foreach($res_images as $i => $row)
-			{
+			<div>
+				<?php 
+				if(isset($res_images))
+				{
+					foreach($res_images as $i => $row)
+					{
+						?>
+						<div style='float:left;margin-right:30px;'>
+							<div>
+								<img src='../upload/news/<?php echo $row['na_image'];?>' style='width:200px;height:150px;'>
+							</div>
+							<div class='delimg btn' style='color:#000;width:50px;margin-bottom:10px;' rel='<?php echo $row['na_id'];?>'>删除</div>
+							<div class='editimg btn' style='color:#000;width:50px;margin-bottom:10px;display:none;' rel='<?php echo $row['na_id'];?>'>修改</div>
+						</div>
+						<?php
+					}
+				}
 				?>
-				<div style='float:left;margin-right:30px;'>
-					<div>
-						<img src='../upload/news/<?php echo $row['na_image'];?>' style='width:200px;height:150px;'>
-					</div>
-					<div class='delimg btn' style='color:#000;width:50px;margin-bottom:10px;' rel='<?php echo $row['na_id'];?>'>删除</div>
-					<div class='editimg btn' style='color:#000;width:50px;margin-bottom:10px;display:none;' rel='<?php echo $row['na_id'];?>'>修改</div>
-				</div>
-				<?php
-			}
-		}
-		?>
-	</div>
+			</div>
         </div>
     </div>
 </div>

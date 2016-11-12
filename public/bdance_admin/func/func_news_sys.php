@@ -3,30 +3,30 @@ function db_get_news($db,$arr_input,$arr_page = null)
 {
 	$def = 'WHERE nw_del = 0 ';
 	
-	if($arr_input['nw_id'] != '')
+	if(@$arr_input['nw_id'] != '')
 	{
 		$def .= ' AND nw_id = ? ';
-		$sql_input[] = $arr_input['nw_id'];
+		$sql_input[] = @$arr_input['nw_id'];
 	}
 	
-	if($arr_input['expect_date_op'] != '')
+	if(@$arr_input['expect_date_op'] != '')
 	{
 		$def .= ' AND nw_date >= ? ';
-		$sql_input[] = $arr_input['expect_date_op'];
+		$sql_input[] = @$arr_input['expect_date_op'];
 	}
 	
-	if($arr_input['expect_date_ed'] != '')
+	if(@$arr_input['expect_date_ed'] != '')
 	{
 		$def .= ' AND nw_date <= ? ';
-		$sql_input[] = $arr_input['expect_date_ed'];
+		$sql_input[] = @$arr_input['expect_date_ed'];
 	}
 
-	if($arr_input['screach_str'] != '')
+	if(@$arr_input['screach_str'] != '')
 	{
 		$def .= ' AND nw_title LIKE ? OR nw_synopsis LIKE ? OR nw_content LIKE ?';
-		$sql_input['nw_title'] = $arr_input['screach_str'];
-		$sql_input['nw_synopsis'] = $arr_input['screach_str'];
-		$sql_input['nw_content'] = $arr_input['screach_str'];
+		$sql_input['nw_title'] = @$arr_input['screach_str'];
+		$sql_input['nw_synopsis'] = @$arr_input['screach_str'];
+		$sql_input['nw_content'] = @$arr_input['screach_str'];
 	}
 	
 	if(count($arr_page) == 0)
@@ -37,7 +37,7 @@ function db_get_news($db,$arr_input,$arr_page = null)
 	}
 	else
 	{
-		$sql = 'SELECT nw_id,nw_user,nw_title,nw_synopsis,nw_top_content,nw_content,nw_date,nw_update,nw_status,nw_link 
+		$sql = 'SELECT nw_id,nw_user,nw_title,nw_synopsis,nw_synopsis_image,nw_top_content,nw_content,nw_date,nw_update,nw_status,nw_link 
 				FROM news 
 				'.$def;
 		$sql .= get_page_limit($arr_page);		

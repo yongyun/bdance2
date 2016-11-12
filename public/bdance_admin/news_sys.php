@@ -107,7 +107,7 @@ require_once('head.php');
 								</td>
 								<!-- 功能 -->
 								<td class="center" style="white-space:nowrap;">
-									<a class="btn btn-warning btn-small" href="news_sys_content.php?id=<?php echo $row['nw_id'];?>">修改</a>
+									<a class="btn btn-warning btn-small" href="news_sys_content1.php?id=<?php echo $row['nw_id'];?>">修改</a>
 									<a class="btn btn-small" href="news_sys_act.php?act=del&id=<?php echo $row['nw_id'];?>">刪除</a>
 								</td>
 							</tr>

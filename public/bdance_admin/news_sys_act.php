@@ -72,8 +72,11 @@ switch($act)
 		
 		//擷取全部圖片
 		preg_match_all('#<img[^>]*>#i', $content, $match);
+		//取得第一張圖
+		preg_match('/upload(.*?)"/i',$match[0][0],$arr_image);
+		$one_images = str_replace('"','',$arr_image[0]);
 
-		$arr_input['nw_synopsis_image'] = $match[0][0];
+		$arr_input['nw_synopsis_image'] = $one_images;
 		$arr_input['nw_top_content'] = $top_content;
 		$arr_input['nw_content'] = $content;
 		$arr_input['nw_update'] = date('Y-m-d H:i:s');
@@ -214,6 +217,24 @@ switch($act)
 		$res = db_mod_news_video($db,$arr_input,$id);
 		
 		reload_js_top_href('新增成功','news_sys_content3.php?id='.$id);
+		exit;
+	break;
+	
+	case 'cover_pic':
+		$id = $_POST['id'];
+		$pic = $_POST['pic'];
+		if($id == '')
+		{
+			post_back('參數錯誤');
+			exit();
+		}
+		if($pic == '')
+		{
+			post_back('參數錯誤');
+			exit();
+		}
+		$arr_input['nw_synopsis_image'] = $pic;
+		$res = db_mod_news($db,$arr_input,$id);
 		exit;
 	break;
 	
