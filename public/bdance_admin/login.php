@@ -5,6 +5,7 @@ $su_tk = ft($_COOKIE['su_tk'],1);
 $su_tk_key = ft($_COOKIE['su_tk_key'],1);
 $submit	= ft($_POST['submit'],1);
 
+
 $crypt_cookie = new phpcrypt();
 $su_ok = 0;
 //已經登入狀態

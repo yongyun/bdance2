@@ -101,7 +101,7 @@
 
 	<section class="sec-white" >
 		<div class="con1">
-			<iframe src="https://player.vimeo.com/video/179031782?title=0&byline=0&portrait=0" width="1000" height="450" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+			<iframe src="https://player.vimeo.com/video/179031782?title=0&byline=0&portrait=0" width="70%" height="450px" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 		</div>
 	</section>
 
@@ -425,16 +425,22 @@ the purity of the child within us?
 	</section>
 
 	<section class="sec-white">
-		<div class="con2wid">
+		<div class="con3wid">
 			<div class="bpostlink">
-				<div class="b-con" >
-					<a href="http://www.artsticket.com.tw/CKSCC2005/cart/cart00/ShowMap.aspx?PerformanceId=8JNfZ4VZd5RtUOxQvA62L9sMP56NfMHuHdHl3VWIPt4" target="_blank" class="b-box bpost-box">Buy now</a>	
+					<div class="b-con" >
+						<div class="nov12test">
+						<a href="http://www.artsticket.com.tw/CKSCC2005/cart/cart00/ShowMap.aspx?PerformanceId=8JNfZ4VZd5RtUOxQvA62L9sMP56NfMHuHdHl3VWIPt4" target="_blank" class="b-box bpost-box">Buy now</a>	
+					</div>
 				</div>
 				<div class="b-con" >
-					<a href="http://www.accupass.com/event/register/1609201817241808410365#apjs-leftmenu" target="_blank" class="b-box bpost-box">Workshop</a>	
+					<div class="nov12test">
+						<a href="http://www.accupass.com/event/register/1609201817241808410365#apjs-leftmenu" target="_blank" class=" b-box bpost-box">Workshop</a>	
+					</div>
 				</div>
 				<div class="b-con">
-					<a href="#" class="b-box backToTop bpost-box"> Back to Top </a>	
+					<div class="nov12test">
+						<a href="#" class="b-box backToTop bpost-box"> Back to Top </a>	
+					</div>
 				</div>
 			</div>
 		</div>

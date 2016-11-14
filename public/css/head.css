@@ -54,6 +54,7 @@ a:hover {
   width: 100%;
   display: block; 
   background: rgba(0, 0, 0, .5);
+  line-height: 100px;
 }
 
 .js .nav-collapse {
@@ -98,7 +99,11 @@ a:hover {
   }
 }
 
-
+@media screen and (max-height:  460px) {
+  .nav-collapse li {
+  line-height: 60px;
+  }
+}
 /* ------------------------------------------
   DEMO STYLES
 --------------------------------------------- */
@@ -232,6 +237,7 @@ header {
   .nav-collapse li {
     width: auto;
     background: rgba(0, 0, 0, 0);
+    line-height: 125px;
   }
   .nav-collapse li.social {
     display: none;
