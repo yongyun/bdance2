@@ -15,7 +15,7 @@ class NewsController extends Controller {
 		$news_list = News::where([
 				['nw_del','=',0],
 				['nw_status','=','0']
-			])->get();
+			])->orderBy('nw_id','desc')->get();
 		return view('news_list', ['news_list' => $news_list]);
 	}
 
@@ -36,13 +36,18 @@ class NewsController extends Controller {
 
 		$news_pr = News::where([
 				['nw_del','=',0],
-			])->orderBy('nw_id','asc')->get();
+			])->orderBy('nw_id','asc')->limit(1)->get();
 
 		$news_nt = News::where([
 				['nw_del','=',0],
-				['nw_id','>',$id]
-			])->orderBy('nw_id','asc')->get();
-		return view('news', ['news_list' => $news_list,'news_ad' => $news_ad,'news_video' => $news_video,'news_pr' => $news_pr,'news_nt' => $news_nt]);
+			])->orderBy('nw_id','desc')->limit(1)->get();
+		
+		$news_next = News::where([
+				['nw_del','=',0],
+				['nw_id','>=',$id]
+			])->orderBy('nw_id','asc')->limit(2)->get();
+		
+		return view('news', ['news_list' => $news_list,'news_ad' => $news_ad,'news_video' => $news_video,'news_pr' => $news_pr,'news_nt' => $news_nt,'news_next' => $news_next]);
 	}
 }
 

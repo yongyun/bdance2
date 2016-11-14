@@ -32,10 +32,28 @@
 </br></br>
 <section>
 	<div class="new-con">
-		<div>
-	      <a class="example-image-link" href="/img/1.jpg" data-lightbox="example-1"><img class="example-image" src="/img/1.jpg" alt="image-1" /></a>
-	    </div>
-		<?php echo $news_list[0]['nw_content'];?>
+		<?php 
+		$content = $news_list[0]['nw_content'];
+		// 擷取全部圖片
+		preg_match_all('#<img[^>]*>#i', $news_list[0]['nw_content'], $arr_image);
+		if(count($arr_image[0]) > 0)
+		{
+			foreach($arr_image[0] as $key => $row)
+			{
+				// 擷取圖片位置
+				preg_match('/upload(.*?)"/i',$row,$src_image);
+				// 更換頁面顯示方式
+				$view_images = str_replace('"','',$src_image[0]);
+				$content_image = '<div>
+									<a class="example-image-link" href="../'.$view_images.'" data-lightbox="example-'.$key.'">
+										<img class="example-image" src="../'.$view_images.'" alt="image-'.$key.'" />
+									</a>
+								</div>';
+				$content = str_replace($row,$content_image,$content);
+			}
+		}
+		echo $content;
+		?>
 		<?php
 		foreach ($news_video as $row)
 		{
@@ -48,6 +66,10 @@
 			}
 			else
 			{
+				$array_str = explode('v=',$row['nv_link']);
+				?>
+				<iframe width="1000" height="563" src="https://www.youtube.com/embed/<?php echo $array_str[count($array_str) - 1];?>?rel=0&amp;controls=0" frameborder="0" allowfullscreen></iframe>
+				<?php
 			}
 		}
 		?>
@@ -61,7 +83,7 @@
 <section class="sec-white">
 	<div class="proj-btm"><a href="/news"><p>&#8212; News List &#8212;</p></a></div>
 	<div class="proj-btm" style=" margin-top: 100px;"><a href="#" class="backToTop"><p>&#8212; Back to Top &#8212;</p></a></div>
-	<div class="proj-btm"><a href="/news/<?php if($news_nt[0]['nw_id'] == ''){ echo $news_pr[0]['nw_id'];}else{ echo $news_nt[0]['nw_id'];}?>"><p>&#8212; Next News &#8212;</p></a></div>
+	<div class="proj-btm"><a href="/news/<?php if($news_nt[0]['nw_id'] == $news_next[0]['nw_id']){ echo $news_pr[0]['nw_id'];}else{ echo $news_next[1]['nw_id'];}?>"><p>&#8212; Next News &#8212;</p></a></div>
 </section>
 
 <section class="onepage-foot">
