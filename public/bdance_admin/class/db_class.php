@@ -227,11 +227,11 @@ class DB
 			{
 				$sql_TableName = explode('INTO',$sql);
 				//PK auto value
-				// $res = $conn->query("SELECT `auto_increment` FROM INFORMATION_SCHEMA.TABLES WHERE table_name = '".trim($sql_TableName[1])."'");
-				$res = $conn->query("SHOW TABLE STATUS FROM ".$this->db_table_name." LIKE '".trim($sql_TableName[1])."'");
+				$res = $conn->query("SELECT `auto_increment` FROM INFORMATION_SCHEMA.TABLES WHERE table_name = '".trim($sql_TableName[1])."'");
+				//$res = $conn->query("SHOW TABLE STATUS FROM ".$this->db_table_name." LIKE '".trim($sql_TableName[1])."'");
 				$auto_increment = $res->fetch_assoc();
 				//now auto_increment value
-				$auto_incriement_value = $auto_increment['Rows'];
+				$auto_incriement_value = $auto_increment['auto_increment'] - 1;
 			}
 			else
 			{
@@ -338,11 +338,10 @@ class DB
 		
 		
 		//重新排序 WHERE 的內容 
-		$arr_sql_where = explode('?',$sql_where_condition);
-		$sql_where = $arr_sql_where[0];
-		for($i = 0;$i < count($sql_where_value);$i++)
+		$sql_where = "";
+		for($i = 0;$i < count($sql_where_condition);$i++)
 		{
-			$sql_where .= "'".$sql_where_value[($i)]."'";
+			$sql_where .= $sql_where_condition[$i] . " = '".$sql_where_value[($i)]."'";
 		}
 		
 		$new_sql = $sql." WHERE ".$sql_where.";";

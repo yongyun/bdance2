@@ -14,7 +14,8 @@ use App\Tour;
 class WorkController extends Controller {
 
 	public function allWorks() {
-		return view('works', ['works' => Work::all()]);
+		$work = Work::orderBy('created_at', 'desc')->get();
+		return view('works', ['works' => $work]);
 	}
 
 	public function showWork($id) {
@@ -31,7 +32,7 @@ class WorkController extends Controller {
 		$other_stuff = Stuff::where([
 				['work_id', '=' , $id],
 				['type', '=' , 'secondary']
-			])->first();
+			])->get();
 		$awards = Award::where('work_id', $id)->get();
 		$tours = Tour::where('work_id', $id)->orderBy('order', 'asc')->get();
 
