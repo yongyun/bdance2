@@ -16,6 +16,8 @@ if($sid != '')
 {
 	$res_view = db_get_stuffs_one($db,$sid);
 }
+
+$rest_stuffs = db_get_stuffs_rest($db,$id);
 require_once('head.php');
 ?>
 <div id="content" class="span10">
@@ -34,34 +36,40 @@ require_once('head.php');
 				<div class="control-group">
 					 <label class="control-label">類別：</label>
 					<div class="controls" style="margin-top:5px;">
-						<select id="type" name="type">
+						<select id="type" name="type" onchange="stype(this.value);">
 							<option value="primary" <?php if($res_view['type'] == 'primary') echo 'selected';?>>Main Staff</option>
 							<option value="secondary" <?php if($res_view['type'] == 'secondary') echo 'selected';?>>Staff</option>
 						</select>
 					</div>
 				</div>
 				
-				<div class="control-group">
-					 <label class="control-label">暱稱：</label>
-					<div class="controls" style="margin-top:5px;">
-						<input type="text" value="<?php echo $res_view['name'];?>" name="name" id="name" class="input">
+				<div id="primary">
+					<div class="control-group">
+						 <label class="control-label">暱稱：</label>
+						<div class="controls" style="margin-top:5px;">
+							<input type="text" value="<?php echo $res_view['name'];?>" name="name" id="name" class="input">
+						</div>
+					</div>
+					
+					<div class="control-group">
+						 <label class="control-label">身分：</label>
+						<div class="controls" style="margin-top:5px;">
+							<input type="text" value="<?php echo $res_view['role'];?>" name="role" id="role" class="input">
+						</div>
+					</div>
+					
+					<div class="control-group">
+						<label class="control-label" for="local_fee">圖片上傳：</label>
+						<div class="controls">
+							<input id="mypic" type="file" name="mypic">
+						</div>
 					</div>
 				</div>
-				
-				<div class="control-group">
-					 <label class="control-label">身分：</label>
-					<div class="controls" style="margin-top:5px;">
-						<input type="text" value="<?php echo $res_view['role'];?>" name="role" id="role" class="input">
+				<div id="secondary" style="display:none;">
+					<div class="control-group">
+						<textarea id="content" name="content" class="ckeditor" style="width:99%; height:200px;"><?php echo $res_view[0]['rest_stuffs'];?></textarea>
 					</div>
 				</div>
-				
-				<div class="control-group">
-					<label class="control-label" for="local_fee">圖片上傳：</label>
-					<div class="controls">
-						<input id="mypic" type="file" name="mypic">
-					</div>
-				</div>
-				
 				<div class="control-group"> 
 					<label class="control-label" for="id"></label>
 					<div class="controls">
@@ -78,7 +86,7 @@ require_once('head.php');
 <div class="row-fluid sortable ui-sortable">
     <div class="box span12">
         <div class="box-header well" data-original-title="">
-            <h2> 成員列表</h2>
+            <h2> Main Staff 成員列表</h2>
         </div>
         <div class="box-content">
 			<div>
@@ -120,6 +128,18 @@ require_once('head.php');
 			</div>
         </div>
     </div>
+ </div>
+ <div class="row-fluid sortable ui-sortable">
+	<div class="box span12">
+        <div class="box-header well" data-original-title="">
+            <h2> Staff 說明</h2>
+        </div>
+        <div class="box-content">
+			<div>
+				<?php echo $rest_stuffs;?>
+			</div>
+        </div>
+    </div>
 </div>
         <!-- content ends -->
         </div>
@@ -139,5 +159,18 @@ function del_stuffs(sid,id)
 function mod_stuffs(sid,id)
 {
 	window.location.href='works_sys_content8.php?id=' + id + '&sid=' + sid;
+}
+function stype(value)
+{
+	if(value == 'primary')
+	{
+		$('#primary').show();
+		$('#secondary').hide();
+	}
+	else
+	{
+		$('#secondary').show();
+		$('#primary').hide();
+	}
 }
 </script>

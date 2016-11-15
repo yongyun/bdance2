@@ -148,4 +148,17 @@ function db_del_stuffs($db,$id)
 	return $res;
 }
 
+
+function db_get_stuffs_rest($db,$id)
+{
+	$sql = 'SELECT id   
+			FROM stuffs 
+			WHERE work_id = ? AND rest_stuffs != "" 
+			ORDER BY id ASC
+			LIMIT 1';
+	$sql_input['id'] = $id;
+	
+	$res = $db->dbSelect($sql,$sql_input);
+	return $res[0]['id'];
+}
 ?>

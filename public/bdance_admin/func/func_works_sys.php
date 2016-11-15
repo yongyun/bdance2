@@ -104,7 +104,7 @@ function db_get_stuffs($db,$id)
 {
 	$sql = 'SELECT *  
 			FROM stuffs 
-			WHERE work_id = ? 
+			WHERE work_id = ? AND type = "primary"
 			ORDER BY id ASC';
 	$sql_input['work_id'] = $id;
 	
@@ -122,5 +122,18 @@ function db_get_stuffs_one($db,$id)
 	
 	$res = $db->dbSelect($sql,$sql_input);
 	return $res[0];
+}
+
+function db_get_stuffs_rest($db,$id)
+{
+	$sql = 'SELECT rest_stuffs   
+			FROM stuffs 
+			WHERE work_id = ? AND rest_stuffs != "" 
+			ORDER BY id ASC
+			LIMIT 1';
+	$sql_input['id'] = $id;
+	
+	$res = $db->dbSelect($sql,$sql_input);
+	return $res[0]['rest_stuffs'];
 }
 ?>

@@ -238,6 +238,36 @@ switch($act)
 		exit;
 	break;
 	
+	case 'cover_add':
+		$id = ft($_POST['id'],0);
+
+		if($id == '')
+		{
+			post_back('參數錯誤');
+			exit();
+		}
+
+		$picname = $_FILES['mypic']['name'];
+		$picsize = $_FILES['mypic']['size'];
+		
+		if ($picname != '') {
+			$type = strstr($picname, '.');
+			$rand = rand(100, 999);
+			$pics = $id.'_'.date('YmdHis') . $rand . $type;
+
+			$pic_path = '../upload/news/'. $pics;
+			$pic_path_view = 'upload/news/'. $pics;
+			move_uploaded_file($_FILES['mypic']['tmp_name'], $pic_path);
+			
+			$arr_input['nw_synopsis_image'] = $pic_path_view;
+			db_mod_news($db,$arr_input,$id);
+			unset($arr_input);
+		}
+		
+		reload_js_top_href('上傳成功','news_sys_cover_picture.php?id='.$id);
+		exit();
+	break;
+	
 	default:
 		post_back('參數錯誤');
 		exit();

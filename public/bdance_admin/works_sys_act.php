@@ -367,67 +367,92 @@ switch($act)
 		$s_type = ft($_POST['type'],1);
 		$name = ft($_POST['name'],1);
 		$role = ft($_POST['role'],1);
-
+		$content = $_POST['content'];
+		
 		if($id == '')
 		{
 			post_back('參數錯誤');
 			exit();
 		}
-		if($name == '')
+		
+		if($s_type == 'primary')
 		{
-			post_back('未輸入暱稱');
-			exit();
-		}
-
-		$picname = $_FILES['mypic']['name'];
-		$picsize = $_FILES['mypic']['size'];
-		if($sid == '')
-		{
-			if ($picname == '') 
+			if($name == '')
 			{
-				post_back('請上傳圖片');
+				post_back('未輸入暱稱');
 				exit();
-			}	
+			}
+
+			$picname = $_FILES['mypic']['name'];
+			$picsize = $_FILES['mypic']['size'];
+			if($sid == '')
+			{
+				if ($picname == '') 
+				{
+					post_back('請上傳圖片');
+					exit();
+				}	
+			}
+			
+			$arr_input['work_id'] = $id;
+			$arr_input['name'] = $name;
+			$arr_input['type'] = $s_type;
+			if($sid == '')
+			{
+				$arr_input['created_at'] = date('Y-m-d H:i:s');
+			}
+			$arr_input['updated_at'] = date('Y-m-d H:i:s');
+			$arr_input['role'] = $role;
+			if($picname != '') 
+			{
+				if($sid != '')
+				{
+					$res_old = db_get_stuffs_one($db,$sid);
+				}
+				$type = strstr($picname, '.');
+				$rand = rand(100, 999);
+				$pics = $id.'_'.date('YmdHis') . $rand . $type;
+
+				$pic_path = '../photos/'.$id.'/'. $pics;
+				$pic_path_src = 'photos/'.$id.'/'. $pics;
+				move_uploaded_file($_FILES['mypic']['tmp_name'], $pic_path);
+				
+				if($sid != '')
+				{
+					//刪除舊檔
+					unlink('../'.$res_old['photo']);
+				}
+				$arr_input['photo'] = $pic_path_src;
+			}
+			if($sid == '')
+			{
+				db_add_stuffs($db,$arr_input);
+			}
+			else
+			{
+				db_mod_stuffs($db,$arr_input,$sid);
+			}
+		}
+		unset($arr_input);
+		
+		if($s_type == 'secondary')
+		{
+			$stuffs_rest_id = db_get_stuffs_rest($db,$id);
+			
+			$arr_input['work_id'] = $id;
+			$arr_input['type'] = 'secondary';
+			$arr_input['rest_stuffs'] = $content;
+			if($stuffs_rest_id == '')
+			{
+				db_add_stuffs($db,$arr_input);
+			}
+			else
+			{
+				
+				db_mod_stuffs($db,$arr_input,$stuffs_rest_id);
+			}
 		}
 		
-		$arr_input['work_id'] = $id;
-		$arr_input['name'] = $name;
-		$arr_input['type'] = $s_type;
-		if($sid == '')
-		{
-			$arr_input['created_at'] = date('Y-m-d H:i:s');
-		}
-		$arr_input['updated_at'] = date('Y-m-d H:i:s');
-		$arr_input['role'] = $role;
-		if($picname != '') 
-		{
-			if($sid != '')
-			{
-				$res_old = db_get_stuffs_one($db,$sid);
-			}
-			$type = strstr($picname, '.');
-			$rand = rand(100, 999);
-			$pics = $id.'_'.date('YmdHis') . $rand . $type;
-
-			$pic_path = '../photos/'.$id.'/'. $pics;
-			$pic_path_src = 'photos/'.$id.'/'. $pics;
-			move_uploaded_file($_FILES['mypic']['tmp_name'], $pic_path);
-			
-			if($sid != '')
-			{
-				//刪除舊檔
-				unlink('../'.$res_old['photo']);
-			}
-			$arr_input['photo'] = $pic_path_src;
-		}
-		if($sid == '')
-		{
-			db_add_stuffs($db,$arr_input);
-		}
-		else
-		{
-			db_mod_stuffs($db,$arr_input,$sid);
-		}
 		unset($arr_input);
 		
 		reload_js_top_href('修改成功','works_sys_content8.php?id='.$id);

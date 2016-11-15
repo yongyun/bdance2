@@ -17,7 +17,16 @@ unset($arr_input);
 unset($arr_page);
 
 //擷取全部圖片
-preg_match_all('#<img[^>]*>#i', $res_news[0]['nw_content'], $all_image);
+$res_images = db_get_news_ad($db,$id);
+if(isset($res_images))
+{
+	foreach($res_images as $i => $row)
+	{
+		$arr_images[] = 'upload/news/'.$row['na_image'];
+	}
+}
+
+preg_match_all('#<img[^>]*>#i', $res_news[0]['nw_top_content'].$res_news[0]['nw_content'], $all_image);
 if(count($all_image[0]) > 0)
 {
 	foreach($all_image[0] as $key => $row)
@@ -36,9 +45,12 @@ require_once('head.php');
         <div class="box-header well" data-original-title="">
             <h2><i class="icon-th-list"></i> 封面圖設定</h2>
         </div>
+        	<button class="btn btn-large btn-primary" onclick="dialog_set('news_sys_cover_porp.php?id=<?php echo $id;?>','手動上傳封面圖',350,460);" style="float:left;">手動上傳封面圖</button>
+			</br></br>
         <div class="box-content">
 			<div>
 				<?php 
+				$pk_image = 0;
 				if(isset($arr_images))
 				{
 					foreach($arr_images as $i => $row)
@@ -51,6 +63,7 @@ require_once('head.php');
 							<?php
 							if($res_news[0]['nw_synopsis_image'] == $row)
 							{
+								$pk_image = 1;
 								echo '目前封面 ';
 							}
 							else
@@ -63,10 +76,36 @@ require_once('head.php');
 						</div>
 						<?php
 					}
+					
+					if($pk_image == 0)
+					{
+						?>
+						<div style='float:left;margin-right:30px;'>
+							<div>
+								<img src='../<?php echo $res_news[0]['nw_synopsis_image'];?>' style='width:200px;height:150px;'>
+							</div>
+							目前封面
+						</div>
+						<?php
+					}
 				}
 				else
 				{
-					echo '中間文章無圖片，請先至中間內容說明上傳圖片';
+					if($res_news[0]['nw_synopsis_image'] != '')
+					{
+						?>
+						<div style='float:left;margin-right:30px;'>
+							<div>
+								<img src='../<?php echo $res_news[0]['nw_synopsis_image'];?>' style='width:200px;height:150px;'>
+							</div>
+							目前封面
+						</div>
+						<?php
+					}
+					else
+					{
+						echo '中間文章無圖片，請先至中間內容說明上傳圖片';
+					}
 				}
 				?>
 			</div>

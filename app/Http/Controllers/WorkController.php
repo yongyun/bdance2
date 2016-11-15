@@ -32,7 +32,7 @@ class WorkController extends Controller {
 		$other_stuff = Stuff::where([
 				['work_id', '=' , $id],
 				['type', '=' , 'secondary']
-			])->get();
+			])->first();
 		$awards = Award::where('work_id', $id)->get();
 		$tours = Tour::where('work_id', $id)->orderBy('order', 'asc')->get();
 

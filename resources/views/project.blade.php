@@ -61,12 +61,20 @@
 	</section>
 	<?php } ?>
 
+	<?php 
+	if($project->duration != '' || $project->premiere)
+	{
+	?>
 	<section class="sec-norm">
 		<div class="conwidth">
 			<h2>&#8212; Details &#8212;</h2>
 			<div class="text-lft">
 				<p>DURATION &#58; {{ $project->duration}} </p>
 				<p>PREMIERE &#58; {{ $project->premiere}}</p>
+				<?php 
+				if(count($tours) > 0)
+				{
+				?>
 				<div class="tour">
 					<p>TOUR DATE &#58; </p>
 					@foreach ($tours as $tour)
@@ -77,35 +85,48 @@
 						</ul>
 					@endforeach
 				</div>
+				<?php } ?>
 			</div>
 		</div>
 	</section>
+	<?php } ?>
 
-	<section>
-		<div>
-			<?php
-			if(preg_match("/youtube/i", $project->video_url))
-			{
-				$array_str = explode('v=',$project->video_url);
-				?>
-				<iframe width="70%" height="450px" src="https://www.youtube.com/embed/<?php echo $array_str[count($array_str) - 1];?>?rel=0&amp;controls=0" frameborder="0" allowfullscreen></iframe>
+	<?php
+	if($project->video_url != '')
+	{
+		?>
+		<section>
+			<div>
 				<?php
-			}
-			else
-			{
-				$array_str = explode('/',$project->video_url);
+				if(preg_match("/youtube/i", $project->video_url))
+				{
+					$array_str = explode('v=',$project->video_url);
+					?>
+					<iframe width="70%" height="450px" src="https://www.youtube.com/embed/<?php echo $array_str[count($array_str) - 1];?>?rel=0&amp;controls=0" frameborder="0" allowfullscreen></iframe>
+					<?php
+				}
+				else
+				{
+					$array_str = explode('/',$project->video_url);
+					?>
+					 <iframe src="https://player.vimeo.com/video/<?php echo $array_str[count($array_str) - 1];?>?title=0&byline=0&portrait=0" width="70%" height="450px" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+					<?php
+				}
 				?>
-				 <iframe src="https://player.vimeo.com/video/<?php echo $array_str[count($array_str) - 1];?>?title=0&byline=0&portrait=0" width="70%" height="450px" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 				<?php
-			}
-			?>
-			<?php
-			
-			?>
-		</div>
-	</section>
+				
+				?>
+			</div>
+		</section>
+		<?php
+	}
+	?>
 
-	<section class="sec-norm underline">
+	<?php
+	if(count($reviews) > 0)
+	{
+		?>
+		<section class="sec-norm underline">
 			<h2>&#8212; Reviews &#8212;</h2>
 			<ul class="bxslider" id="review_slider">
 
@@ -131,52 +152,57 @@
 			?>
 			</ul>
 			<div id="bx-pager">
-			    <ul>
-			    	<?php 
-			    		$pages = ceil( count($reviews) / $reviewLimit); 
-			    		for ($i = 1; $i <= $pages; $i ++) { 
-	    			?>
-	    				<li> <a data-slide-index="{{ $i - 1 }}" href="">{{ $i}}</a></li>
-	    			<?php
-	    				}
-		    		?>
-			    </ul>
+				<ul>
+					<?php 
+						$pages = ceil( count($reviews) / $reviewLimit); 
+						for ($i = 1; $i <= $pages; $i ++) { 
+					?>
+						<li> <a data-slide-index="{{ $i - 1 }}" href="">{{ $i}}</a></li>
+					<?php
+						}
+					?>
+				</ul>
 			</div>
-	</section>
+		</section>
+		<?php
+	}
+	?>
 
-	<section class="sec-norm">
-		<div class="mainsection">
-			<h2>&#8212; Main Staff &#8212;</h2>
-			@foreach ($main_stuff as $stuff)
-				<div class="mainstaff">
-					<div class="staffoto">
-						<img src="{{ asset($stuff->photo)}}" alt="">
+	<?php
+	if(count($main_stuff) > 0)
+	{
+		?>
+		<section class="sec-norm">
+			<div class="mainsection">
+				<h2>&#8212; Main Staff &#8212;</h2>
+				@foreach ($main_stuff as $stuff)
+					<div class="mainstaff">
+						<div class="staffoto">
+							<img src="{{ asset($stuff->photo)}}" alt="">
+						</div>
+						<h3>{{$stuff->name}}</h3>
+						<p>{{$stuff->role}}</p>
 					</div>
-					<h3>{{$stuff->name}}</h3>
-					<p>{{$stuff->role}}</p>
-				</div>
-			@endforeach
-		</div>
-	</section>
+				@endforeach
+			</div>
+		</section>
+		<?php
+	}
+	?>
 	
 	<?php 
-		if (!is_null($other_stuff)) {
+	if (!is_null($other_stuff))
+	{
+		?>
+		<section class="sec-norm">
+			<div class="conwidth">
+				<h2>&#8212; Staff &#8212;</h2>
+				<p>{!! $other_stuff->rest_stuffs !!}</p>
+			</div>
+		</section>
+		<?php 
+		} 
 	?>
-	<section class="sec-norm">
-		<div class="conwidth">
-			<h2>&#8212; Staff &#8212;</h2>
-			@foreach ($other_stuff as $stuff)
-				<div class="mainstaff">
-					<div class="staffoto">
-						<img src="{{ asset($stuff->photo)}}" alt="">
-					</div>
-					<h3>{{$stuff->name}}</h3>
-					<p>{{$stuff->role}}</p>
-				</div>
-			@endforeach
-		</div>
-	</section>
-	<?php } ?>
 
 	<section class="sec-norm">
 		<div class="proj-btm"><a href="/works"><p>&#8212; All Works &#8212;</p></a></div>
