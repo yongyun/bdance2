@@ -32,18 +32,18 @@
 					<li class="menu-item"><a href="/news">News</a></li>
 					<li class="menu-item"><a href="/contact">Contact us</a></li>
 					<li class="menu-item social">
-							<span class="social-item-main"><a target href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></span>
-							<span class="social-item-main"><a target href="#"><i class="fa fa-vimeo" aria-hidden="true"></i></a></span>
-							<span class="social-item-main" aria-hidden="true"><a target href="#"><img class="icon_logo" src="{{ asset('img/axe.svg')}}" alt=""></a></span>
+						<span class="social-item-main"><a target href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></span>
+						<span class="social-item-main"><a target href="#"><i class="fa fa-vimeo" aria-hidden="true"></i></a></span>
+						<span class="social-item-main" aria-hidden="true"><a target href="#"><img class="icon_logo" src="{{ asset('img/axe.svg')}}" alt=""></a></span>
 					</li>
 				</ul>
 				<!-- full screen -->
 				<ul id="fv">
 					<li>
 					 	<ul>
-					 		<li class="social-item"><a href="https://www.facebook.com/tsaipocheng/?fref=ts"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-					     	<li class="social-item"><a href="https://vimeo.com/bdancetw"><i class="fa fa-vimeo" aria-hidden="true"></i></a></li>
-					     	<li class="social-item"><a href="http://www.axearts.org" aria-hidden="true"><img src="{{ asset('img/axe.svg')}}" class="icon_logo" alt=""></a></li>
+					 		<li class="social-item"><a href="<?php echo $right_menu['fb_link'];?>"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+					     	<li class="social-item"><a href="<?php echo $right_menu['vimeo_link'];?>"><i class="fa fa-vimeo" aria-hidden="true"></i></a></li>
+					     	<li class="social-item"><a href="<?php echo $right_menu['axearts_link'];?>" aria-hidden="true"><img src="{{ asset('img/axe.svg')}}" class="icon_logo" alt=""></a></li>
 					    </ul>
 					</li>
 					<!-- <li class="menu-item">

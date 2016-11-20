@@ -13,11 +13,10 @@
 					<div class="atop-text">
 						<h2 class="animated fadeInDown">
 							<span class="quotation">&#8223; </span>
-							We believe focus and sincerity define beauty
+							<?php echo $slogan[0]['name'];?>
 							<span class="quotation">&#8221;</span>
 						</h2>
-						<p class="animated fadeInUp delay-05s">while stunning beauty is bigoted focus with a human touch,
-						coupled with the test of time, to create the value of &#34;creation&#34;. </p>
+						<p class="animated fadeInUp delay-05s"><?php echo $slogan[0]['ps'];?></p>
 					</div>
 					<div class="atop-down scroll-down"><img src="img/down.svg"></div>
 				</div>
@@ -29,65 +28,40 @@
 					<div class="atext media-title"><h2>&#8212; Media &#8212;</h2></div>
 					<ul class="itemwrap atext bxslider" id="MediaSlider">
 						<li >
+						<?php
+						foreach($about_media as $i => $row)
+						{
+							$i += 1;
+							?>
 							<div class="atext at-left">
-								<p>Featuring unpredictability, Tsai Po-Cheng puts everyday objects to good uses and creates new ideas out of them.</p>
-								<p>In a nut shell, he is a magician that unveils the mystery of the gift cordially presented to the audience.</p>
-								<h4>&#8212; October 2015  Issue, La vie</h4>
+								<p><?php echo $row['description'];?></p>
+								<h4>&#8212; <?php echo $row['awardName'];?></h4>
 							</div>
-							<div class="atext at-left">
-								<p>Artistic director Kathleen McNurney&#58; &#34;Hugin/Munin&#34; is full of suprises. The choreographer&#39;s talents are undeniable. Dancers Change Shen-Ho and Change Chien-Chih&#39;s unique body performance is displayed. It is undoubtedly the best heartwarming work among this year&#39;works. </p>
-								<h4>&#8212; Taipei Representative Office in Denmark (Resident News)</h4>
-							</div>
-						</li>
-						<li>
-							<div class="atext at-left">
-								<p>&#34;Floating Flower&#34; comes from a 27-year-old choreographer. A heavy pull on life and death transcends to a new realm for  affectionate farewell.</p>
-								<h4>&#8212; PAR Performance Arts Reviews &#47; No. 274 &#47; 2015. July &#47; page15</h4>
-							</div>
-							<div class="atext at-left">
-								<p>Germany&#39;s Stuttgart dance troupe founder and artistic director Dric Gauthier: “Floatign flower” is an eye-catching materpiece.  </p>
-								<h4>&#8212; Report of the Central News Agency</h4>
-							</div>
-						</li>
-						<li>
-							<div class="atext at-left">
-								<p>Tsao Cheng-Yuan: “Tsai Po-Cheng’s “Floating Flower” emphasizes interpersonal relationships. From this work you will discover that instead of performing in a certain mood, they use stage language devices to perform through clothing and action”. </p>
-								<h4>—nddaily</h4>
-							</div>
-							<div class="atext at-left">
-								<p>The audience’s favorite piece “Floating Flower” is a pas de deux filled with surprises created by Tsai Po-Cheng from Taiwan.  As the dance starts, the male partner readily hiding under the puffy skirt lets the female dancer sit on his shoulder. Suddenly the peitite female dancer grows like a tree, briing the first surprise to the audicence, folllowed by an interesting mix of rhthymic and lively dance.  </p>
-								<h4>&#8212; HAZ Anmeldung  newspaper’</h4>
-							</div>
-						</li>
-						<li>
-							<div class="atext at-left">
-								<p>It is precise to say the work is a clever balance of body and poetry. The choreographer’s arrangement of two dancers sitting on each other’s shoulders makes them appear like a giant dancer’s perfect skirt. Floating Flower is indeed a clever masterpiece.  </p>
-								<h4>&#8212; Germany kreiszeitung newspaper </h4>
-							</div>
-							<div class="atext at-left">
-								<p>Tsai Po-Cheng is young and gifted. He defines complexity through the simple concept of  “less is more”.  </p>
-								<h4>&#8212; critical dance commentary</h4>
-							</div>
-						</li>
-						<li>
-							<div class="atext at-left">
-								<p>Floating Fower created by young Taiwanese choreographer Tsai Po-Cheng is definitely the most popular program for the night.</p>
-								<h4>&#8212; tanznetz.de</h4>
-							</div>
+							<?php
+							if($i % 2 == 0)
+							{
+								echo '</li>';
+								echo '<li>';
+							}
+						}
+						?>
 						</li>
 					</ul>
 					<div id="bx-pager">
 					    <ul>
-					        <li> <a data-slide-index="0" href="">1</a>
-							</li>
-					        <li> <a data-slide-index="1" href="">2</a>
-					        </li>
-					        <li> <a data-slide-index="2" href="">3</a>
-					        </li>
-					        <li> <a data-slide-index="3" href="">4</a>
-					        </li>
-					        <li> <a data-slide-index="4" href="">5</a>
-					        </li>
+						<?php
+						$k = 0;
+						foreach($about_media as $i => $row)
+						{
+							if($i % 2 == 0)
+							{
+								?>
+								<li> <a data-slide-index="<?php echo $k;?>" href=""><?php echo $k + 1;?></a></li>
+								<?php
+								$k += 1;
+							}
+						}
+						?>
 					    </ul>
 					</div>
 			</div>
@@ -169,31 +143,18 @@
       			</div>
 			<div class="awards">
 				<ul class="bxslider textwhite" id="awardSlider">
-					<li class="current">
-						<p>Hugin/Munin</p>
-						<h5>Copenhagen International Choreography Competition</h5>
-						<h6>First prize &#38; Tanz Luzerner Theater Production Award</h6>
-					</li>
-					<li>
-						<p>Hugin/Munin</p>
-						<h5>International Contest of Choreography Burgos and New York</h5>
-						<h6>First prize &#38; Italy Balletto Di Siena production award</h6>
-					</li>
-					<li>
-						<p>Hugin/Munin</p>
-						<h5>International Choreography Competition in Jerusalem</h5>
-						<h6>Sliver prize</h6>
-					</li>
-					<li>
-						<p>Floating Flowers</p>
-						<h5>20th MASDANZA International choreography competition</h5>
-						<h6>Best choreography of Audience</h6>
-					</li>
-					<li>
-						<p>Floating Flowers</p>
-						<h5>29th International Choreography Competition Hanover in 2014</h5>
-						<h6>Gauthier Dance//Dance company Theaterhaus Stuttgart Production Award. &#38; Audience award</h6>
-					</li>
+					<?php
+					foreach($about_awards as $i => $row)
+					{
+						?>
+						<li <?php if($i == 0) echo 'class="current"';?>>
+							<p><?php echo $row['title'];?></p>
+							<h5><?php echo $row['description'];?></h5>
+							<h6><?php echo $row['awardName'];?></h6>
+						</li>
+						<?php
+					}
+					?>
 				</ul>
 			</div>
 		</section>

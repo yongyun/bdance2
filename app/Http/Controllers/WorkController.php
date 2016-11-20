@@ -15,7 +15,7 @@ class WorkController extends Controller {
 
 	public function allWorks() {
 		$work = Work::orderBy('created_at', 'desc')->get();
-		return view('works', ['works' => $work]);
+		return view('works', ['works' => $work,'right_menu' => right_menu()]);
 	}
 
 	public function showWork($id) {
@@ -39,7 +39,7 @@ class WorkController extends Controller {
 		return view('project', 
 			['project' => $work, 'images' => $images, 'reviews' => $reviews,
 			 'main_stuff' => $main_stuff, 'other_stuff' => $other_stuff,
-			 'tours' => $tours, 'awards' => $awards]);
+			 'tours' => $tours, 'awards' => $awards,'right_menu' => right_menu()]);
 	}
 }
 

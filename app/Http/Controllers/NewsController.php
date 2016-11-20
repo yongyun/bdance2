@@ -16,7 +16,7 @@ class NewsController extends Controller {
 				['nw_del','=',0],
 				['nw_status','=','0']
 			])->orderBy('nw_id','desc')->get();
-		return view('news_list', ['news_list' => $news_list]);
+		return view('news_list', ['news_list' => $news_list,'right_menu' => right_menu()]);
 	}
 
 	public function showNews($id) {
@@ -47,7 +47,7 @@ class NewsController extends Controller {
 				['nw_id','>=',$id]
 			])->orderBy('nw_id','asc')->limit(2)->get();
 		
-		return view('news', ['news_list' => $news_list,'news_ad' => $news_ad,'news_video' => $news_video,'news_pr' => $news_pr,'news_nt' => $news_nt,'news_next' => $news_next]);
+		return view('news', ['news_list' => $news_list,'news_ad' => $news_ad,'news_video' => $news_video,'news_pr' => $news_pr,'news_nt' => $news_nt,'news_next' => $news_next,'right_menu' => right_menu()]);
 	}
 }
 

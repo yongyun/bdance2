@@ -1,0 +1,5 @@
+.progress, .progress2, .progress3, .progress4, .progress5, .progress6, .progress7, .progress8, .progress9, .progress10, .progress11, .progress12 { position:relative; margin-left:10px; margin-top:-24px; width:200px;padding: 1px; border-radius:3px; display:none;}  
+.bar, .bar2, .bar3, .bar4, .bar5, .bar6, .bar7, .bar8, .bar9, .bar10, .bar11, .bar12 {background-color: green; display:block; width:0%; height:20px; border-radius: 3px; }  
+.percent, .percent2, .percent3, .percent4, .percent5, .percent6, .percent7, .percent8, .percent9, .percent10, .percent11, .percent12 { position:absolute; height:20px; display:inline-block; top:3px; left:2%; color:#fff }  
+.files, .files2, .files3, .files4, .files5, .files6, .files7, .files8, .files9, .files10, .files11, .files12{height:22px; line-height:22px; margin:10px 0}  
+.delimg, .delimg2, .delimg3, .delimg4, .delimg5, .delimg6, .delimg7, .delimg8, .delimg9, .delimg10, .delimg11, .delimg12{margin-left:20px; color:#090; cursor:pointer}

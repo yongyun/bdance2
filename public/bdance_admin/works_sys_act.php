@@ -485,6 +485,60 @@ switch($act)
 
 	break;
 	
+	case 'awards_mod':
+		$id = ft($_POST['id'],0);
+		$aid = ft($_POST['aid'],0);
+		$title = ft($_POST['title'],1);
+		$awardName = ft($_POST['awardName'],1);
+		$content = $_POST['content'];
+		
+		if($id == '')
+		{
+			post_back('參數錯誤');
+			exit();
+		}
+		
+		$arr_input['work_id'] = $id;
+		$arr_input['title'] = $title;
+		$arr_input['awardName'] = $awardName;
+		$arr_input['description'] = $content;
+		$arr_input['updated_at'] = date('Y-m-d H:i:s');
+		if($aid == '')
+		{
+			$arr_input['created_at'] = date('Y-m-d H:i:s');
+			db_add_awards($db,$arr_input);
+		}
+		else
+		{
+			db_mod_awards($db,$arr_input,$aid);
+		}
+		unset($arr_input);
+		
+		reload_js_top_href('修改成功','works_sys_content9.php?id='.$id);
+		exit();
+	break;
+	
+	case 'del_awards':
+		$id = ft($_GET['id'],0);
+		$aid = ft($_GET['aid'],0);
+		if($id == '')
+		{
+			post_back('參數錯誤');
+			exit();
+		}
+		if($aid == '')
+		{
+			post_back('參數錯誤');
+			exit();
+		}
+
+		db_del_awards($db,$aid);
+		
+		reload_js_top_href('修改成功','works_sys_content9.php?id='.$id);
+		exit();
+
+	break;
+	
 	default:
 		post_back('參數錯誤');
 		exit();

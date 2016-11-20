@@ -136,4 +136,28 @@ function db_get_stuffs_rest($db,$id)
 	$res = $db->dbSelect($sql,$sql_input);
 	return $res[0]['rest_stuffs'];
 }
+
+function db_get_awards($db,$id)
+{
+	$sql = 'SELECT *  
+			FROM awards 
+			WHERE work_id = ? 
+			ORDER BY id DESC';
+	$sql_input['work_id'] = $id;
+	
+	$res = $db->dbSelect($sql,$sql_input);
+	return $res;
+}
+
+function db_get_awards_one($db,$id)
+{
+	$sql = 'SELECT *  
+			FROM awards 
+			WHERE id = ? 
+			LIMIT 1';
+	$sql_input['id'] = $id;
+	
+	$res = $db->dbSelect($sql,$sql_input);
+	return $res[0];
+}
 ?>

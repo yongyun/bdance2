@@ -13,20 +13,56 @@
 use Illuminate\Support\Facades\Input;
 use Jenssegers\Agent\Agent;
 use App\MailMessage;
+use App\index_view;
+use App\menu_link;
+use App\slogan;
+use App\about_media;
+use App\about_awards;
 
+function right_menu()
+{
+	$fb_link = menu_link::where([
+			['ml_id','=','1']
+		])->get();
+	$vimeo_link = menu_link::where([
+			['ml_id','=','2']
+		])->get();
+	$axearts_link = menu_link::where([
+			['ml_id','=','3']
+		])->get();
+		
+	$url_link = array('fb_link' => $fb_link[0]['ml_link'] , 'vimeo_link' => $vimeo_link[0]['ml_link'] , 'axearts_link' => $axearts_link[0]['ml_link']);
+	return $url_link;
+}
 
 Route::get('/', function () {
-	$agent = new Agent();
+	// $agent = new Agent();
 
-    return view('index', ['isMobile' => $agent->isMobile()]);
+    // return view('index', ['isMobile' => $agent->isMobile()]);
+	$video = index_view::where([
+			['iv_type','=','0']
+		])->orderBy('iv_id','desc')->get();
+		
+	$images = index_view::where([
+			['iv_type','=','1']
+		])->orderBy('iv_id','desc')->get();
+	return view('index', ['video' => $video,'images' => $images,'right_menu' => right_menu()]);
 });
 
 Route::get('/about', function () {
-    return view('about');
+	$slogan = slogan::where([
+			['id','=','1']
+		])->get();
+		
+	$about_media = about_media::orderBy('am_id','desc')->get();
+
+	$about_awards = about_awards::orderBy('id','desc')->get();
+
+	return view('about', ['right_menu' => right_menu(),'slogan' => $slogan , 'about_media' => $about_media , 'about_awards' => $about_awards]);
 });
 
 Route::get('/contact', function () {
-    return view('contact');
+    return view('contact', ['right_menu' => right_menu()]);
 });
 
 Route::post('/sendMail', function() {
@@ -51,7 +87,7 @@ Route::post('/sendMail', function() {
 	$model->created_at = date("Y-m-d H:i:s");
 	$model->save();
 
-	return redirect('/');
+	return redirect('/', ['right_menu' => right_menu()]);
 });
 
 

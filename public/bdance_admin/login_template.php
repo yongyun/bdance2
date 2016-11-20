@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>MyCase</title>
+<title>B.DANCE 控制台</title>
 <!--讓手機瀏覽器呈現正確的寬度-->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Charisma, a fully featured, responsive, HTML5, Bootstrap admin template.">

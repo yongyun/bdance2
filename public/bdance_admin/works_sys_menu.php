@@ -10,6 +10,7 @@
             <a class="btn btn-outline-success" href="works_sys_content1.php?id=<?php echo $id;?>">封面內容</a>
 			<a class="btn btn-outline-success" href="works_sys_content2.php?id=<?php echo $id;?>">輪播圖片</a>
 			<a class="btn btn-outline-success" href="works_sys_content3.php?id=<?php echo $id;?>">內容訊息</a>
+			<a class="btn btn-outline-success" href="works_sys_content9.php?id=<?php echo $id;?>">獎項</a>
 			<a class="btn btn-outline-success" href="works_sys_content4.php?id=<?php echo $id;?>">細節</a>
 			<a class="btn btn-outline-success" href="works_sys_content5.php?id=<?php echo $id;?>">演出日期</a>
 			<a class="btn btn-outline-success" href="works_sys_content6.php?id=<?php echo $id;?>">影片設定</a>

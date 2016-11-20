@@ -28,9 +28,12 @@ body
 <link href="css/opa-icons.css?20161025" rel="stylesheet">
 <link href="css/leaderboard.css?20161025" rel="stylesheet">
 <link href="js/css/layui.css?20161025" rel="stylesheet">
+<link href="css/style.css?20161120" rel="stylesheet">
 
 <!-- jQuery -->
 <script src="js/jquery-1.7.2.min.js?20161025"></script>
+<script type="text/javascript" src="js/jquery.form.js?20161120"></script>
+<script type="text/javascript" src="js/jquery.blockUI.js?20161120"></script>
 <!-- jQuery UI -->
 <script src="js/jquery-ui-1.8.21.custom.min.js?20161025"></script>
 <!-- comm -->

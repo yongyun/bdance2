@@ -161,4 +161,41 @@ function db_get_stuffs_rest($db,$id)
 	$res = $db->dbSelect($sql,$sql_input);
 	return $res[0]['id'];
 }
+
+function db_add_awards($db,$arr_input)
+{
+	$sql = 'INSERT INTO awards ';
+	$res = $db->dbInsert($sql,$arr_input);
+	return $res;
+}
+
+function db_mod_awards($db,$arr_input,$id)
+{
+	$sql = 'UPDATE awards ';
+	$sql_where_condition = array('id');
+	$sql_where_value = array($id);
+	$res = $db->dbUpdate($sql,$arr_input,$sql_where_condition,$sql_where_value);
+	return $res;
+}
+
+function db_get_awards_one($db,$id)
+{
+	$sql = 'SELECT *  
+			FROM awards 
+			WHERE id = ? 
+			LIMIT 1';
+	$sql_input['id'] = $id;
+	
+	$res = $db->dbSelect($sql,$sql_input);
+	return $res[0];
+}
+
+function db_del_awards($db,$id)
+{
+	$sql = 'DELETE FROM awards ';
+	$sql_where_condition = array('id');
+	$sql_where_value = array($id);
+	$res = $db->dbDelete($sql,$sql_where_condition,$sql_where_value);
+	return $res;
+}
 ?>
