@@ -41,6 +41,16 @@ switch($act)
 			echo json_encode($arr);
 			exit;
 		}
+	
+		if($picsize  == 0)
+		{
+			$arr = array(
+				'status'=>'error',
+				'error'=>'[系統錯誤]檔案大小錯誤'
+			);
+			echo json_encode($arr);
+			exit;
+		}
 
 		if ($picname != '') 
 		{
