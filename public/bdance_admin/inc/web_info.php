@@ -15,7 +15,7 @@ $main_url_sys[2] = 'news_sys.php';
 $main_sys[3] = '作品';
 $main_url_sys[3] = 'works_sys.php';
 $main_sys[4] = '售票資訊';
-$main_url_sys[4] = '#';
+$main_url_sys[4] = 'boom_sys.php';
 $main_sys[5] = '聯絡我們';
 $main_url_sys[5] = 'message_sys.php';
 
