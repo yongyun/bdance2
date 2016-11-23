@@ -9,15 +9,46 @@ function db_get_boom_info($db,$id)
 	$res = $db->dbSelect($sql,$sql_input);
 	return $res[0];
 }
+function db_get_boom_list_one($db,$id)
+{
+	$sql = 'SELECT bl_id,bl_title,bl_image 
+			FROM boom_list 
+			WHERE bl_del = 0 AND bl_id = ?';
+	$sql_input['bl_id'] = $id;
+	
+	$res = $db->dbSelect($sql,$sql_input);
+	return $res[0];
+}
 
-function db_get_news_video($db,$id)
+function db_get_boom_ad($db,$id)
 {
 	$sql = 'SELECT * 
-			FROM news_video 
-			WHERE nv_del = 0 AND nv_nwid = ?';
-	$sql_input['nv_nwid'] = $id;
+			FROM boom_ad 
+			WHERE ba_work = ?';
+	$sql_input['ba_work'] = $id;
 	
 	$res = $db->dbSelect($sql,$sql_input);
 	return $res;
 }
+function db_get_boom_list($db,$id)
+{
+	$sql = 'SELECT bl_id,bl_title,bl_date,bl_update 
+			FROM boom_list 
+			WHERE bl_del = 0';
+	
+	$res = $db->dbSelect($sql,$sql_input);
+	return $res;
+}
+
+function db_get_boom_list_bl($db,$id)
+{
+	$sql = 'SELECT * 
+			FROM boom_list 
+			WHERE bl_id = ?';
+	$sql_input['bl_id'] = $id;
+	
+	$res = $db->dbSelect($sql,$sql_input);
+	return $res[0];
+}
+
 ?>
