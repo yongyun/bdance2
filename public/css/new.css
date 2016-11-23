@@ -40,6 +40,12 @@ body {
 
 .feature img {
   width: 100%;
+  -webkit-transition: .5s ease-in-out;
+}
+
+.feature img:hover {
+  border: 0.5px solid;
+  padding: 5px;
 }
 
 .more {
@@ -50,8 +56,13 @@ body {
   float: right;
   text-align: center;
   margin: 10px 0;
+  -webkit-transition: .5s ease-in-out;
 }
 
+.more:hover {
+  background: #999;
+  color: #fff;
+}
 .news {
   text-align: center;
   margin: 180px 0 -105px 0;
@@ -97,6 +108,15 @@ body {
 iframe {
   width: 100%;
   margin: 40px 0;
+}
+
+.newspagebar {
+  text-align: center;
+}
+
+.newspagebar ul li {
+  display: inline-block;
+  margin: 0 10px;
 }
 
 #a-slider {

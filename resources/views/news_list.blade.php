@@ -1,6 +1,7 @@
 @extends('layout')
 
 @section('custom_css')
+<link rel="stylesheet" type="text/css" href="{{asset('css/about.css')}}">
 <link rel="stylesheet" type="text/css" href="{{asset('css/new.css')}}">
 @endsection
 
@@ -26,6 +27,33 @@
 			</div>
 		@endforeach
 	</div>
+
+	<!-- 頁碼 -->
+	<div>
+		<div class="newspagebar">
+			<ul>
+				<li><a href="">Prev</a></li>
+				<li><a href="">1</a></li>
+				<li><a href="">2</a></li>
+				<li><a href="">3</a></li>
+				<li><a href="">4</a></li>
+				<li><a href="">5</a></li>
+				<li><a href="">6</a></li>
+				<li><a href="">7</a></li>
+				<li><a href="">...</a></li>
+				<li><a href="">Next</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- 頁碼結束 -->
+
+	<section class="onepage-foot">
+		<div class="con1">
+			<div style="margin-top: 150px;">
+				<p class="acopyright">Copyright &copy; 2016 B.DANCE . All rights reserved.</p>
+			</div>
+		</div>
+	</section>
 
 @endsection
 
