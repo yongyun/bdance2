@@ -12,7 +12,6 @@
 		@foreach ($news_list as $n_list)
 			<div class="grid-item staffoto">
 				<a href="/news/{{ $n_list->nw_id}}" title="{{$n_list->nw_title}}">
-<<<<<<< HEAD
 					<div id="outer-box" class="feature box-line">
 						<img src="{{ $n_list->nw_synopsis_image}}">
 						<div id="inner-dicora">
@@ -23,21 +22,6 @@
 						<div id="inner-box">
 							<P> {{$n_list->nw_synopsis}} </P>
 						</div>
-=======
-					<div class="feature box-line">
-						<?php
-						if($n_list->nw_synopsis_image == '')
-						{
-							$simg = rand(1,3);
-							$image = 'img/bdance_no_image'.$simg.'.jpg';
-							echo '<img src="'.$image.'">';
-						}
-						else
-						{
-							echo '<img src="'.$n_list->nw_synopsis_image.'">';
-						}
-						?>
->>>>>>> origin/master
 					</div>
 					<h3>{{$n_list->nw_title}}</h3>
 					<h5>
