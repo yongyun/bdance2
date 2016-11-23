@@ -214,9 +214,9 @@ switch($act)
 			exit();
 		}
 		$arr_input['nv_del'] = 1;
-		$res = db_mod_news_video($db,$arr_input,$id);
+		$res = db_mod_news_video($db,$arr_input,$vid);
 		
-		reload_js_top_href('新增成功','news_sys_content3.php?id='.$id);
+		reload_js_top_href('刪除成功','news_sys_content3.php?id='.$id);
 		exit;
 	break;
 	
