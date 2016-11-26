@@ -17,19 +17,26 @@
 	    <p><?php echo $news_list[0]['nw_top_content'];?></p>
 	</div>
 </section>
-<!-- Slieshow -->
+<?php
+if(count($news_ad) > 0)
+{
+	?>
+	<!-- Slieshow -->
 
-<section id="a-slider">
-	<div class="awards sec-white new-con2">
-		<ul class="bxslider textwhite" id="awardSlider">
-			@foreach ($news_ad as $row)
-				<li><img src="/upload/news/{{$row->na_image}}"  width="100%" title="{{$row->na_description}}"></li>					
-			@endforeach
-		</ul>
-	</div>
-</section>
-<!-- Slieshow End-->
-</br></br>
+	<section id="a-slider">
+		<div class="awards sec-white new-con2">
+			<ul class="bxslider textwhite" id="awardSlider">
+				@foreach ($news_ad as $row)
+					<li><img src="/upload/news/{{$row->na_image}}"  width="100%" title="{{$row->na_description}}"></li>					
+				@endforeach
+			</ul>
+		</div>
+	</section>
+	<!-- Slieshow End-->
+	</br></br>
+	<?php
+}
+?>
 <section>
 	<div class="new-con">
 		<?php 

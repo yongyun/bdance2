@@ -195,7 +195,7 @@ switch($act)
 		if($image_id > 0)
 		{			
 			$arr_input['na_del'] = 1;
-			$res = db_mod_news($db,$arr_input,$image_id);
+			$res = db_mod_news_ad($db,$arr_input,$image_id);
 			echo '1';
 		}
 		else

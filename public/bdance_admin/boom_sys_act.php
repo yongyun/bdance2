@@ -215,6 +215,67 @@ switch($act)
 		exit();
 	break;
 
+	case 'artists_mod':
+		$work_id = ft($_POST['work_id'],0);
+		$bu_id = ft($_POST['bu_id'],0);
+		$uname = ft($_POST['uname'],1);
+		$country = ft($_POST['country'],1);
+		$info = ft($_POST['info'],1);
+		$concept = ft($_POST['concept'],1);
+		$duration = ft($_POST['duration'],1);
+		$choreography = ft($_POST['choreography'],1);
+		$performance = ft($_POST['performance'],1);
+		$technician = ft($_POST['technician'],1);
+		$photographer = ft($_POST['photographer'],1);
+		$artist_link = $_POST['artist_link'];
+
+		if($work_id == '')
+		{
+			post_back('參數錯誤');
+			exit();
+		}
+
+		$picname = $_FILES['mypic']['name'];
+		$picsize = $_FILES['mypic']['size'];
+		
+		if ($picname != '') {
+			$type = strstr($picname, '.');
+			$rand = rand(100, 999);
+			$pics = $work_id.'_'.date('YmdHis') . $rand . $type;
+
+			$pic_path = '../upload/boom/'.$work_id.'/'. $pics;
+			$pic_path_view = 'upload/boom/'.$work_id.'/'. $pics;
+			move_uploaded_file($_FILES['mypic']['tmp_name'], $pic_path);
+			
+			$arr_input['bu_image'] = $pic_path_view;
+		}
+		$arr_input['bu_work'] = $work_id;
+		$arr_input['bu_uname'] = $uname;
+		$arr_input['bu_country'] = $country;
+		$arr_input['bu_info'] = $info;
+		$arr_input['bu_concept'] = $concept;
+		$arr_input['bu_duration'] = $duration;
+		$arr_input['bu_choreography'] = $choreography;
+		$arr_input['bu_performance'] = $performance;
+		$arr_input['bu_technician'] = $technician;
+		$arr_input['bu_photographer'] = $photographer;
+		$arr_input['bu_artist_link'] = $artist_link;
+		$arr_input['bu_update'] = date('Y-m-d H:i:s');
+		if($bu_id == '')
+		{
+			$arr_input['bu_date'] = date('Y-m-d H:i:s');
+			db_add_boom_user($db,$arr_input);
+		}
+		else
+		{
+			db_mod_boom_user($db,$arr_input,$bu_id);
+		}
+		unset($arr_input);
+		
+		reload_js_top_href('修改成功','boom_sys_artists.php?id='.$work_id);
+		exit();
+	break;
+
 	default:
 		post_back('參數錯誤');
 		exit();

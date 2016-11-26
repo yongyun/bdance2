@@ -16,6 +16,7 @@ class NewsController extends Controller {
 				['nw_del','=',0],
 				['nw_status','=','0']
 			])->orderBy('nw_id','desc')->get();
+
 		return view('news_list', ['news_list' => $news_list,'right_menu' => right_menu()]);
 	}
 

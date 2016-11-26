@@ -50,5 +50,27 @@ function db_get_boom_list_bl($db,$id)
 	$res = $db->dbSelect($sql,$sql_input);
 	return $res[0];
 }
+function db_get_boom_user($db,$arr_input)
+{
+	$sql = 'SELECT * 
+			FROM boom_user
+			WHERE bu_work = ?';
+	
+	$sql_input['bu_work'] = $arr_input['id'];
+	
+	$res = $db->dbSelect($sql,$sql_input);
+	return $res;
+}
+function db_get_boom_user_one($db,$arr_input)
+{
+	$sql = 'SELECT * 
+			FROM boom_user
+			WHERE bu_id = ?';
+	
+	$sql_input['bu_id'] = $arr_input['bu_id'];
+	
+	$res = $db->dbSelect($sql,$sql_input);
+	return $res[0];
+}
 
 ?>

@@ -53,4 +53,20 @@ function db_del_boom_ad($db,$id)
 	return $res;
 }
 
+function db_add_boom_user($db,$arr_input)
+{
+	$sql = 'INSERT INTO boom_user ';
+	$res = $db->dbInsert($sql,$arr_input);
+	return $res;
+}
+function db_mod_boom_user($db,$arr_input,$id)
+{
+	$sql = 'UPDATE boom_user ';
+	$sql_where_condition = array('bu_id');
+	$sql_where_value = array($id);
+	$res = $db->dbUpdate($sql,$arr_input,$sql_where_condition,$sql_where_value);
+	return $res;
+}
+
+
 ?>

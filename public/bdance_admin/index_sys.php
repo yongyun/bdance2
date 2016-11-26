@@ -55,7 +55,7 @@ require_once('head.php');
 				<div class="control-group"> 
 					<label class="control-label" for="id"></label>
 					<div class="controls">
-						<a id="fileupload" class="btn btn-primary" style="cursor:pointer;">送出</a>
+						<a id="fileupload" class="btn btn-primary" style="cursor:pointer;">新增</a>
 						<a class="btn btn-outline-success" href="index_sys_act.php?id=<?php echo $id;?>">取消</a>
 					</div>
 				</div>
