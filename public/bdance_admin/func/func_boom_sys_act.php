@@ -44,6 +44,16 @@ function db_get_boom_list_one($db,$id)
 	return $res[0];
 }
 
+
+function db_del_boom_list($db,$id)
+{
+	$sql = 'DELETE FROM boom_list ';
+	$sql_where_condition = array('bl_id');
+	$sql_where_value = array($id);
+	$res = $db->dbDelete($sql,$sql_where_condition,$sql_where_value);
+	return $res;
+}
+
 function db_del_boom_ad($db,$id)
 {
 	$sql = 'DELETE FROM boom_ad ';

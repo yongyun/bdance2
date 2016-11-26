@@ -150,12 +150,12 @@ switch($act)
 			exit();
 		}
 
-		db_del_boom_ad($db,$id);
+		db_del_boom_list($db,$id);
 		db_del_boom_ad($db,$id);
 		$dir = '../upload/boom/'.$id;
 		rmdir($dir);
 		
-		redirect_js_href('刪除成功','works_sys.php');
+		redirect_js_href('刪除成功','boom_list_sys.php');
 		exit();
 
 	break;
