@@ -25,13 +25,20 @@
 						<div class="con2wid">
 							<div class="boomlink">
 								<div class="t-con" >
-									<a href="http://www.artsticket.com.tw/CKSCC2005/cart/cart00/ShowMap.aspx?PerformanceId=8JNfZ4VZd5RtUOxQvA62L9sMP56NfMHuHdHl3VWIPt4" target="_blank" class="b-box">Buy now</a>
+									<?php
+									if($boom_buy[0]['bl_buy_now'] != '')
+									{
+										?>
+										<a href="<?php echo $boom_buy[0]['bl_buy_now'];?>" target="_blank" class="b-box">Buy now</a>
+										<?php
+									}
+									?>
 								</div>
 							</div>
 
 							<div class="boomlink">
 								<div class="t-con">
-									<a href="/boom/1" class="b-box">More info</a>
+									<a href="/boom/<?php echo $boom_buy[0]['bl_id'];?>" class="b-box">More info</a>
 								</div>
 							</div>
 						</div>
@@ -50,8 +57,7 @@
 						<h2>&#8212; Concept of B.OOM &#8212;</h2>
 				</div>
 				<div class="atext at-left">
-					<p>B.OOM by B.DANCE - a pioneer dance project transcends borders
-					Initiated by B.DANCE in 2016, B.OOM is an international dance project across borders. B.DANCE aims at creating a dance platform for strengthening cultural exchange in the international dance scene. Nowadays, artists can easily travel around in the world, where they can meet other artists from different disciplines, share with each other and learn from others as well. B.OOM not only creates a transparent platform for cross-cultural exchange but also provides opportunities for international dance performers to increase their visibility in the Eastern dance scene. This is the main concept of B.OOM.</p>
+					<p><?php echo $boom_info[0]['bi_info'];?></p>
 				</div>
 			</div>
 		</section>
@@ -72,11 +78,18 @@
 				</div>
 				<div class="boomhistory">
 					<ul>
-						<li>
-							<a href="/boom/1">
-								<img src="/img/kv1.jpg"><p>2016 BOOM</p>
-							</a>
-						</li>		
+						<?php
+						foreach($boom_list as $row)
+						{
+							?>
+							<li>
+								<a href="/boom/<?php echo $row['bl_id'];?>">
+									<img src="<?php echo $row['bl_image'];?>"><p><?php echo $row['bl_title'];?></p>
+								</a>
+							</li>
+							<?php
+						}
+						?>
 					</ul>
 				</div>
 			</div>
