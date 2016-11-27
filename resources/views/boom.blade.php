@@ -35,12 +35,18 @@
 									?>
 								</div>
 							</div>
-
-							<div class="boomlink">
-								<div class="t-con">
-									<a href="/boom/<?php echo $boom_buy[0]['bl_id'];?>" class="b-box">More info</a>
+							<?php 
+							if($boom_buy[0]['bl_id'] != '')
+							{
+								?>
+								<div class="boomlink">
+									<div class="t-con">
+										<a href="/boom/<?php echo $boom_buy[0]['bl_id'];?>" class="b-box">More info</a>
+									</div>
 								</div>
-							</div>
+								<?php
+							}
+							?>
 						</div>
 					</div>
 					

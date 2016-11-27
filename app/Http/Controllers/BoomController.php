@@ -4,10 +4,10 @@ namespace App\Http\Controllers;
 
 use App\User;
 use App\Http\Controllers\Controller; 
-use App\Boom_info;
-use App\Boom_ad;
-use App\Boom_list;
-use App\Boom_user;
+use App\boom_info;
+use App\boom_ad;
+use App\boom_list;
+use App\boom_user;
 
 
 class BoomController extends Controller 
