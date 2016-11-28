@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Request;
 use App\User;
 use App\Http\Controllers\Controller; 
 use App\News;
@@ -9,13 +10,15 @@ use App\News_ad;
 use App\News_video;
 
 
-class NewsController extends Controller {
+class NewsController extends Controller 
+{
 
 	public function allNews() {
 		$news_list = News::where([
 				['nw_del','=',0],
 				['nw_status','=','0']
-			])->orderBy('nw_id','desc')->get();
+			])->orderBy('nw_id','desc')
+			->paginate(30);
 
 		return view('news_list', ['news_list' => $news_list,'right_menu' => right_menu()]);
 	}

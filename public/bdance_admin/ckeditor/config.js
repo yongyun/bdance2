@@ -31,7 +31,8 @@ CKEDITOR.editorConfig = function( config ) {
 		{ name: 'styles', items : [ 'Styles','Format','Font','FontSize' ] },
 		{ name: 'colors', items : [ 'TextColor','BGColor' ] },
 		{ name: 'insert', items : [ 'Image' ] },
-		{ name: 'links', items : [ 'Link','Unlink' ] }
+		{ name: 'links', items : [ 'Link','Unlink' ] },
+		{ name: 'insert', items: ['Image', 'Youtube']}
 	];	
 	
 	//開啟圖片上傳功能
@@ -41,5 +42,11 @@ CKEDITOR.editorConfig = function( config ) {
 	config.filebrowserUploadUrl = 'ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files'; //可上傳一般檔案
 	config.filebrowserImageUploadUrl = 'ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images';//可上傳圖檔
 	config.filebrowserFlashUploadUrl = 'ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash';//可上傳Flash檔案
+	//youtube
+	config.extraPlugins = 'youtube';
+	config.youtube_width = '640';
+	config.youtube_related = true;
+	config.youtube_older = false;
+	config.youtube_privacy = false;
 };
 

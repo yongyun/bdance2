@@ -41,6 +41,8 @@
 	<!-- 頁碼 -->
 	<div>
 		<div class="newspagebar">
+			{{ $news_list->links() }}
+			<!--
 			<ul>
 				<li><a href="">Prev</a></li>
 				<li><a href="">1</a></li>
@@ -53,6 +55,7 @@
 				<li><a href="">...</a></li>
 				<li><a href="">Next</a></li>
 			</ul>
+			-->
 		</div>
 	</div>
 	<!-- 頁碼結束 -->
