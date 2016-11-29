@@ -77,7 +77,7 @@ body {
   color: #fff;
   text-align: center;
   margin: 20px auto;
-  height: 50%;
+  height: 68%;
   overflow: hidden;
 }
 /* line 34, ../sass/style.scss */
@@ -117,7 +117,7 @@ body {
   width: 150px;
   padding: 5px;
   font-size: 12px;
-  margin: 45% auto;
+  margin: 85% auto;
   text-align: center;
   -webkit-transition: .5s ease-in-out;
 }
