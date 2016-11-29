@@ -55,7 +55,7 @@ require_once('head.php');
 					<label class="control-label" for="local_fee">封面圖上傳：</label>
 					<div class="controls">
 						<input id="mypic" type="file" name="mypic">
-						
+						<p>*注意：請使用1:1正方形圖片，size建議在700*700px。</p>
 					</div>
 				</div>
 				
