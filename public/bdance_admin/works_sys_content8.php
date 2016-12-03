@@ -37,24 +37,24 @@ require_once('head.php');
 					 <label class="control-label">類別：</label>
 					<div class="controls" style="margin-top:5px;">
 						<select id="type" name="type" onchange="stype(this.value);">
-							<option value="primary" <?php if($res_view['type'] == 'primary') echo 'selected';?>>Main Staff</option>
-							<option value="secondary" <?php if($res_view['type'] == 'secondary') echo 'selected';?>>Staff</option>
+							<option value="primary" <?php if($res_view['type'] == 'primary') echo 'selected';?>>Main Staff主要成員</option>
+							<option value="secondary" <?php if($res_view['type'] == 'secondary') echo 'selected';?>>Staff工作人員</option>
 						</select>
 					</div>
 				</div>
 				
 				<div id="primary">
 					<div class="control-group">
-						 <label class="control-label">暱稱：</label>
+						 <label class="control-label">姓名：</label>
 						<div class="controls" style="margin-top:5px;">
-							<input type="text" value="<?php echo $res_view['name'];?>" name="name" id="name" class="input">
+							<input type="text" value="<?php echo $res_view['name'];?>" name="name" id="name" class="input" placeholder="EX: PO-CHENG TSAI">
 						</div>
 					</div>
 					
 					<div class="control-group">
-						 <label class="control-label">身分：</label>
+						 <label class="control-label">職位：</label>
 						<div class="controls" style="margin-top:5px;">
-							<input type="text" value="<?php echo $res_view['role'];?>" name="role" id="role" class="input">
+							<input type="text" value="<?php echo $res_view['role'];?>" name="role" id="role" class="input" placeholder="EX:Dancer">
 						</div>
 					</div>
 					
@@ -62,6 +62,7 @@ require_once('head.php');
 						<label class="control-label" for="local_fee">圖片上傳：</label>
 						<div class="controls">
 							<input id="mypic" type="file" name="mypic">
+							<p>*注意：為求畫面整齊，請統一圖片比例</p>
 						</div>
 					</div>
 				</div>
@@ -98,7 +99,7 @@ require_once('head.php');
 						?>
 						<div style='float:left;margin-right:30px;'>
 							<div>
-								<img src='../<?php echo $row['photo'];?>' style='width:200px;height:150px;'>
+								<img src='../<?php echo $row['photo'];?>' style='width:150px;'>
 							</div>
 							<div>
 								<?php echo $row['name'];?>
@@ -132,7 +133,7 @@ require_once('head.php');
  <div class="row-fluid sortable ui-sortable">
 	<div class="box span12">
         <div class="box-header well" data-original-title="">
-            <h2> Staff 說明</h2>
+            <h2> Staff 工作人員 </h2>
         </div>
         <div class="box-content">
 			<div>

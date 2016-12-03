@@ -26,7 +26,7 @@ require_once('head.php');
 <div class="row-fluid sortable ui-sortable">
     <div class="box span12">
         <div class="box-header well" data-original-title="">
-            <h2> 演出資訊</h2>
+            <h2>演出資訊TOUR DATE</h2>
         </div>
         <div class="box-content">
 			<form id="mod_form" name="mod_form" method="post" action="works_sys_act.php" class="bs-docs-example form-horizontal" enctype='multipart/form-data'>
@@ -43,14 +43,15 @@ require_once('head.php');
 				<div class="control-group">
 					<label class="control-label">表演名稱</label>
 					<div class="controls" style="margin-top:5px;">
-						<input type="text" value="<?php echo $res_view['name'];?>" name="name" id="name" class="input-xxlarge">
+						<input type="text" value="<?php echo $res_view['name'];?>" name="name" id="name" class="input-xxlarge" placeholder="EX: FLOATING FLOWERS & HUGIN/MUNIN," />
 					</div>
 				</div>
 				
 				<div class="control-group">
-					<label class="control-label">說明：</label>
+					<label class="control-label">場地/國籍：</label>
 					<div class="controls" style="margin-top:5px;">
-						<input type="text" value="<?php echo $res_view['performed'];?>" name="performed" id="performed" class="input-xxlarge">
+						<input type="text" value="<?php echo $res_view['performed'];?>" name="performed" id="performed" class="input-xxlarge" placeholder= "EX:Zaragoza Trayecto (ES)">
+						<p>請輸入演出地點與國家</p>
 					</div>
 				</div>
 				

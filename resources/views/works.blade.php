@@ -33,7 +33,7 @@
 	
 
 @section('footer')
-<footer>
+<footer style="position: relative;">
 	<p class="copyright">Copyright &copy; 2016 B.DANCE . All rights reserved.</p>
 </footer>
 @endsection
