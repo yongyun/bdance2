@@ -20,8 +20,8 @@
 							</div>
 						</div>
 						<div id="inner-box">
-							<P> {{$n_list->nw_synopsis}} </P>
-						</div>
+							<!-- <P> {{$n_list->nw_synopsis}} </P>
+ -->						</div>
 					</div>
 					<h3>{{$n_list->nw_title}}</h3>
 					<h5>

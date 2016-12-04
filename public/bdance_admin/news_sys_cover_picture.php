@@ -46,6 +46,7 @@ require_once('head.php');
             <h2><i class="icon-th-list"></i> 封面圖設定</h2>
         </div>
         	<button class="btn btn-large btn-primary" onclick="dialog_set('news_sys_cover_porp.php?id=<?php echo $id;?>','手動上傳封面圖',350,460);" style="float:left;">手動上傳封面圖</button>
+        	<p>*注意：請使用1:1正方形圖片，size建議在700*700px。</p>
 			</br></br>
         <div class="box-content">
 			<div>

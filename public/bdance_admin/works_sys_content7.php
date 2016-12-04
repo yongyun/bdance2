@@ -27,7 +27,7 @@ require_once('head.php');
 <div class="row-fluid sortable ui-sortable">
     <div class="box span12">
         <div class="box-header well" data-original-title="">
-            <h2> 評論</h2>
+            <h2> 評論Reviews </h2>
         </div>
         <div class="box-content">
 			<form id="mod_form" name="mod_form" method="post" action="works_sys_act.php" class="bs-docs-example form-horizontal" enctype='multipart/form-data'>
@@ -38,18 +38,19 @@ require_once('head.php');
 					<label class="control-label">日期：</label>
 					<div class="controls" style="margin-top:5px;">
 						<input type="text" value="<?php echo $s_date;?>" name="created_at" id="created_at" class="input-xxlarge">
+						<p>*注意：若無填寫會自動顯示表演日期</p>
 					</div>
 				</div>
 				
 				<div class="control-group">
-					<label class="control-label">評論人：</label>
+					<label class="control-label">評論者/單位：</label>
 					<div class="controls" style="margin-top:5px;">
 						<input type="text" value="<?php echo $res_view['reviewer'];?>" name="reviewer" id="reviewer" class="input-xxlarge">
 					</div>
 				</div>
 				
 				<div class="control-group">
-					<label class="control-label">內容：</label>
+					<label class="control-label">評論內容：</label>
 					<div class="controls" style="margin-top:5px;">
 						<textarea id="content" name="content" class="input-xxlarge" rows="5"><?php echo $res_view['content'];?></textarea>
 					</div>
@@ -71,7 +72,7 @@ require_once('head.php');
 <div class="row-fluid sortable ui-sortable">
     <div class="box span12">
         <div class="box-header well" data-original-title="">
-            <h2> 演出資訊列表</h2>
+            <h2>評論清單</h2>
         </div>
         <div class="box-content">
             <table class="table table-striped table-bordered">

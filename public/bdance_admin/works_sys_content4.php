@@ -32,14 +32,15 @@ require_once('head.php');
 			<div class="box-content">
 				<div class="control-group">
 					<div>
-						演出時間:
-						<input type="text" name="duration" id="duration" class="input-xxlarge" value="<?php echo $res_data[0]['duration'];?>" placeholder="請輸入幾分鐘" />
+						演出時間DURATION:
+						<input type="text" name="duration" id="duration" class="input-xxlarge" value="<?php echo $res_data[0]['duration'];?>" placeholder="EX: 10 minutes without intermission" />
 				    </div>
 				</div>
 				<div class="control-group">
 					<div>
-						首&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;映:
-						<input type="text" name="premiere" id="premiere" class="input-xxlarge" value="<?php echo $res_data[0]['premiere'];?>" placeholder="請輸入日期及地點" />
+						首&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;映PREMIERE :
+						<input type="text" name="premiere" id="premiere" class="input-xxlarge" value="<?php echo $res_data[0]['premiere'];?>" placeholder="EX:June 28th, 2014 at Theater am Aegi, Hannover, Germany" />
+						<span>請輸入日期/年份，演出場地/國家。</span>
 				    </div>
 				</div>
 				

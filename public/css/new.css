@@ -7,6 +7,7 @@ body {
 }
 .grid-item h3 {
   line-height: 20px;
+  text-transform:uppercase;
 }
 
 .grid-item h5 {
@@ -111,13 +112,15 @@ body {
 }
 
 .more {
+  position: absolute;
+  top: 45%;
+  left: 30%;
   background: #333;
   color: #fff;
   border: 1px solid #fff;
   width: 150px;
   padding: 5px;
   font-size: 12px;
-  margin: 85% auto;
   text-align: center;
   -webkit-transition: .5s ease-in-out;
 }

@@ -24,7 +24,7 @@ require_once('head.php');
 <div class="row-fluid sortable ui-sortable">
     <div class="box span12">
         <div class="box-header well" data-original-title="">
-            <h2> 內容訊息</h2>
+            <h2> 內容訊息Information</h2>
         </div>
 		<form id="mod_form" name="mod_form" method="post" action="works_sys_act.php" class="bs-docs-example form-horizontal" enctype='multipart/form-data'>
 			<input type="hidden" name="id" id="id" value="<?php echo $id;?>" />
