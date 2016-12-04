@@ -26,7 +26,7 @@ require_once('head.php');
 <div class="row-fluid sortable ui-sortable">
     <div class="box span12">
         <div class="box-header well" data-original-title="">
-            <h2> 獎項</h2>
+            <h2> 獎項Award </h2>
         </div>
         <div class="box-content">
 			<form id="mod_form" name="mod_form" method="post" action="works_sys_act.php" class="bs-docs-example form-horizontal" enctype='multipart/form-data'>
@@ -34,7 +34,7 @@ require_once('head.php');
 				<input type="hidden" name="id" id="id" value="<?php echo $id;?>" />
 				<input type="hidden" name="aid" id="aid" value="<?php echo $aid;?>" />
 				<div class="control-group">
-					<label class="control-label">標題：</label>
+					<label class="control-label">作品名稱：</label>
 					<div class="controls" style="margin-top:5px;">
 						<input type="text" value="<?php echo $res_view['title'];?>" name="title" id="title" class="input-xxlarge">
 					</div>
@@ -43,12 +43,12 @@ require_once('head.php');
 				<div class="control-group">
 					<label class="control-label">獎名：</label>
 					<div class="controls" style="margin-top:5px;">
-						<input type="text" value="<?php echo $res_view['awardName'];?>" name="awardName" id="awardName" class="input-xxlarge">
+						<input type="text" value="<?php echo $res_view['awardName'];?>" name="awardName" id="awardName" class="input-xxlarge" placeholder="EX: First prize">
 					</div>
 				</div>
 				
 				<div class="control-group">
-					<label class="control-label">說明：</label>
+					<label class="control-label">得獎單位：</label>
 					<div class="controls" style="margin-top:5px;">
 						<textarea id="content" name="content" class="input-xxlarge" rows="5"><?php echo $res_view['description'];?></textarea>
 					</div>

@@ -39,7 +39,7 @@
 		<div class="conwidth">
 			<h2>&#8212; Information &#8212;</h2>
 			<p style="margin-bottom: 20px;">Date: {{ $project->perform_date }}</p>
-			<p class="text-lft">{{ $project->description}}</p>
+			<p class="text-lft"><?php echo $project->description;?></p>
 		</div>
 	</section>
 	<?php 

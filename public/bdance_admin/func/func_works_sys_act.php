@@ -31,6 +31,15 @@ function db_del_projects($db,$id)
 	return $res;
 }
 
+function db_del_awards_work_id($db,$id)
+{
+	$sql = 'DELETE FROM awards ';
+	$sql_where_condition = array('work_id');
+	$sql_where_value = array($id);
+	$res = $db->dbDelete($sql,$sql_where_condition,$sql_where_value);
+	return $res;
+}
+
 function db_del_photos($db,$id)
 {
 	$sql = 'DELETE FROM photos ';
@@ -86,6 +95,15 @@ function db_del_tours($db,$id)
 	return $res;
 }
 
+function db_del_tours_work_id($db,$id)
+{
+	$sql = 'DELETE FROM tours ';
+	$sql_where_condition = array('work_id');
+	$sql_where_value = array($id);
+	$res = $db->dbDelete($sql,$sql_where_condition,$sql_where_value);
+	return $res;
+}
+
 function db_add_reviews($db,$arr_input)
 {
 	$sql = 'INSERT INTO reviews ';
@@ -106,6 +124,15 @@ function db_del_reviews($db,$id)
 {
 	$sql = 'DELETE FROM reviews ';
 	$sql_where_condition = array('id');
+	$sql_where_value = array($id);
+	$res = $db->dbDelete($sql,$sql_where_condition,$sql_where_value);
+	return $res;
+}
+
+function db_del_reviews_work_id($db,$id)
+{
+	$sql = 'DELETE FROM reviews ';
+	$sql_where_condition = array('work_id');
 	$sql_where_value = array($id);
 	$res = $db->dbDelete($sql,$sql_where_condition,$sql_where_value);
 	return $res;
@@ -148,6 +175,14 @@ function db_del_stuffs($db,$id)
 	return $res;
 }
 
+function db_del_stuffs_work_id($db,$id)
+{
+	$sql = 'DELETE FROM stuffs ';
+	$sql_where_condition = array('work_id');
+	$sql_where_value = array($id);
+	$res = $db->dbDelete($sql,$sql_where_condition,$sql_where_value);
+	return $res;
+}
 
 function db_get_stuffs_rest($db,$id)
 {

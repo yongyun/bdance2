@@ -283,9 +283,14 @@ switch($act)
 			post_back('參數錯誤');
 			exit();
 		}
+		$db->debug();
 
-		db_del_projects($db,$id);
+		db_del_awards_work_id($db,$id);
+		db_del_reviews_work_id($db,$id);
+		db_del_stuffs_work_id($db,$id);
+		db_del_tours_work_id($db,$id);
 		db_del_photos($db,$id);
+		db_del_projects($db,$id);
 		$dir = '../photos/'.$id;
 		rmdir($dir);
 		

@@ -67,7 +67,7 @@ require_once('head.php');
 				</div>
 				<div id="secondary" style="display:none;">
 					<div class="control-group">
-						<textarea id="content" name="content" class="ckeditor" style="width:99%; height:200px;"><?php echo $res_view[0]['rest_stuffs'];?></textarea>
+						<textarea id="content" name="content" class="ckeditor" style="width:99%; height:200px;"><?php echo $rest_stuffs;?></textarea>
 					</div>
 				</div>
 				<div class="control-group"> 
