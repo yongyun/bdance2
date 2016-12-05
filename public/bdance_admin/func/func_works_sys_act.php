@@ -22,6 +22,15 @@ function db_add_photos($db,$arr_input)
 	return $res;
 }
 
+function db_mod_photos($db,$arr_input,$id)
+{
+	$sql = 'UPDATE photos ';
+	$sql_where_condition = array('id');
+	$sql_where_value = array($id);
+	$res = $db->dbUpdate($sql,$arr_input,$sql_where_condition,$sql_where_value);
+	return $res;
+}
+
 function db_del_projects($db,$id)
 {
 	$sql = 'DELETE FROM projects ';

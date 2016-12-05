@@ -110,6 +110,7 @@ switch($act)
 	
 	case 'ad_images_add':
 		$id = ft($_POST['id'],0);
+		$tid = ft($_POST['tid'],0);
 		$description = ft($_POST['description'],1);
 
 		if($id == '')
@@ -129,11 +130,19 @@ switch($act)
 			$pic_path = '../upload/news/'. $pics;
 			move_uploaded_file($_FILES['mypic']['tmp_name'], $pic_path);
 			
-			$arr_input['na_nwid'] = $id;
 			$arr_input['na_image'] = $pics;
+		}
+		
+		if($tid == '')
+		{
+			$arr_input['na_nwid'] = $id;
 			$arr_input['na_description'] = $description;
 			db_add_news_ad($db,$arr_input);
-			unset($arr_input);
+		}
+		else
+		{
+			$arr_input['na_description'] = $description;
+			db_mod_news_ad($db,$arr_input,$tid);
 		}
 		
 		reload_js_top_href('修改成功','news_sys_content.php?id='.$id);

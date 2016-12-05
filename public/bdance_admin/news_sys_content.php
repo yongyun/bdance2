@@ -7,11 +7,17 @@ require_once('func/func_news_sys.php');
 
 $act = ft($_GET['act'],1);
 $id = ft($_GET['id'],0);
+$tid = ft($_GET['tid'],0);
 
 //========== 接收參數 ed ==========
 
 //取得訊息資料
 $res_images = db_get_news_ad($db,$id);
+
+if($tid != '')
+{
+	$res_view = db_get_news_ad_one($db,$tid);
+}
 require_once('head.php');
 ?>
 <div id="content" class="span10">
@@ -26,10 +32,11 @@ require_once('head.php');
 			<form id="mod_form" name="mod_form" method="post" action="news_sys_act.php" class="bs-docs-example form-horizontal" enctype='multipart/form-data'>
 				<input type="hidden" name="act" id="act" value="ad_images_add" />
 				<input type="hidden" name="id" id="id" value="<?php echo $id;?>" />
+				<input type="hidden" name="tid" id="tid" value="<?php echo $tid;?>" />
 				<div class="control-group">
 					 <label class="control-label">說明：</label>
 					<div class="controls" style="margin-top:5px;">
-						<input type="text" value="" name="description" id="description" class="input">
+						<input type="text" value="<?php echo $res_view['na_description'];?>" name="description" id="description" class="input">
 					</div>
 				</div>
 				
@@ -40,10 +47,24 @@ require_once('head.php');
 					</div>
 				</div>
 				
+				<?php
+				if($res_view['na_image'] != '')
+				{
+					?>
+					<div class="control-group">
+						<div class="controls" id="view_pic">
+							<img src='../upload/news/<?php echo $res_view['na_image'];?>' style='width:200px;height:150px;'>
+						</div>
+					</div>
+					<?php
+				}
+				?>
+				
 				<div class="control-group"> 
 					<label class="control-label" for="id"></label>
 					<div class="controls">
-						<input type="submit" class="btn btn-primary" value="新增" />
+						<input type="submit" class="btn btn-primary" value="送出" />
+						<a class="btn btn-outline-success" href="news_sys_content.php?id=<?php echo $id;?>">取消</a>
 					</div>
 				</div>
 				
@@ -70,7 +91,7 @@ require_once('head.php');
 								<img src='../upload/news/<?php echo $row['na_image'];?>' style='width:200px;height:150px;'>
 							</div>
 							<div class='delimg btn' style='color:#000;width:50px;margin-bottom:10px;' rel='<?php echo $row['na_id'];?>'>删除</div>
-							<div class='editimg btn' style='color:#000;width:50px;margin-bottom:10px;display:none;' rel='<?php echo $row['na_id'];?>'>修改</div>
+							<a class="btn btn-warning btn-small" href="news_sys_content.php?id=<?php echo $row['na_nwid'];?>&tid=<?php echo $row['na_id'];?>">修改</a>
 						</div>
 						<?php
 					}

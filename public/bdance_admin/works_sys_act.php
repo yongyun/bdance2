@@ -125,6 +125,7 @@ switch($act)
 	
 	case 'ad_images_add':
 		$id = ft($_POST['id'],0);
+		$tid = ft($_POST['tid'],0);
 		$description = ft($_POST['description'],1);
 
 		if($id == '')
@@ -135,7 +136,7 @@ switch($act)
 
 		$picname = $_FILES['mypic']['name'];
 		$picsize = $_FILES['mypic']['size'];
-		if ($picname == '') 
+		if ($picname == '' && $tid == '') 
 		{
 			post_back('請上傳圖片');
 			exit();
@@ -151,12 +152,22 @@ switch($act)
 			$pic_path_src = 'photos/'.$id.'/'. $pics;
 			move_uploaded_file($_FILES['mypic']['tmp_name'], $pic_path);
 			
-			$arr_input['work_id'] = $id;
 			$arr_input['url'] = $pic_path_src;
+		}
+		
+		if($tid == '')
+		{
+			$arr_input['work_id'] = $id;
 			$arr_input['description'] = $description;
 			$arr_input['created_at'] = date('Y-m-d H:i:s');
 			db_add_photos($db,$arr_input);
-			unset($arr_input);
+		}
+		else
+		{
+			$arr_input['work_id'] = $id;
+			$arr_input['description'] = $description;
+			$arr_input['updated_at'] = date('Y-m-d H:i:s');
+			db_mod_photos($db,$arr_input,$tid);
 		}
 		
 		reload_js_top_href('修改成功','works_sys_content2.php?id='.$id);

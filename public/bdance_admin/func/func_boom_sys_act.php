@@ -22,6 +22,15 @@ function db_add_boom_ad($db,$arr_input)
 	return $res;
 }
 
+function db_mod_boom_ad($db,$arr_input,$id)
+{
+	$sql = 'UPDATE boom_ad ';
+	$sql_where_condition = array('ba_id');
+	$sql_where_value = array($id);
+	$res = $db->dbUpdate($sql,$arr_input,$sql_where_condition,$sql_where_value);
+	return $res;
+}
+
 function db_mod_boom_info($db,$arr_input,$id)
 {
 	$sql = 'UPDATE boom_info ';

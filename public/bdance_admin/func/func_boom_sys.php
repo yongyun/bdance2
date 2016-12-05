@@ -30,6 +30,17 @@ function db_get_boom_ad($db,$id)
 	$res = $db->dbSelect($sql,$sql_input);
 	return $res;
 }
+
+function db_get_boom_ad_one($db,$id)
+{
+	$sql = 'SELECT * 
+			FROM boom_ad 
+			WHERE ba_id = ?';
+	$sql_input['ba_id'] = $id;
+	
+	$res = $db->dbSelect($sql,$sql_input);
+	return $res[0];
+}
 function db_get_boom_list($db,$id)
 {
 	$sql = 'SELECT bl_id,bl_title,bl_date,bl_update 

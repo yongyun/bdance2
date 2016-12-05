@@ -59,6 +59,17 @@ function db_get_news_ad($db,$id)
 	return $res;
 }
 
+function db_get_news_ad_one($db,$id)
+{
+	$sql = 'SELECT * 
+			FROM news_ad 
+			WHERE na_del = 0 AND na_id = ?';
+	$sql_input['na_id'] = $id;
+	
+	$res = $db->dbSelect($sql,$sql_input);
+	return $res[0];
+}
+
 function db_get_news_video($db,$id)
 {
 	$sql = 'SELECT * 

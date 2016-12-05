@@ -112,6 +112,7 @@ switch($act)
 
 	case 'ad_images_add':
 		$id = ft($_POST['id'],0);
+		$tid = ft($_POST['tid'],0);
 		$description = ft($_POST['description'],1);
 
 		if($id == '')
@@ -131,11 +132,19 @@ switch($act)
 			$pic_path = '../upload/boom/'.$id.'/'. $pics;
 			move_uploaded_file($_FILES['mypic']['tmp_name'], $pic_path);
 			
+			$arr_input['ba_image'] = $pics;
+		}
+		
+		if($tid == '')
+		{
 			$arr_input['ba_work'] = $id;
 			$arr_input['ba_title'] = $description;
-			$arr_input['ba_image'] = $pics;
 			db_add_boom_ad($db,$arr_input);
-			unset($arr_input);
+		}
+		else
+		{
+			$arr_input['ba_title'] = $description;
+			db_mod_boom_ad($db,$arr_input,$tid);
 		}
 		
 		reload_js_top_href('修改成功','boom_sys_ad.php?id='.$id);

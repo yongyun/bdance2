@@ -42,7 +42,7 @@ function db_get_projects($db,$arr_input,$arr_page = null)
 
 function db_get_photos($db,$id)
 {
-	$sql = 'SELECT id,url,description 
+	$sql = 'SELECT id,work_id,url,description 
 			FROM photos 
 			WHERE work_id = ?
 			ORDER BY id DESC';
@@ -50,6 +50,18 @@ function db_get_photos($db,$id)
 	
 	$res = $db->dbSelect($sql,$sql_input);
 	return $res;
+}
+
+function db_get_photos_one($db,$id)
+{
+	$sql = 'SELECT id,url,description 
+			FROM photos 
+			WHERE id = ?
+			ORDER BY id DESC';
+	$sql_input['work_id'] = $id;
+	
+	$res = $db->dbSelect($sql,$sql_input);
+	return $res[0];
 }
 
 function db_get_tours($db,$id)

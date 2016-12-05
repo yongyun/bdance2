@@ -101,7 +101,7 @@ layui.use('laydate', function(){
   var laydate = layui.laydate;
   
   var start = {
-    min: '2015-01-01 23:59:59',
+    min: '1900-01-01 23:59:59',
     max: '2099-06-16 23:59:59',
     istoday: false,
     choose: function(datas)
