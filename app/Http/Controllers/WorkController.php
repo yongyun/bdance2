@@ -31,6 +31,7 @@ class WorkController extends Controller {
 			])->get();
 		$other_stuff = Stuff::where([
 				['work_id', '=' , $id],
+				['rest_stuffs', '!=' , ''],
 				['type', '=' , 'secondary']
 			])->first();
 		$awards = Award::where('work_id', $id)->get();

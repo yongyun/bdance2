@@ -53,9 +53,20 @@ require_once('head.php');
 				
 				<div class="control-group">
 					<label class="control-label" for="local_fee">封面圖上傳：</label>
+					<div>
+						<a class="btn btn-outline-success" style="background: #ffd400; margin-left: 20px;" href="http://www.fotor.com/app.html#!module/basic/tool/BasicEdits" target="_blank">圖片修改工具 Edit Image
+						</a>
+					</div>
 					<div class="controls">
-						<input id="mypic" type="file" name="mypic">
-						<p>*注意：請使用1:1正方形圖片，size建議在700*700px。</p>
+						<p>Step1：請先編輯圖片大小，size為700X700px的1:1正方形圖片</p>
+						<ul style="font-size: 12px;">
+							<li>1-1：點選畫面中上方Button[Open]打開欲編輯圖像（Add photo first）</li>
+							<li>1-2：左方有Basic Edit Bar，進入[CROP]，輸入數值700x700</li>
+							<li>1-3：畫面中，移動正方形位置，擺置封面圖範圍</li>
+							<li>1-4：畫面上方Button點選[Save]，完成。</li>
+						</ul>
+						<p>Step2：選擇Choose File，上傳編輯後的圖片</p>
+						<input class="btn btn-outline-success" id="mypic" type="file" name="mypic">
 					</div>
 				</div>
 				
@@ -101,7 +112,7 @@ layui.use('laydate', function(){
   var laydate = layui.laydate;
   
   var start = {
-    min: '1900-01-01 23:59:59',
+    min: '2015-01-01 23:59:59',
     max: '2099-06-16 23:59:59',
     istoday: false,
     choose: function(datas)
