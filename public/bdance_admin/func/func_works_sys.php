@@ -32,7 +32,7 @@ function db_get_projects($db,$arr_input,$arr_page = null)
 		$sql = 'SELECT id,name,intro,description,video_url,perform_date,created_at,updated_at,feature_img,duration,premiere,video_chanel 
 				FROM projects 
 				'.$def.'
-				ORDER BY id DESC';
+				ORDER BY perform_date DESC';
 		$sql .= get_page_limit($arr_page);		
 	}
 	

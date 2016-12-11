@@ -1,5 +1,6 @@
 <?php
 require_once('inc/inc.php');
+require_once('func/func_news_sys.php');
 require_once('head_porp.php');
 
 
@@ -10,6 +11,8 @@ $type = ft($_POST['type'],1);
 
 //========== 接收參數 ed ==========
 
+//取得訊息資料
+$res_news = db_get_news_all($db);
 ?>
 <div id="content" class="span10">
     <div class="span6" style="margin-left:auto; margin-right:auto; float:none;">
@@ -26,6 +29,25 @@ $type = ft($_POST['type'],1);
                     <label class="control-label" for="local_fee">簡述內容：</label>
                     <div class="controls">
 						<textarea name="synopsis" id="synopsis" class="input" style="height:150px;"></textarea>
+                    </div>
+                </div>
+                
+                <div class="control-group">
+                    <label class="control-label" for="local_fee">排序：</label>
+                    <div class="controls" style="margin-top:5px;">
+						<select id="item" name="item" class="input">
+							<option value="0">最前</option>
+							<option value="<?php echo count($res_news);?>">最後</option>
+							<?php
+							if(count($res_news) > 0)
+							{
+								foreach($res_news as $row)
+								{
+									echo '<option value="'.$row['nw_item'].'">'.$row['nw_title'].'之後</option>';
+								}
+							}								
+							?>
+						</select>
                     </div>
                 </div>
  				

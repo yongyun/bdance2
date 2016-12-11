@@ -17,7 +17,7 @@ class NewsController extends Controller
 		$news_list = news::where([
 				['nw_del','=',0],
 				['nw_status','=','0']
-			])->orderBy('nw_id','desc')
+			])->orderBy('nw_item','asc')
 			->paginate(20);
 
 		return view('news_list', ['news_list' => $news_list,'right_menu' => right_menu()]);

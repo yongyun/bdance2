@@ -64,7 +64,7 @@ require_once('head.php');
             <table class="table table-striped table-bordered">
                 <thead>
                     <tr style="background-color:#DFDFDF;">
-                    	<th width="7%">No.</th>
+                    	<th width="10%">No.</th>
                         <th width="8%">建立人</th>
                         <th width="15%">標題</th>
                         <th width="25%">簡介</th>
@@ -84,7 +84,11 @@ require_once('head.php');
 							?>
 							<tr>
 								<!-- 編號 -->
-								<td class="center"><?php echo $row['nw_id'];?></td>
+								<td class="center">
+									<a class="btn btn-small btn-primary" href="news_sys_act.php?act=item_up&item=<?php echo $row['nw_item'];?>">↑</a> 
+									<?php echo $row['nw_item'];?> 
+									<a class="btn btn-small btn-warning" href="news_sys_act.php?act=item_down&item=<?php echo $row['nw_item'];?>">↓</a>
+								</td>
 								<!-- 建立人 -->
 								<td class="center"><?php echo $row['nw_user'];?></td>
 								<!-- 標題 -->

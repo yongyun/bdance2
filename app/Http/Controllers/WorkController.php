@@ -14,7 +14,7 @@ use App\Tour;
 class WorkController extends Controller {
 
 	public function allWorks() {
-		$work = Work::orderBy('created_at', 'desc')->get();
+		$work = Work::orderBy('perform_date', 'desc')->get();
 		return view('works', ['works' => $work,'right_menu' => right_menu()]);
 	}
 

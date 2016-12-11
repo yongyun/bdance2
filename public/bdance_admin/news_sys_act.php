@@ -20,6 +20,7 @@ switch($act)
 		$title = ft($_POST['title'],1);
 		$synopsis = ft($_POST['synopsis'],1);
 		$status = ft($_POST['status'],0);
+		$item = ft($_POST['item'],0);
 	
 		if($title == '')
 		{
@@ -27,12 +28,44 @@ switch($act)
 			exit();
 		}
 
+		if($item == 0)
+		{
+			$res_news = db_get_news_all($db);
+			if(count($res_news) > 0)
+			{
+				foreach($res_news as $k => $row)
+				{
+					$arr_input['nw_item'] = $k + 2;
+					db_mod_news($db,$arr_input,$row['nw_id']);
+					unset($arr_input);
+				}
+			}
+			$item = 1;
+		}
+		else
+		{
+			$arr_input['item'] = $item;
+			$res_news = db_get_news_all($db,$arr_input);
+			unset($arr_input);
+			if(count($res_news) > 0)
+			{
+				foreach($res_news as $k => $row)
+				{
+					$arr_input['nw_item'] = $k + $item + 2;
+					db_mod_news($db,$arr_input,$row['nw_id']);
+					unset($arr_input);
+				}
+			}
+			$item += 1;
+		}
+		
 		//新增資料
 		$arr_input['nw_user'] = $mem_info['name'];
 		$arr_input['nw_title'] = $title;
 		$arr_input['nw_synopsis'] = $synopsis;
 		$arr_input['nw_date'] = date('Y-m-d H:i:s');
 		$arr_input['nw_status'] = $status;
+		$arr_input['nw_item'] = $item;
 
 		$res = db_add_news($db,$arr_input);
 		unset($arr_input);
@@ -274,6 +307,75 @@ switch($act)
 		}
 		
 		reload_js_top_href('上傳成功','news_sys_cover_picture.php?id='.$id);
+		exit();
+	break;
+	
+	case 'item_up':
+		$item = ft($_GET['item'],0);
+
+		if($item == '')
+		{
+			post_back('參數錯誤');
+			exit();
+		}
+		
+		if($item == 1)
+		{
+			post_back('已經是最前面了');
+			exit();
+		}
+		$arr_input['item'] = $item;
+		$res_now = db_get_news_item($db,$arr_input);
+		unset($arr_input);
+		
+		$arr_input['item'] = $item - 1;
+		$res_up = db_get_news_item($db,$arr_input);
+		unset($arr_input);
+
+		$arr_input['nw_item'] = $item;
+		db_mod_news($db,$arr_input,$res_up['nw_id']);
+		unset($arr_input);
+		
+		$arr_input['nw_item'] = $item - 1;
+		db_mod_news($db,$arr_input,$res_now['nw_id']);
+		unset($arr_input);
+		
+		reload_js_top_href('','news_sys.php');
+		exit();
+	break;
+	
+	case 'item_down':
+		$item = ft($_GET['item'],0);
+
+		if($item == '')
+		{
+			post_back('參數錯誤');
+			exit();
+		}
+		
+		$item_end = db_get_news_item_end($db);
+		if($item == $item_end['nw_item'])
+		{
+			post_back('已經是最後面了');
+			exit();
+		}
+		$arr_input['item'] = $item;
+		$res_now = db_get_news_item($db,$arr_input);
+		unset($arr_input);
+		
+		$arr_input['item'] = $item + 1;
+		$res_up = db_get_news_item($db,$arr_input);
+		unset($arr_input);
+
+		$arr_input['nw_item'] = $item;
+		db_mod_news($db,$arr_input,$res_up['nw_id']);
+		unset($arr_input);
+		
+		$arr_input['nw_item'] = $item + 1;
+		db_mod_news($db,$arr_input,$res_now['nw_id']);
+		unset($arr_input);
+		
+		reload_js_top_href('','news_sys.php');
 		exit();
 	break;
 	

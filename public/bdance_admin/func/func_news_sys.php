@@ -37,13 +37,23 @@ function db_get_news($db,$arr_input,$arr_page = null)
 	}
 	else
 	{
-		$sql = 'SELECT nw_id,nw_user,nw_title,nw_synopsis,nw_synopsis_image,nw_top_content,nw_content,nw_date,nw_update,nw_status,nw_link 
+		$sql = 'SELECT nw_id,nw_user,nw_title,nw_synopsis,nw_synopsis_image,nw_top_content,nw_content,nw_date,nw_update,nw_status,nw_link,nw_item 
 				FROM news 
 				'.$def.'
-				ORDER BY nw_id DESC';
+				ORDER BY nw_item ASC';
 		$sql .= get_page_limit($arr_page);		
 	}
 	
+	$res = $db->dbSelect($sql,$sql_input);
+	return $res;
+}
+
+function db_get_news_all($db)
+{
+	$sql = 'SELECT nw_id,nw_title,nw_item 
+			FROM news 
+			WHERE nw_del=0 
+			ORDER BY nw_item ASC';
 	$res = $db->dbSelect($sql,$sql_input);
 	return $res;
 }

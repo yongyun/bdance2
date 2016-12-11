@@ -134,14 +134,41 @@ switch($act)
 			exit();
 		}
 
-		$picname = $_FILES['mypic']['name'];
-		$picsize = $_FILES['mypic']['size'];
-		if ($picname == '' && $tid == '') 
+		if (!isset($_FILES['mypic'])) 
 		{
 			post_back('請上傳圖片');
 			exit();
 		}	
 		
+		
+		if(isset($_FILES['mypic']))
+		{
+			foreach($_FILES['mypic']['tmp_name'] as $key => $tmp_name )
+			{
+				$file_name = $_FILES['mypic']['name'][$key];
+				$file_size =$_FILES['mypic']['size'][$key];
+				$file_tmp =$_FILES['mypic']['tmp_name'][$key];
+				$file_type=$_FILES['mypic']['type'][$key]; 
+
+				$type = strstr($file_name, '.');
+				$rand = rand(100, 999);
+				$pics = $id.'_'.date('YmdHis') . $rand . $type;
+
+				$pic_path = '../photos/'.$id.'/'. $pics;
+				$pic_path_src = 'photos/'.$id.'/'. $pics;
+				move_uploaded_file($file_tmp, $pic_path);
+				
+				$arr_input['url'] = $pic_path_src;
+				if($tid == '')
+				{
+					$arr_input['work_id'] = $id;
+					$arr_input['description'] = $description;
+					$arr_input['created_at'] = date('Y-m-d H:i:s');
+					db_add_photos($db,$arr_input);
+				}
+			}
+		}
+
 		if ($picname != '') 
 		{
 			$type = strstr($picname, '.');
@@ -155,14 +182,7 @@ switch($act)
 			$arr_input['url'] = $pic_path_src;
 		}
 		
-		if($tid == '')
-		{
-			$arr_input['work_id'] = $id;
-			$arr_input['description'] = $description;
-			$arr_input['created_at'] = date('Y-m-d H:i:s');
-			db_add_photos($db,$arr_input);
-		}
-		else
+		if($tid != '')
 		{
 			$arr_input['work_id'] = $id;
 			$arr_input['description'] = $description;

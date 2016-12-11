@@ -33,7 +33,7 @@ require_once('head.php');
 				<input type="hidden" name="act" id="act" value="stuffs_mod" />
 				<input type="hidden" name="id" id="id" value="<?php echo $id;?>" />
 				<input type="hidden" name="sid" id="sid" value="<?php echo $sid;?>" />
-				<div class="control-group">
+				<div class="control-group" style="display:none;">
 					 <label class="control-label">類別：</label>
 					<div class="controls" style="margin-top:5px;">
 						<select id="type" name="type" onchange="stype(this.value);">
@@ -64,11 +64,6 @@ require_once('head.php');
 							<input id="mypic" type="file" name="mypic">
 							<p>*注意：為求畫面整齊，請統一圖片比例</p>
 						</div>
-					</div>
-				</div>
-				<div id="secondary" style="display:none;">
-					<div class="control-group">
-						<textarea id="content" name="content" class="ckeditor" style="width:99%; height:200px;"><?php echo $rest_stuffs;?></textarea>
 					</div>
 				</div>
 				<div class="control-group"> 
@@ -136,9 +131,31 @@ require_once('head.php');
             <h2> Staff 工作人員 </h2>
         </div>
         <div class="box-content">
-			<div>
-				<?php echo $rest_stuffs;?>
-			</div>
+			<form id="mod_form2" name="mod_form2" method="post" action="works_sys_act.php" class="bs-docs-example form-horizontal" enctype='multipart/form-data'>
+				<input type="hidden" name="act" id="act" value="stuffs_mod" />
+				<input type="hidden" name="id" id="id" value="<?php echo $id;?>" />
+				<input type="hidden" name="sid" id="sid" value="<?php echo $sid;?>" />
+				<div class="control-group" style="display:none;">
+					 <label class="control-label">類別：</label>
+					<div class="controls" style="margin-top:5px;">
+						<select id="type" name="type" onchange="stype(this.value);">
+							<option value="secondary" <?php if($res_view['type'] == 'secondary') echo 'selected';?>>Staff工作人員</option>
+						</select>
+					</div>
+				</div>
+				<div id="secondary">
+					<div class="control-group">
+						<textarea id="content" name="content" class="ckeditor" style="width:99%; height:200px;"><?php echo $rest_stuffs;?></textarea>
+					</div>
+				</div>
+				<div class="control-group"> 
+					<label class="control-label" for="id"></label>
+					<div class="controls">
+						<input type="submit" class="btn btn-primary" value="Staff工作人員 存檔" />
+					</div>
+				</div>
+				
+			</form>
         </div>
     </div>
 </div>
