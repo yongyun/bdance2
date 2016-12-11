@@ -27,7 +27,7 @@ if(count($news_ad) > 0)
 		<div class="awards sec-white new-con2">
 			<ul class="bxslider textwhite" id="awardSlider">
 				@foreach ($news_ad as $row)
-					<li><img src="/upload/news/{{$row->na_image}}"  width="100%" title="{{$row->na_description}}"></li>					
+					<li><img src="http://demo.bdance.com.tw/upload/news/{{$row->na_image}}"  width="100%" title="{{$row->na_description}}"></li>					
 				@endforeach
 			</ul>
 		</div>
