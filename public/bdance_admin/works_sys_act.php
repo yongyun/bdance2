@@ -169,19 +169,6 @@ switch($act)
 			}
 		}
 
-		if ($picname != '') 
-		{
-			$type = strstr($picname, '.');
-			$rand = rand(100, 999);
-			$pics = $id.'_'.date('YmdHis') . $rand . $type;
-
-			$pic_path = '../photos/'.$id.'/'. $pics;
-			$pic_path_src = 'photos/'.$id.'/'. $pics;
-			move_uploaded_file($_FILES['mypic']['tmp_name'], $pic_path);
-			
-			$arr_input['url'] = $pic_path_src;
-		}
-		
 		if($tid != '')
 		{
 			$arr_input['work_id'] = $id;

@@ -43,9 +43,21 @@ require_once('head.php');
 				<div class="control-group">
 					<label class="control-label" for="local_fee">圖片上傳：</label>
 					<div class="controls">
-						<input id="mypic" type="file" name="mypic">
+						<input id="mypic" type="file" name="mypic[]" <?php if($tid == '') echo 'multiple';?>>
 					</div>
 				</div>
+				<?php
+				if($tid == '')
+				{
+					?>
+					<div class="control-group">
+						<div class="controls">
+							溫馨小提醒：按住 Ctrl 可選擇多張圖。
+						</div>
+					</div>
+					<?php
+				}
+				?>
 				
 				<?php
 				if($res_view['na_image'] != '')

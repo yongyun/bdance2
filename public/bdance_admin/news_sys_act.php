@@ -152,27 +152,33 @@ switch($act)
 			exit();
 		}
 
-		$picname = $_FILES['mypic']['name'];
-		$picsize = $_FILES['mypic']['size'];
-		
-		if ($picname != '') {
-			$type = strstr($picname, '.');
-			$rand = rand(100, 999);
-			$pics = $id.'_'.date('YmdHis') . $rand . $type;
-
-			$pic_path = '../upload/news/'. $pics;
-			move_uploaded_file($_FILES['mypic']['tmp_name'], $pic_path);
-			
-			$arr_input['na_image'] = $pics;
-		}
-		
-		if($tid == '')
+		if(isset($_FILES['mypic']))
 		{
-			$arr_input['na_nwid'] = $id;
-			$arr_input['na_description'] = $description;
-			db_add_news_ad($db,$arr_input);
+			foreach($_FILES['mypic']['tmp_name'] as $key => $tmp_name )
+			{
+				$file_name = $_FILES['mypic']['name'][$key];
+				$file_size =$_FILES['mypic']['size'][$key];
+				$file_tmp =$_FILES['mypic']['tmp_name'][$key];
+				$file_type=$_FILES['mypic']['type'][$key]; 
+
+				$type = strstr($file_name, '.');
+				$rand = rand(100, 999);
+				$pics = $id.'_'.date('YmdHis') . $rand . $type;
+
+				$pic_path = '../upload/news/'. $pics;
+				move_uploaded_file($file_tmp, $pic_path);
+				
+				$arr_input['na_image'] = $pics;
+				if($tid == '')
+				{
+					$arr_input['na_nwid'] = $id;
+					$arr_input['na_description'] = $description;
+					db_add_news_ad($db,$arr_input);
+				}
+			}
 		}
-		else
+		
+		if($tid != '')
 		{
 			$arr_input['na_description'] = $description;
 			db_mod_news_ad($db,$arr_input,$tid);
