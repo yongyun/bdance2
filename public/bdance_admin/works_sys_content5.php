@@ -34,9 +34,15 @@ require_once('head.php');
 				<input type="hidden" name="id" id="id" value="<?php echo $id;?>" />
 				<input type="hidden" name="tid" id="tid" value="<?php echo $tid;?>" />
 				<div class="control-group">
-					<label class="control-label">演出日期：</label>
+					<label class="control-label">開始日期：</label>
 					<div class="controls" style="margin-top:5px;">
 						<input type="text" value="<?php echo $res_view['tour_date'];?>" name="tour_date" id="tour_date" class="input-xxlarge">
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label">結束日期：</label>
+					<div class="controls" style="margin-top:5px;">
+						<input type="text" value="<?php echo $res_view['tour_date2'];?>" name="tour_date2" id="tour_date2" class="input-xxlarge">
 					</div>
 				</div>
 				
@@ -77,7 +83,8 @@ require_once('head.php');
             <table class="table table-striped table-bordered">
                 <thead>
                     <tr style="background-color:#DFDFDF;">
-                        <th width="15%">日期</th>
+                        <th width="10%">開始日期</th>
+                        <th width="10%">結束日期</th>
                         <th width="20%">表演名稱</th>
                         <th width="40%">說明</th>
                         <th width="8%">功能</th>
@@ -95,6 +102,8 @@ require_once('head.php');
 							<tr>
 								<!-- 日期 -->
 								<td class="center"><?php echo $row['tour_date'];?></td>
+								<!-- 日期 -->
+								<td class="center"><?php echo $row['tour_date2'];?></td>
 								<!-- 表演名稱 -->
 								<td class="center"><?php echo $row['name'];?></td>
 								<!-- 說明 -->
@@ -143,9 +152,23 @@ layui.use('laydate', function(){
       end.start = datas;
     }
   };
+  
+  var end = {
+	min: '2015-01-01 23:59:59',
+    max: '2099-06-16 23:59:59',
+    istoday: false,
+    choose: function(datas)
+	{
+      start.max = datas;
+    }
+  };
   document.getElementById('tour_date').onclick = function(){
     start.elem = this
     laydate(start);
+  }
+  document.getElementById('tour_date2').onclick = function(){
+    end.elem = this
+    laydate(end);
   }
   
 });

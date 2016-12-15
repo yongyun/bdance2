@@ -104,12 +104,12 @@ switch($act)
 		$content = $_POST['content'];
 		
 		//擷取全部圖片
-		preg_match_all('#<img[^>]*>#i', $content, $match);
+		// preg_match_all('#<img[^>]*>#i', $content, $match);
 		//取得第一張圖
-		preg_match('/upload(.*?)"/i',$match[0][0],$arr_image);
-		$one_images = str_replace('"','',$arr_image[0]);
+		// preg_match('/upload(.*?)"/i',$match[0][0],$arr_image);
+		// $one_images = str_replace('"','',$arr_image[0]);
 
-		$arr_input['nw_synopsis_image'] = $one_images;
+		// $arr_input['nw_synopsis_image'] = $one_images;
 		$arr_input['nw_top_content'] = $top_content;
 		$arr_input['nw_content'] = $content;
 		$arr_input['nw_update'] = date('Y-m-d H:i:s');

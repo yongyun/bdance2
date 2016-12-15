@@ -39,7 +39,7 @@
 		<div class="conwidth">
 			<h2>&#8212; Information &#8212;</h2>
 			<p style="margin-bottom: 20px;">Date: {{ $project->perform_date }}</p>
-			<p class="text-lft"><?php echo $project->description;?></p>
+			<p class="text-lft"><?php echo stripslashes($project->description);?></p>
 		</div>
 	</section>
 	<?php 
@@ -79,7 +79,20 @@
 					<p>TOUR DATE &#58; </p>
 					@foreach ($tours as $tour)
 						<ul>
-							<li><p>{{ $tour->tour_date}}</p></li>
+							<li>
+								<p>
+									<?php
+									if($tour['tour_date2'] == '0000-00-00' || $tour['tour_date'] == $tour['tour_date2'])
+									{
+										echo $tour['tour_date'];
+									}
+									else
+									{
+										echo $tour['tour_date'].' ~ '.$tour['tour_date2'];
+									}
+									?>
+								</p>
+							</li>
 							<li><h1>{{ $tour->name}}</h1></li>
 							<li><p>{{ $tour->performed}}</p></li>
 						</ul>
@@ -197,7 +210,7 @@
 		<section class="sec-norm">
 			<div class="conwidth">
 				<h2>&#8212; Staff &#8212;</h2>
-				<p>{!! $other_stuff->rest_stuffs !!}</p>
+				<p><?php echo stripslashes($other_stuff['rest_stuffs']);?></p>
 			</div>
 		</section>
 		<?php 

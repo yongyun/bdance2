@@ -318,18 +318,19 @@ footer {
       top: 0;
 }
 
-.tour{
+.tour {
     border-top: 1px solid #d9d9d9;
     margin-top: 20px;
     padding-top: 20px;
 }
 
-.tour ul li {
-    display: inline-block;
+.tour ul {
+  margin: 15px 0;
 }
 
-.tour ul li:first-child {
-   width: 140px;
+.tour ul li {
+    display: inline-block;
+    width: 100%;
 }
 
 .mainsection {

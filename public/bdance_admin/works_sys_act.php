@@ -225,6 +225,7 @@ switch($act)
 		$id = ft($_POST['id'],0);
 		$tid = ft($_POST['tid'],0);
 		$tour_date = ft($_POST['tour_date'],1);
+		$tour_date2 = ft($_POST['tour_date2'],1);
 		$name = ft($_POST['name'],1);
 		$performed = ft($_POST['performed'],1);
 
@@ -242,6 +243,7 @@ switch($act)
 	
 		$arr_input['work_id'] = $id;
 		$arr_input['tour_date'] = $tour_date;
+		$arr_input['tour_date2'] = $tour_date2;
 		$arr_input['name'] = $name;
 		$arr_input['performed'] = $performed;
 		if($tid == '')
