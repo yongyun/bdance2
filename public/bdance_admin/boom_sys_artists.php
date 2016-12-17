@@ -60,7 +60,7 @@ require_once('foot.php');
 $(function () {	
 	$(".delimg").live('click',function(){
 		var pic = $(this).attr("rel");
-		$.post("works_sys_act.php?act=delimg",{image_id:pic},function(msg){
+		$.post("boom_sys_act.php?act=del_artists",{image_id:pic},function(msg){
 			if(msg==1){
 				location.reload();
 			}else{

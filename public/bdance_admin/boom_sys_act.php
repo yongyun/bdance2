@@ -188,6 +188,25 @@ switch($act)
 		exit;
 	break;
 
+	case 'del_artists':
+		$image_id = ft($_POST['image_id'],0);
+		if($image_id == '')
+		{
+			post_back('參數錯誤');
+			exit();
+		}
+		if($image_id > 0)
+		{			
+			$res = db_del_boom_user($db,$image_id);
+			echo '1';
+		}
+		else
+		{
+			echo '刪除失敗.';
+		}
+		exit;
+	break;
+
 	case 'content_mod':
 		$id = ft($_POST['id'],0);
 		$top_content = $_POST['top_content'];

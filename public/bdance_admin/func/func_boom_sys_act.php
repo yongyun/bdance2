@@ -87,5 +87,14 @@ function db_mod_boom_user($db,$arr_input,$id)
 	return $res;
 }
 
+function db_del_boom_user($db,$id)
+{
+	$sql = 'DELETE FROM boom_user ';
+	$sql_where_condition = array('bu_id');
+	$sql_where_value = array($id);
+	$res = $db->dbDelete($sql,$sql_where_condition,$sql_where_value);
+	return $res;
+}
+
 
 ?>
