@@ -31,6 +31,7 @@ CKEDITOR.stylesSet.add( 'default', [
 	{ name: 'Address',			element: 'address' },
 	*/
 
+	{ name: '系統預設',		element: 'h2', styles: { 'font-family': '\'Raleway\', sans-serif, Microsoft JhengHei, 微軟正黑體','line-height':'25px','font-size':'15px','letter-spacing':'1px' } },
 	{ name: 'Italic Title',		element: 'h2', styles: { 'font-style': 'italic' } },
 	{ name: 'Subtitle',			element: 'h3', styles: { 'color': '#aaa', 'font-style': 'italic' } },
 	{
